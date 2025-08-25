@@ -1,4 +1,4 @@
-# T03D03
+# D02T02
 
 
 Foydali video materiallarni Platformadagi “Projects (Media)” bo‘limida topishingiz mumkin. 
