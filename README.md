@@ -159,7 +159,7 @@ The hard drive is rustling joyfully:
 
 ***LOADING…***
 
-## Bonus Quest 4*. Macro.
+## Quest 4*. Macro.
 
 \> *Ready. Restart the computer #3*
 
