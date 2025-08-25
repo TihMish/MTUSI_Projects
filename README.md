@@ -566,7 +566,7 @@ Kill.
 
 ***LOADING...***
 
-# Quest 9. Conflict
+## Quest 9. Conflict
 
 \> *Набрать: «Есть подозрение, что это финал»*
 
