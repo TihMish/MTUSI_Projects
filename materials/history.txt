@@ -12,7 +12,6 @@ A drawback of the B language was that it did not know data-types. (Everything wa
 
 The programming language C was written down, by Kernighan and Ritchie, in a now classic book called “The C Programming Language, 1st edition”. (Kernighan has said that he had no part in the design of the C language: “It’s entirely Dennis Ritchie’s work”. But he is the author of the famous “Hello, World” program and many other UNIX programs).
 
-For years the book “The C Programming Language, 1st edition” was the standard on the language C. In 1983 a committee was formed by the American National Standards Institute (ANSI)
-to develop a modern definition for the programming language C (ANSI X3J11). In 1988 they delivered the final standard definition ANSI C. (The standard was based on the book from K&R 1st ed.).
+For years the book “The C Programming Language, 1st edition” was the standard on the language C. In 1983 a committee was formed by the American National Standards Institute (ANSI) to develop a modern definition for the programming language C (ANSI X3J11). In 1988 they delivered the final standard definition ANSI C. (The standard was based on the book from K&R 1st ed.).
 
 The standard ANSI C made little changes on the original design of the C language. (They had to make sure that old programs still worked with the new standard). Later on, the ANSI C standard was adopted by the International Standards Organization (ISO). The correct term should therefore be ISO C, but everybody still calls it ANSI C.

@@ -22,12 +22,14 @@ The infix expression has the following general structure.
 Operand1 Operator Operand2
 
 Postfix Expression
+
 The expression in which the operator is used after operands is called postfix expression.
 The postfix expression has the following general structure.
 
 Operand1 Operand2 Operator
 
 Prefix Expression
+
 The expression in which the operator is used before operands is called a prefix expression.
 The prefix expression has the following general structure.
 
