@@ -1,4 +1,4 @@
-# Test uchun ko‘rsatmalar. 
+# Test uchun ko‘rsatmalar
 
 To'g'ri chiqish ma'lumotlarini sinovdan o'tkazishdan tashqari, avtotest tizimi ham shunday qiladi
 dasturingizni va uning manba kodini tekshiring. Sinovdan muvaffaqiyatli o'tish uchun siz kerak

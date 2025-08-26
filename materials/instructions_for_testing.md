@@ -1,4 +1,4 @@
-# Instructions for running tests.
+# Instructions for running tests
 
 In addition to testing for correct output, the automated testing system will
 check your program and its source code. To successfully pass the test, you must
