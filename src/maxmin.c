@@ -2,7 +2,7 @@
 
 void maxmin(int prob1, int prob2, int prob3, int *max, int min);
 
-/* Find a max & min probabilities */
+/* Найди максимальную и минимальную вероятности */
 int main()
 {
     int x, y, z;
@@ -18,8 +18,8 @@ int main()
 }
 
 
-/* This function should be kept !!! (Your AI) */
-/* But errors & bugs should be fixed         */
+/* Эту фукнцию нужно сохранить! (Твой ИИ) */
+/* Но ошибки и баги необходимо исправить */
 void maxmin(int prob1, int prob2, int prob3, int *max, int min)
 {
     *max = min = prob1;
