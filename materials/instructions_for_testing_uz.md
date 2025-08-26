@@ -1,4 +1,4 @@
-# Test uchun ko‘rsatmalar. 
+# Test uchun ko‘rsatmalar 
 
 Dasturning to‘g‘ri ma‘lumot qaytarishidan tashqari avtotest siz tuzgan dastur kodini keyingi punktlar bo‘yicha tekshirib o‘tadi: 
 
