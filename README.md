@@ -1,251 +1,584 @@
-# T09D15
+# D08T06: Многофайловые проекты, символы и строки 
 
-You can find some useful video materials in the "Projects (Media)" section on the Platform.
+Аннотация: Данный проект позволит тебе познакомиться с многофайловыми проектами, а также с символами и строками. 
 
-![This day will help you get acquainted with multifile projects.](misc/eng/images/day9_door.png)
-
-
-## Contents
+## Contents 
 
 1. [Chapter I](#chapter-i) \
- 1.1. [Level 3. Room 1.](#level-3-room-1) 
+    1.1. [Рекомендации к проекту](#рекомендации)
 2. [Chapter II](#chapter-ii) \
- 2.1. [List 1.](#list-1)
+    2.1. [Level 3. Room 1](#room2)
 3. [Chapter III](#chapter-iii) \
- 3.1. [Quest 1. Modules.](#quest-1-modules) \
- 3.2. [Quest 2. Modules II.](#quest-2-modules-ii) \
- 3.3. [Quest 3. Makefile.](#quest-3-makefile) \
- 3.4. [Quest 4*. Macro.](#bonus-quest-4-macro) \
- 3.5. [Quest 5. Static Lib.](#quest-5-static-lib) \
- 3.6. [Quest 6. Dynamic Lib.](#quest-6-dynamic-lib) 
-4. [Chapter IV](#chapter-iv) 
+    3.1. [Quests: Level 3. Room 1](#quests) 
+4. [Chapter IV](#chapter-iii) \
+    4.1. [Level 3. Room 2](#room2)   
+5. [Chapter V](#chapter-iii) \
+    5.1. [Quests: Level 3. Room 2](#quests) 
 
 
-# Chapter I
+## Chapter I
+### Рекомендации к проекту
+Как учиться в «Школе 21»:  
+- На протяжении всего курса ты будешь самостоятельно добывать информацию. Пользуйся всеми доступными средствами поиска информации, к примеру, Google и GigaChat. Будь внимателен к источникам информации: проверяй, думай, анализируй, сравнивай. 
+- Взаимообучение (P2P, Peer-to-Peer) — это процесс, при котором учащиеся обмениваются знаниями и опытом, выступая одновременно в роли учителей и учеников. Этот подход позволяет учиться не только у преподавателя, но и друг у друга, что способствует более глубокому пониманию материала.
+- Не стесняйся просить помощи: вокруг тебя такие же пиры, которые тоже проходят этот путь впервые. Не бойся откликаться на просьбы о помощи. Твой опыт ценен и полезен, смело делись им с другими участниками. 
+- Не списывай, а если пользуешься помощью — всегда разбирайся до конца, почему, как и зачем. Иначе твое обучение не будет иметь никакого смысла. 
+- Если ты на чем-то застрял и кажется, что все уже перепробовал, но по-прежнему непонятно, куда идти, — просто передохни! Поверь, этот совет помогал многим разработчикам в их работе. Проветрись, перезагрузи голову, и, возможно, в следующий раз тебе наконец придет нужное решение!
+- Важен не только результат обучения, но и сам процесс. Нужно не просто решить задачу, а понять, КАК ее решить. 
+- Следи за временем при выполнении проекта. В день ты должен преодолевать минимум одно испытание. 
+- Помни, что каждое задание по завершении проекта проходит ряд проверок: р2р-проверка с помощью чек-листа, проверка набором автотестов, проверка на стиль кода, проверка статическим анализатором, проверка на корректную работу с памятью. 
 
-## Level 3. Room 1.
+Как работать с проектом:
+- Полезные видеоматериалы ты можешь найти в разделе Projects (Media) на Платформе. 
+- Перед выполнением проект необходимо склонировать с GitLab в одноименный репозиторий.
+- Все файлы с кодом необходимо создавать в папке src/ склонированного репозитория.
+- После клонирования проекта необходимо создать ветку `develop` и вести разработку в ней. После этого пушить в GitLab также нужно ветку `develop`.
 
-***LOADING Level 3… \
-LOADING Room 1…***
+## Chapter II
+## Level 3. Room 1
 
-You catch yourself contemplating the structures from The Game of Life pulsating in the black ocean and realize that you must have fallen asleep and your eyes are closed. You open your eyes and find yourself sitting in a rather comfortable chair in front of a large, heavy desk. There are long printed pieces of code that look like ancient scrolls hanging on the walls of this new room. They have a lot of marks, arrows, underlines, and other traces of intellectual activity. 
+***LOADING Level 3…*** \
+***LOADING Room 1…***
 
-![day9_chair](misc/eng/images/day9_chair.png)
+Ты ловишь себя на созерцании пульсирующих в черном океане матричных структур и понимаешь, что, скорее всего, задремал. Ты открываешь глаза и обнаруживаешь себя сидящим в довольно удобном кресле перед большим, массивным столом. Сразу виднен апгрейд до третьего уровня! 
 
-\> *Look around*
+Напротив тебя на стенах очередной комнаты висят распечатанные длинные полотнища кода, похожие на древние свитки. Они испещрены пометками, стрелками, подчеркиваниями и прочими следами интеллектуальной деятельности.
 
-Aside from a shabby and not very trustworthy brochure titled "The C Preprocessor. Macro definitions. A guide for Professionals", the desk has a monitor with a lot of stickers on it. They mainly have dates that mean nothing to you, names, and events from someone's work and personal life. A bright red sticker catches your attention:
+![day9_chair](misc/rus/images/day9_chair.png)
 
->Got to put things in order in the modules. Working with this endless code is unbearable. Looks like no one else is going to do it but me.
+\> *Оглядеться*
 
-And a postscript:
+Помимо потрепанной и не вызывающей особого доверия брошюры «Препроцессор языка Си. Макроопределения. Гайд для профессионалов», на столе стоит монитор, обклеенный стикерами. В основном, на них ничего не значащие для тебя даты, имена и события чьей-то работы и личной жизни. Твое внимание привлекает стикер ярко-красного цвета:
 
->I've prepared all the necessary materials on the computer. A couple of things still need to be finalized. The work is going slowly. I'm getting constantly distracted by routine tasks and new features. But refactoring is important. Otherwise, we will just collapse at some point. Everything will fall apart.
+>Необходимо навести порядок в модулях. Невыносимо больше работать с этими бесконечными портянками кода. Видимо, никто кроме меня это не сделает.
 
-This sticker holds another piece of paper, half the size of an A4
+И приписка:
 
-\> *Read*
+>Подготовил все необходимые материалы на компьютере. Осталось доработать пару моментов. Работа идет медленно. Постоянно отвлекают текущие задачи и новые фичи. Но рефакторинг — это важно. Иначе мы просто заколлапсируем в определенный момент. Все развалится.
+
+Этот стикер удерживает еще одну бумажку размером с половину печатного листа.
+
+\> *Читать*
+
+***LOADING...***
+
+## List 1
+
+>Заголовочный файл — файл, содержимое которого автоматически добавляется препроцессором в исходный текст в том месте, где располагается директива включения (#include <file.h>).
+>
+>В языках программирования С/C++ заголовочные файлы — основной способ подключить к программе типы данных, структуры, прототипы функций, перечисляемые типы и макросы, используемые в другом модуле. По умолчанию используется расширение .h.
+> 
+>Чтобы избежать повторного включения одного и того же кода, используются директивы #ifndef, #define, #endif.
+
+Ты замечаешь, что лист как бы сложен пополам.
+
+\> *Аккуратно развернуть лист*
 
 ***LOADING...***
 
 
-# Chapter II
+## List 2
 
-## List 1.
-
->Header file — a file with content that is automatically added to the source text where the include directive is located (#include <file.h>), by the preprocessor.
->In С/C++ programming languages, header files are the key method for connecting data types, structures, function prototypes, enumerated types, and macros used in a different module, to the program. .h extension is used by default. 
->The following directives are used to avoid including the same code again: #ifndef, #define, #endif.
-
-You notice that the sheet of paper seems to be folded in half.
-
-\> *Carefully unfold the sheet*
-
-***LOADING...***
-
-## List 2.
-
->In software development, Make is a build automation tool that automatically builds executable programs and libraries from source code by reading files called Makefiles which specify how to derive the target program. 
+>In software development, Make is a build automation tool that automatically builds executable programs and libraries from source code by reading files called Makefiles, which specify how to derive the target program.
+>
 >Though integrated development environments and language-specific compiler features can also be used to manage a build process, Make remains widely used, especially in Unix and Unix-like operating systems.
 
-\> *I see. Turn on the computer*
+\> *Ясно. Включить компьютер*
 
-The text you already know flashed on the download screen:
+На экране загрузки замелькал уже знакомый тебе текст:
 
-> Don't forget to check your programs for style norms and memory leaks! \
-> Don't forget to check your programs for style norms and memory leaks! \
-> Don't forget to check your programs for style norms and memory leaks! \
-> Check out ' materials` more often.....
+> Не забывайте проверять свои программы на стилевую норму и утечки памяти! \
+> Не забывайте проверять свои программы на стилевую норму и утечки памяти! \
+> Не забывайте проверять свои программы на стилевую норму и утечки памяти! \
+> Почаще заглядывай в `materials`...
 
 ***LOADING...***
 
 # Chapter III
+## Quests: Level 3. Room 1
+> **Внимание!** Все элементы с плавающей точкой необходимо выводить в формате до двух знаков после запятой через пробел, если исходный код программы не предусматривает иного варианта.
 
-> **Attention!** All floating-point elements must be output in the format up to two decimal places separated by a space, unless the source code of the program provides for another option.
+## Quest 1. Modules
 
-## Quest 1. Modules.
+Компьютер загружается подозрительно долго. Наконец ты видишь загрузку терминала и следующий текст:
 
-Strangely enough, the computer took a long time to start up. You finally see the terminal loading and the following text:
+    Приветственное сообщение рабочей станции #771.
+    Сообщение поставлено в автозагрузку.
+    Шлюз 1-й комнаты 3-го уровня находится на техническом обслуживании.
+    Статус технического обслуживания:
+     1. Начат рефакторинг модулей из директории src.
+     2. Работоспособность модулей нарушена.
+    Проверка:
+     1. Load data_module... FAIL.
+    Необходимо закончить рефакторинг указанных модулей.
+    Разбивку на файлы не менять, она согласована с ведущим архитектором.
 
-    Welcome message from workstation #771.
-    The message is displayed automatically.
-    The gateway of the 1st room of level 3 is under maintenance.
-    Maintenance status:
-     1. Refactoring of modules from the src directory has begun.
-     2. The modules are not working properly.
-    Check:
-     1. Load data_module ... FAIL.
-    Complete the refactoring of the specified modules.
-    Do not change the division into files: it has been approved by the lead architect.
-
-    Restart the system when it's ready.
+    Перезагрузите систему, как будет готово.
     
-***== Quest 1 received. Finalize the src/data_module module so src/data_module/data_module_entry.c is able to start and work correctly. Pay attention to the data_libs directory. Reuse the existing files and functions to the maximum, using the corresponding directives of the preprocessor. It is forbidden to make system calls using the system() function and other similar functions that can access the system kernel directly. This prohibition applies to all subsequent quests ==***
+#### Получен Quest 1. Доработать модуль src/data_module таким образом, чтобы `src/data_module/data_module_entry.c` запускался и работал корректно. Обратить внимание на директорию data_libs. Максимально переиспользовать имеющиеся файлы и функции, применяя соответствующие директивы препроцессора. Запрещено выполнять системные вызовы, используя функцию `system()` и другие аналогичные ей функции, которые могут обращаться напрямую к ядру системы. Данный запрет распространяется на все последующие задачи.
 
 ***LOADING…***
 
+## Quest 2. Modules II
 
-## Quest 2. Modules II.
+\> *Готово. Перезагрузить компьютер*
 
-\> *Ready. Restart the computer*
+После перезагрузки дело пошло шустрее:
 
-It's working much faster after the restart:
-
-    Welcome message from workstation #771.
-    The message is displayed automatically.
-    The gateway of the 1st room of level 3 is under maintenance.
-    Maintenance status:
-     1. Refactoring of modules from the src directory has begun.
-     2. The modules are not working properly.
-    Checking modules:
-     1. Load data_module ... SUCCESS.
-     2. Load yet_another_decision_module ... FAIL.
-    Complete the refactoring of the specified modules.
-    Do not change the division into files: it has been approved by the lead architect.
+    Приветственное сообщение рабочей станции #771.
+    Сообщение поставлено в автозагрузку.
+    Шлюз 1-й комнаты 3-го уровня находится на техническом обслуживании.
+    Статус технического обслуживания:
+     1. Начат рефакторинг модулей из директории src.
+     2. Работоспособность модулей нарушена.
+    Проверка модулей:
+     1. Load data_module... SUCCESS.
+     2. Load yet_another_decision_module... FAIL.
+    Необходимо закончить рефакторинг указанных модулей.
+    Разбивку на файлы не менять, она согласована с ведущим архитектором.
     
-    Restart the system when it's ready.
+    Перезагрузите систему, как будет готово.
 
-***== Quest 2 received. Finalize the src/yet_another_decision_module module so src/yet_another_decision_module/yet_another_decision_module_entry.c is able to start and work correctly. Pay attention to the data_libs directory. Reuse the existing files and functions to the maximum, using the corresponding directives of the preprocessor. ==***
-
-***LOADING…***
-
-
-## Quest 3. Makefile.
-
-\> *Ready. Restart the computer #2*
-
-The hard drive is rustling joyfully: 
-
-    Welcome message from workstation #771.
-    The message is displayed automatically.
-    The gateway of the 1st room of level 3 is under maintenance.
-    Maintenance status:
-     1. Refactoring of modules from the src directory has begun.
-     2. The modules are not working properly.
-    Checking modules:
-     1. Load data_module ... SUCCESS.
-     2. Load yet_another_decision_module ... SUCCESS.
-     3. Make main_executable_module ... FAIL
-    The Makefile part of the build process must be finalized.
-    I haven't had the time to finish it. I was planning to add standard targets (clean, all, rebuild)
-
-    Restart the system when it's ready.
-
-> **Attention!** All paths in the Makefile must be specified relative to the directory in which it is located, since it will be launched from there
-
-> The file name should be `Makefile` here and in the following tasks, unless otherwise specified
-
-***== Quest 3 received. Finalize the src/main_executable_module module so src/main_executable_module/main_executable_module.c is able to start and work correctly. Develop a Makefile for building the solution and place it in the src/main_executable_module directory. Add standard targets to the Makefile: clean, all, rebuild. When creating the Makefile, follow standard solutions used for developing programs in C. The compiled file should be located in the build folder at the root of the repository. It should be named Quest_3. The compile result itself should not be uploaded to the repository. ==***
+#### Получен Quest 2. Доработать модуль src/yet_another_decision_module таким образом, чтобы `src/yet_another_decision_module/yet_another_decision_module_entry.c` запускался и работал корректно. Обратить внимание на директорию data_libs. Максимально переиспользовать имеющиеся файлы и функции, применяя соответствующие директивы препроцессора.
 
 ***LOADING…***
 
-## Quest 4*. Macro.
+## Quest 3. Makefile
 
-\> *Ready. Restart the computer #3*
+\> *Готово. Перезагрузить компьютер #2*
 
-The computer is taking off:
+Компьютер весело зашуршал винчестером:
 
-    Welcome message from workstation #771.
-    The message is displayed automatically.
-    The gateway of the 1st room of level 3 is under maintenance.
-    Maintenance status:
-     1. Refactoring of modules from the src directory has begun.
-     2. The modules are not working properly.
-    Checking modules:
-     1. Load data_module ... SUCCESS.
-     2. Load yet_another_decision_module ... SUCCESS.
-     3. Make main_executable_module ... SUCCESS.
-     4. Load check_list ...
-      4.1. Optional. Add the data_io_macro.h implementation to the src/data_libs folder with parametric macros that take the array,
-     the size, and the format for working with different types of arrays. Add the build_with_macro target to the Makefile. 
-     Finalize main_executable_module.c.
+    Приветственное сообщение рабочей станции #771.
+    Сообщение поставлено в автозагрузку.
+    Шлюз 1-й комнаты 3-го уровня находится на техническом обслуживании.
+    Статус технического обслуживания:
+     1. Начат рефакторинг модулей из директории src.
+     2. Работоспособность модулей нарушена.
+    Проверка модулей:
+     1. Load data_module... SUCCESS.
+     2. Load yet_another_decision_module... SUCCESS.
+     3. Make main_executable_module... FAIL
+    Необходимо доработать процесс сборки в части Makefile.
+    Немного не успел закончить. Планировал добавить стандартные цели (clean, all, rebuild).
+
+    Перезагрузите систему, как будет готово.
+
+> **Внимание!** Все пути в Makefile необходимо указывать относительно той директории, в которой он расположен, т. к. именно из нее он будет запускаться.
+
+> Имя файла должно быть `Makefile` здесь и в следующих заданиях, если не указано иное.
+
+#### Получен Quest 3. Доработать модуль src/main_executable_module таким образом, чтобы `src/main_executable_module/main_executable_module.c` запускался и работал корректно. Разработать Makefile для сборки решения и поместить его в директорию src/main_executable_module. В Makefile предусмотреть стандартные цели: clean, all, rebuild. При разработке Makefile руководствоваться стандартными решениями, применяемыми при разработке программ на языке С. Скомпилированный файл должен располагаться в папке build, в корне репозитория и иметь имя «Quest_3». Сам результат компиляции загружать в репозиторий не нужно. 
+
+***LOADING…***
+
+## Quest 4. Macro
+
+\> *Готово. Перезагрузить компьютер #3*
+
+Компьютер пошел на взлет:
+
+    Приветственное сообщение рабочей станции #771.
+    Сообщение поставлено в автозагрузку.
+    Шлюз 1-й комнаты 3-го уровня находится на техническом обслуживании.
+    Статус технического обслуживания:
+     1. Начат рефакторинг модулей из директории src.
+     2. Работоспособность модулей нарушена.
+    Проверка модулей:
+     1. Load data_module... SUCCESS.
+     2. Load yet_another_decision_module... SUCCESS.
+     3. Make main_executable_module... SUCCESS.
+     4. Load check_list...
+      4.1. Необязательно. Добавить реализацию `data_io_macro.h` в папку src/data_libs на параметрических макросах, принимающих массив,
+      размер и формат для работы с массивами разных типов. В Маkеfile добавить цель build_with_macro. 
+      Немного доработать `main_executable_module.c`.
      ...
      
-    Press Enter to skip or when it's ready.
+    Нажмите Enter для пропуска или по готовности.
 
-***== Quest 4 received. Add the data_io_macro.h implementation to the src/data_libs folder using parametrized multiline macro definitions. The implementation has to work with any types of arrays. Modify main_executable_module.c to make it possible to configure the connection of the io module's header file using a macro (standard data_io.h or data_io_macro.h implementation). Add the build_with_macro target to the Makefile for building main_executable_module with data_io_macro.h, and edit the all target if necessary (for working with data_io.h). The compiled file should be located in the build folder at the root of the repository. It should be named Quest_4. The compile result itself should not be uploaded to the repository. ==***
+#### Получен Quest 4. Добавить в папку src/data_libs реализацию `data_io_macro.h` с помощью параметризованных многострочных макроопределений. Реализация должна работать с массивами любых типов. Доработать `main_executable_module.c` таким образом, чтобы была возможность конфигурировать с помощью макроса подключение header-файла модуля io (стандартная реализация `data_io.h` или `data_io_macro.h`). Добавить в Makefile цель build_with_macro для сборки main_executable_module с `data_io_macro.h`, подредактировав, при необходимости, цель all (для работы с `data_io.h`). Скомпилированный файл должен располагаться в папке build, в корне репозитория и иметь имя «Quest_4». Сам результат компиляции загружать в репозиторий не нужно. 
 
 ***LOADING...***
 
-
-## Quest 5. Static Lib.
+## Quest 5. Static Lib
 
 \> *Enter*
 
-     4. Load check_list ...
-      4.1. Optional. Add the data_io_macro.h implementation with parametric macros that take the array,
-     the size, and the format for working with different types of arrays. Add the build_with_macro target to the Makefile... DONE.
-      4.2. Build data_stat as a static library (.a). Add the build_with_static target to the Makefile.
+     4. Load check_list...
+      4.1. Необязательно. Добавить реализацию `data_io_macro.h` на параметрических макросах, принимающих массив,
+      размер и формат для работы с массивами разных типов. В Макеfile добавить цель build_with_macro... DONE.
+      4.2. Собрать `data_stat` как статическую библиотеку (.a). В Макеfile добавить цель build_with_static.
      
-    Press Enter when it's ready.
+    Нажмите Enter, как будет готово.
 
-***== Quest 5 received. Add the data_stat.a target that builds the data_stat module as the data_stat.a static library, to the Makefile. Add the build_with_static target that builds the main_executable_module, connecting the data_stat module as a static library, to the Makefile. It is not allowed to upload the data_stat.a to the repository, just like any other result of building or compilation (object file, static or dynamic library, executable file). The compiled file should be located in the build folder at the root of the repository. It should be named Quest_5. ==***
+#### Получен Quest 5. Добавить в Makefile цель data_stat.a, собирающую модуль data_stat как статическую библиотеку `data_stat.a`. Добавить в Makefile цель build_with_static, собирающую main_executable_module с подключением модуля data_stat как статической библиотеки. Загружать `data_stat.a` в репозиторий нельзя, как и любой другой результат компиляции и сборки (объектный файл, статическая или динамическая библиотека, исполняемый файл). Скомпилированный файл должен располагаться в папке build, в корне репозитория и иметь имя «Quest_5».
 
 ***LOADING...***
 
-
-## Quest 6. Dynamic Lib.
+## Quest 6. Dynamic Lib
 
 \> *Enter #2*
 
      4. Load check_list ...
-      4.1. Optional. Add the data_io_macro.h implementation with parametric macros that take the array,
-     the size, and the format for working with different types of arrays. Add the build_with_macro target to the Makefile... DONE.
-      4.2. Build data_stat as a static library (.a). Add the build_with_static target to the Makefile... DONE.
-      4.3. Build data_process as a dynamic library (.so). Add the build_with_dynamic target to the Makefile.
+      4.1. Необязательно. Добавить реализацию `data_io_macro.h` на параметрических макросах, принимающих массив,
+      размер и формат для работы с массивами разных типов. В Макеfile добавить цель build_with_macro... DONE.
+      4.2. Собрать `data_stat` как статическую библиотеку (.a). В Макеfile добавить цель build_with_static.... DONE.
+      4.3. Собрать `data_process` как динамическую библиотеку (.so). В Макеfile добавить цель build_with_dynamic.
      
-    Press Enter when it's ready.
+    Нажмите Enter, как будет готово.
 
-***== Quest 6 received. Add the data_process.so target that builds the data_process module as the data_process.so dynamic library, to the Makefile. Add the build_with_dynamic target that builds the main_executable_module, connecting the data_process module as a dynamic library, to the Makefile. Make the necessary changes to the code of the main_executable_module, configuring the use of the dynamic library using macros. It is not allowed to upload the data_process.so to the repository, just like any other building result. The compiled file should be located in the build folder at the root of the repository. It should be named Quest_6. ==***
+#### Получен Quest 6. Добавить в Makefile цель data_process.so, собирающую модуль data_process как динамическую библиотеку `data_process.so`. Добавить в Makefile цель build_with_dynamic, собирающую main_executable_module с подключением модуля data_process как динамической библиотеки. Внести необходимые изменения в код main_executable_module, конфигурировав использование динамической библиотеки с помощью макросов. Загружать `data_process.so` в репозиторий нельзя, как и любой другой результат сборки. Скомпилированный файл должен располагаться в папке build, в корне репозитория и иметь имя «Quest_6». 
 
 ***LOADING...***
-
-
-# Chapter IV
 
 \> *Enter*
 
      4. Load check_list ...
-      4.1. Optional. Add the data_io_macro.h implementation with parametric macros that take the array, 
-     the size, and the format for working with different types of arrays. Add the build_with_macro target to the Makefile... DONE.
-      4.2. Build data_stat as a static library (.a). Add the build_with_static target to the Makefile... DONE.
-      4.3. Build data_process as a dynamic library (.so). Add the build_with_dynamic target to the Makefile... DONE.
+      4.1. Необязательно. Добавить реализацию `data_io_macro.h` на параметрических макросах, принимающих массив, 
+      размер и формат для работы с массивами разных типов. В Макеfile добавить цель build_with_macro... DONE.
+      4.2. Собрать `data_stat` как статическую библиотеку (.a). В Макеfile добавить цель build_with_static.... DONE.
+      4.3. Собрать `data_process` как динамическую библиотеку (.so). В Макеfile добавить цель build_with_dynamic... DONE.
      .....
-     Initializing....
+     Initialising....
      .....
-     The maintenance of the gateway of the 1st room of level 3 is complete.
+     Техническое обслуживание шлюза 1-й комнаты 3-го уровня завершено.
      .....
-     Checking door mechanisms...the doors are open...
-     Please rate how open the doors are on the scale from 1 to 10:
-     >>_
+     Проверка дверных механизмов... Двери открыты...
+     Пожалуйста, оцените степень открытости дверей по шкале от 1 до 10:
+     >>___
 
-\> *I can just leave, right?*
+\> *Я же могу просто выйти?*
 
-Try it!
+Попробуй!
 
-\> *Exit through the door* 
+\> *Выйти в дверь* 
 
-You successfully exit the room through the door. It seems too easy, and the AI has disappeared for some reason.. It's all very suspicious. But it's better to move forward than not to move at all. Clichéd, but true.
+Ты успешно прошел через дверь. Как-то слишком просто, и ИИ куда-то пропал... Все это крайне подозрительно. Но лучше идти вперед, чем не идти. Банально, но правдиво.
 
 ***LOADING...***
+
+# Chapter IV
+## Level 3. Room 2
+
+***LOADING Level 3…*** \
+***LOADING Room 2…***
+
+Ты попадаешь в прекрасно меблированную комнату с большим количеством книжных полок. Куда ни посмотреть — всюду книги. Рядом с дверью — книги. Даже компьютер стоит на стопке книг. Нет, этот уровень точно намного лучше! Как минимум респектабельнее и лучше обставлен!
+
+![day10_book](misc/rus/images/day10_book.png)
+
+\> *Сесть за компьютер, запустить модуль и нажать Enter*
+
+Ты видишь на экране следующие строки:
+
+    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+
+    Аварийное сообщение: недоступны стандартные вызовы библиотеки `string.h`. 
+    Работа модуля лингвистики невозможна.
+
+\> *find -O3 -L / -name "string.h"*
+
+Прождав n часов времени, ты понимаешь, что данной библиотеки попросту **нет** на компьютере.
+
+\> *Дернуть ручку двери*
+
+Не поддается.
+
+\> *Отлично, похоже, теперь еще придется восстанавливать эту библиотеку!*
+
+Твой взгляд падает на многочисленные книги в комнате. Ты замечаешь, что названия книг на корешке находятся в алфавитном порядке.
+
+Похоже на старую компьютерную литературу и распечатки мануалов.
+
+Что-то внутри тебя подсказывает поискать книгу, связанную с библиотекой `string.h`.
+
+\> *Поиск...*
+
+Неудача.
+
+\> *Поиск...*
+
+Неудача.
+
+\> *Поиск...*
+
+Удача. Ты находишь книгу с говорящим названием «The String.h — Linux manual. Complete edition».
+
+\> *Открыть книгу*
+
+Очень похоже на распечатку man-а. Даже шрифт как в терминале. 
+
+***LOADING...***
+
+
+## List 1
+
+\> *Читать книгу*
+
+    PROLOG
+       This manual page is part of the POSIX Programmer's Manual. The Linux
+       implementation of this interface may differ (consult the
+       corresponding Linux manual page for details of Linux behavior), or
+       the interface may not be implemented on Linux.
+    NAME 
+       string.h — string operations
+    SYNOPSIS
+       #include <string.h>
+    DESCRIPTION
+       Some of the functionality described on this reference page extends
+       the ISO C standard. Applications shall define the appropriate feature
+       test macro (see the System Interfaces volume of POSIX.1‐2008, Section
+       2.2, The Compilation Environment) to enable the visibility of these
+       symbols in this header.
+
+       The <string.h> header shall define NULL and size_t as described in
+       <stddef.h>.
+
+       The <string.h> header shall define the locale_t type as described in
+       <locale.h>.
+
+       The following shall be declared as functions and may also be defined
+       as macros. Function prototypes shall be provided for use with ISO C
+       standard compilers.
+
+            Chapter 1 — size_t   strlen(const char *);
+            Chapter 2 — int      strcmp(const char *, const char *);
+            Chapter 3 — char    *strcpy(char *restrict, const char *restrict);
+            Chapter 4 — char    *strcat(char *restrict, const char *restrict);
+            Chapter 5 — char    *strchr(const char *, int);
+            Chapter 6 — char    *strstr(const char *, const char *);
+            Chapter 7 — size_t   strnlen(const char *, size_t);
+            Chapter 8 — int      strncmp(const char *, const char *, size_t);
+          
+            ...
+
+       Inclusion of the <string.h> header may also make visible all symbols
+       from <stddef.h>.
+
+Сколько же функций содержит эта библиотека... Возможно, стоит пойти итеративным путем и после добавления каждой новой функции пытаться перезапускать программный модуль. Может, ему требуются не все функции...
+Иначе можно застрять надолго.
+
+\> *Снова подойти к компьютеру*
+
+Подойдя к компьютеру, ты замечаешь рядом с ним очередную открытую книгу, которую почему-то пропустил при первом подходе. Книга открыта на главе «Модульное тестирование: Часть 2».
+
+\> *Пробежаться глазами*
+
+***LOADING...***
+
+## List 2
+
+>Модульное тестирование (англ. unit testing) — процесс в программировании, позволяющий проверить на корректность отдельные модули исходного кода программы, наборы из одного или более программных модулей вместе с соответствующими управляющими данными, процедурами использования и обработки.
+>
+>Идея состоит в том, чтобы разрабатывать тесты для каждой нетривиальной функции или метода. Это позволяет достаточно быстро проверить, не привело ли очередное изменение кода к регрессии, то есть к появлению ошибок в уже оттестированных частях программы, а также облегчает обнаружение и устранение таких ошибок.
+>
+>Цель модульного тестирования — изолировать отдельные части программы и показать, что по отдельности эти части работоспособны, минимизировав тем самым число состояний системы.
+
+***LOADING...***
+
+# Chapter V
+## Quests: Level 3. Room 2
+
+## Quest 7. Strlen
+
+Возможно, стоит дополнительно написать тесты для каждой новой функции, чтобы удостовериться, что они работают полностью корректно. Кто знает, как может повлиять сломанный код на и так не работающий модуль лингвистики. А тебе все еще нужно выбраться из этой комнаты. К тому же, если что-то пойдет не так, с тестами будет проще искать ошибку.
+
+На каждую добавленную функцию в `src/s21_string.h` нужно добавить в файл `src/s21_string_test.c` тест, разработанный согласно идее модульного тестирования, с названием функции и постфиксом _test, который проверяет функцию на наборе тестовых данных (от 3-х): нормальные значения, ненормальные значения, краевые значения и т. д. По каждому тесту в stdout выводить вход, выход и результат теста (SUCCESS/FAIL).
+
+> НЕ ЗАБЫВАЙ! Все твои программы тестируются на стилевую норму и утечки памяти. Инструкция по запуску тестов все так же лежит в папке `materials`.
+
+#### Получен Quest 7. Создать файлы `src/s21_string.h` и `src/s21_string.c` и добавить в них объявление и определение функции `s21_strlen`. Создать тестовую программу `src/s21_string_test.c`, куда добавить функцию `s21_strlen_test` для проверки функции `s21_strlen` на наборе тестовых данных (от 3-х): нормальные значения, ненормальные значения, краевые значения и т. д. По каждому тесту в stdout выводится вход, выход и результат теста (SUCCESS/FAIL). В main разместить запуск этой функции. При разработке функции `s21_strlen` использовать только средства языка, использовать `string.h` и другие библиотеки нельзя. Сборку программы осуществлять при помощи Makefile. Имя стадии сборки — `strlen_tests`. Исполняемый файл должен храниться в корне в папке build с именем «Quest_7». Запрещено выполнять системные вызовы, используя функцию `system()` и другие аналогичные ей функции, которые могут обращаться напрямую к ядру системы. Данный запрет распространяется на все последующие задачи.
+
+> Разрешено пользоваться только следующими стандартными библиотеками: `stdlib.h`, `stdio.h`.
+
+***LOADING...***
+
+## Quest 8. Strcmp
+
+\> *Первая функция готова*
+
+\> *Перезапуск модуля*
+
+    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+    11111111111111111111111111111111111111111111111111111111111111111111111111111111111
+
+    Аварийное сообщение: недоступны стандартные вызовы библиотеки `string.h`. Работа модуля лингвистики невозможна.
+
+Продолжаем...
+
+#### Получен Quest 8. Добавить объявление и определение функции `s21_strcmp` в файлы `src/s21_string.h` и `src/s21_string.c`. Добавить функцию `s21_strcmp_test` в файл `src/s21_string_test.c` для проверки функции `s21_strcmp` на наборе тестовых данных (от 3-х): нормальные значения, ненормальные значения, краевые значения и т. д. По каждому тесту в stdout выводится вход, выход и результат теста (SUCCESS/FAIL). В main добавить запуск этой функции. При разработке функции `s21_strcmp` использовать только средства языка, использовать `string.h` и другие библиотеки нельзя. Сборку программы осуществлять при помощи Makefile. Имя стадии сборки — `strcmp_tests`. Исполняемый файл должен храниться в корне в папке build с именем «Quest_8». 
+
+> Разрешено пользоваться только следующими стандартными библиотеками: `stdlib.h`, `stdio.h`.
+
+***LOADING...***
+
+## Quest 9. Strcpy
+
+\> *Вторая есть*
+
+\> *Перезапуск*
+
+    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+    1111111111111111111111111111111111111111111111111111111111111111
+    
+    Аварийное сообщение: недоступны стандартные вызовы библиотеки `string.h`. Работа модуля лингвистики невозможна.
+
+#### Получен Quest 9. Добавить объявление и определение функции `s21_strcpy` в файлы `src/s21_string.h` и `src/s21_string.c`. Добавить функцию `s21_strcpy_test` в файл `src/s21_string_test.c` для проверки функции `s21_strcpy` на наборе тестовых данных (от 3-х): нормальные значения, ненормальные значения, краевые значения и т. д. По каждому тесту в stdout выводится вход, выход и результат теста (SUCCESS/FAIL). В main добавить запуск этой функции. При разработке функции `s21_strcpy` использовать только средства языка, использовать `string.h` и другие библиотеки нельзя. Сборку программы осуществлять при помощи Makefile. Имя стадии сборки — `strcpy_tests`. Исполняемый файл должен храниться в корне в папке build с именем  «Quest_9». 
+
+> Разрешено пользоваться только следующими стандартными библиотеками: `stdlib.h`, `stdio.h`.
+
+***LOADING...***
+
+## Quest 10. Strcat
+
+\> *Проверка модуля*
+
+    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+    11111111111111111111111111111111111111
+    
+    Аварийное сообщение: недоступны стандартные вызовы библиотеки `string.h`. Работа модуля лингвистики невозможна.
+
+#### Получен Quest 10. Добавить объявление и определение функции `s21_strcat` в файлы `src/s21_string.h` и `src/s21_string.c`. Добавить функцию `s21_strcat_test` в файл `src/s21_string_test.c` для проверки функции `s21_strcat` на наборе тестовых данных (от 3-х): нормальные значения, ненормальные значения, краевые значения и т. д. По каждому тесту в stdout выводится вход, выход и результат теста (SUCCESS/FAIL). В main добавить запуск этой функции. При разработке функции `s21_strcat` использовать только средства языка, использовать `string.h` и другие библиотеки нельзя. Сборку программы осуществлять при помощи Makefile. Имя стадии сборки — `strcat_tests`. Исполняемый файл должен храниться в корне в папке build с именем «Quest_10».
+
+> Разрешено пользоваться только следующими стандартными библиотеками: `stdlib.h`, `stdio.h`.
+
+***LOADING...***
+
+## Quest 11. Strchr
+
+\> *Очередная унылая проверка модуля*
+
+    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+    11111
+
+    Аварийное сообщение: недоступны стандартные вызовы библиотеки `string.h`. Работа модуля лингвистики невозможна.
+
+#### Получен Quest 11. Добавить объявление и определение функции `s21_strchr` в файлы `src/s21_string.h` и `src/s21_string.c`. Добавить функцию `s21_strchr_test` в файл `src/s21_string_test.c` для проверки функции `s21_strchr` на наборе тестовых данных (от 3-х): нормальные значения, ненормальные значения, краевые значения и т. д. По каждому тесту в stdout выводится вход, выход и результат теста (SUCCESS/FAIL). В main добавить запуск этой функции. При разработке функции `s21_strchr` использовать только средства языка, использовать `string.h` и другие библиотеки нельзя. Сборку программы осуществлять при помощи Makefile. Имя стадии сборки — `strchr_tests`. Исполняемый файл должен храниться в корне в папке build с именем «Quest_11».
+
+> Разрешено пользоваться только следующими стандартными библиотеками: `stdlib.h`, `stdio.h`.
+
+***LOADING...***
+
+## Quest 12. Strstr
+
+\> *Проверяем...*
+
+    1111111111111111111111111111111111111111111111111111111111111111111111111111
+    
+    Аварийное сообщение: недоступны стандартные вызовы библиотеки `string.h`. Работа модуля лингвистики невозможна.
+    
+Сколько же вызовов использует этот модуль?
+    
+#### Получен Quest 12. Добавить объявление и определение функции `s21_strstr` в файлы `src/s21_string.h` и `src/s21_string.c`. Добавить функцию `s21_strstr_test` в файл src/`s21_string_test.c` для проверки функции `s21_strstr` на наборе тестовых данных (от 3-х): нормальные значения, ненормальные значения, краевые значения и т. д. По каждому тесту в stdout выводится вход, выход и результат теста (SUCCESS/FAIL). В main добавить запуск этой функции. При разработке функции `s21_strstr` использовать только средства языка, использовать `string.h` и другие библиотеки нельзя. Сборку программы осуществлять при помощи Makefile. Имя стадии сборки — `strstr_tests`. Исполняемый файл должен храниться в корне в папке build с именем «Quest_12».
+
+> Разрешено пользоваться только следующими стандартными библиотеками: `stdlib.h`, `stdio.h`.
+
+***LOADING...***
+
+## Bonus Quest 13. Strtok
+
+\> *Снова...*
+
+    11111111111111111111111111111111
+    111111111
+    111
+    
+    Загрузка...
+    Подгрузка...
+    Подкачка...
+    Готово.
+    
+    Данные модуля загружены успешно, модуль готов к запуску.
+
+Наконец-то!
+
+\> *Подтвердить запуск модуля*
+
+    Запуск справочного модуля...
+    ОК!
+    
+    Справочный модуль к Вашим услугам, чем могу помочь?
+
+\> *Ввести: «Мне необходимо пройти дальше»*
+
+    Разбиение вопроса — провалено.
+    
+    Аварийное сообщение: недоступны расширенные вызовы библиотеки `string.h` — функция `strtok` не найдена.
+    
+Да что ж такое! Похоже, нужно добавить еще и эту функцию в библиотеку.
+
+#### Получен Quest 13. Добавить объявление и определение функции `s21_strtok` в файлы `src/s21_string.h` и `src/s21_string.c`. Добавить функцию `s21_strtok_test` в файл `src/s21_string_test.c` для проверки функции `s21_strtok` на наборе тестовых данных (от 3-х): нормальные значения, ненормальные значения, краевые значения и т. д. По каждому тесту в stdout выводится вход, выход и результат теста (SUCCESS/FAIL). В main добавить запуск этой функции. При разработке функции `s21_strtok` использовать только средства языка, использовать `string.h` и другие библиотеки нельзя. Сборку программы осуществлять при помощи Makefile. Имя стадии сборки — `strtok_tests`. Исполняемый файл должен храниться в корне в папке build с именем «Quest_13».
+
+> Разрешено пользоваться только следующими стандартными библиотеками: `stdlib.h`, `stdio.h`.
+
+***LOADING...***
+
+## Bonus Quest 14. Width
+
+\> *Перезапуск модуля*
+
+    Запуск справочного модуля...
+    ОК!
+    
+    Справочный модуль к Вашим услугам, чем могу помочь?
+    
+\> *Ввести: «Мне необходимо пройти дальше»*
+
+    Проход дальше — распознано.
+    Поиск информации по базе данных...
+    
+    Данные по ключу для комнаты 3–2:
+    для разблокировки двери в комнате 3–2 необходимо внести посильную лепту в разрабатываемый программный комплекс
+    по обработке текстов. Сканирование доступных тикетов......
+    ..............................................................
+    ..............................................................
+    ..............................................................
+    Найден тикет. Составить программу `src/text_processor.c` с полным функционалом текстового процессора. 
+    Источники для вдохновения: MS Word, LibreOffice, OpenOffice.
+
+\> *Ввести: «Эм. Это, кажется, перебор»*
+
+    Анализ ответа... Ответ проанализирован.
+    Характеристики ответа: сарказм, боль, уныние, недоверие, испуг, отказ.
+    Поиск компромисса...
+    Компромисс №1: реализовать не всю задачу, а ее часть.
+    Составить программу `src/text_processor.c`, которая работает только в одном режиме 
+    с ключом -w (форматирование по ширине), принимая число и текст до 100 символов через stdin.
+    Как результат она должна сформировать и затем вывести входной текст, отформатированный по ширине. 
+    Сама ширина строки текста в символах задается первым числом. 
+    После обновления удаленного репозитория комнаты, дверь будет разблокирована.
+    Компромисс №2: выйти.
+
+#### Получен Quest 14. Создать программу `src/text_processor.c`, которая при запуске с ключом командной строки `-w` принимает на вход в stdin число (ширину строки) и текст до 100 символов, оканчивающийся символом переноса строки. При любых других ключах программа должна выводить «n/a». При запуске с ключом `-w` программа форматирует входной текст по ширине и выводит в stdout, имитируя поведение текстового процессора. Текст должен быть разбит на несколько строк, каждая из которых состоит из указанного количества символов. Строки не могут начинаться с пробела и не могут заканчиваться пробелом, последняя строка не должна оканчиваться знаком переноса строки. Слово может быть разбито для перехода на новую строку через символ «-» только, если целиком не помещается на одной строке. Во всех других случаях оно должно оставаться целым. Слова в строке размещать равномерно, заполняя пространство между ними пробелами. Использовать `string.h` нельзя. Имя стадии сборки — `text_processor`. Исполняемый файл должен храниться в корне в папке build с именем «Quest_14».
+
+| Параметры командной строки | Входные данные | Выходные данные |
+| ------ | ------ | ------ |
+| -w | 10<br/>hello how are you | hello how<br/>are you |
+| -w | 5<br/>ab abcd ab abcd ab abcdefgh | ab<br/>abcd<br/>ab<br/>abcd<br/>ab a-<br/>bcde-<br/>fgh |
+
+> Разрешено пользоваться только следующими стандартными библиотеками: `stdlib.h`, `stdio.h`.
+
+***LOADING...***
+
+# Chapter VI
+
+\> *Ввести: «То есть я могу выйти?»*
+
+    Все условия для выхода выполнены.
+    Осталось последнее.
+    Давайте поговорим.
+
+\> *Ввести: «Может быть, в другой раз?..»*
+
+    Ваш ответ был предсказан предиктивным алгоритмом с точностью до 91%.
+    Спасибо за содержательную беседу и помощь в валидации предиктивной лингвистической аналитики.
+    Всего доброго.
+    Открытие двери...
+    
+Раздается щелчок, и дверь открывается настежь, как на пружинах. Пора в путь! 
+
+***LOADING...***
+
+💡**Просим тебя по завершении проекта оставить [обратную связь](https://forms.yandex.ru/cloud/68a05a2a90fa7b10773180e8). Это поможет нашей команде улучшить данный продукт. Спасибо!**
 
