@@ -1,8 +1,13 @@
 #!/bin/bash
 
 
-$index 
-while IFS= read -r line
+$index
+line_count=$(grep -c . important_data_for_ai_module_2.txt)
+if [ "$line_count" -gt 5 ]; then
+  echo 'ОШИБКА! ОШИБКА! ОШИБКА! ОШИБКА! Обнаружены лишние данные после 5 модулей!'
+  exit 1
+fi 
+while IFS= read -r line || [ -n "$line" ]
 do
   index=$[ $index + 1 ]
   if [ "$index" = "$line" ]; then
