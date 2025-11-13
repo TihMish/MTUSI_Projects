@@ -1,293 +1,306 @@
-# T05D08
+# D07T04. Указатели и массивы 
 
-You can find some useful video materials in the "Projects (Media)" section on the Platform.
-
-![day5_door](misc/eng/images/day5_door.png)
-
+Аннотация: данный проект позволит тебе познакомиться с указателями и массивами.
 
 ## Contents
 
-1. [Chapter I](#chapter-i) \
- 1.1. [Level 2. Room 1.](#level-2-room-1) 
-2. [Chapter II](#chapter-ii) \
- 2.1. [List 1. Pointer.](#list-1-pointer) \
- 2.2. [List 2. Listing.](#list-2-listing) \
- 2.3. [List 3. Operations.](#list-3-operations) \
- 2.4. [List 4. Array.](#list-4-array) \
- 2.5. [List 5. Equality.](#list-5-equality) 
-3. [Chapter III](#chapter-iii) \
- 3.1.  [Quest 1. Arguments and pointers.](#quest-1-arguments-and-pointers) \
- 3.2.  [Quest 2. Data I/O.](#quest-2-data-io) \
- 3.3.  [Quest 3. Data metrics.](#quest-3-data-metrics) \
- 3.4.  [Quest 4. Search.](#quest-4-search) 
-4. [Chapter IV](#chapter-iv)
+1. [Введение](#введение) \
+    1.1. [Рекомендации к проекту](#рекомендации-к-проекту)
+2. [Chapter I](#chapter-i) \
+    2.1. [Level 2. Room 1](#level-2-room-1)
+3. [Chapter II](#chapter-ii) \
+    3.1. [List 1. Pointer](#list-1-pointer) \
+    3.2. [List 2. Listing](#list-2-listing) \
+    3.3. [List 3. Operations](#list-3-operations) \
+    3.4. [List 4. Array](#list-4-array) \
+    3.5. [List 5. Equality](#list-5-equality)
+4. [Chapter III](#chapter-iii) \
+    4.1. [Quest 1. Arguments and pointers](#quest-1-arguments-and-pointers) \
+    4.2. [Quest 2. Data I/O](#quest-2-data-io) \
+    4.3. [Quest 3. Data metrics](#quest-3-data-metrics) \
+    4.4. [Quest 4. Search](#quest-4-search)
+5. [Chapter IV](#chapter-iv)
+6. [Chapter V](#chapter-v) \
+    6.1. [Level 2. Room 2](#level-2-room-2)
+7. [Chapter VI](#chapter-vi) \
+    7.1. [List 1 (Room 2)](#list-1-room-2)
+8. [Chapter VII](#chapter-vii) \
+    8.1. [Quest 5. Sort & memory](#quest-5-sort--memory) \
+    8.2. [Quest 6. Several arrays](#quest-6-several-arrays) \
+    8.3. [Quest 7. Cyclic shift](#quest-7-cyclic-shift) \
+    8.4. [Bonus Quest 8. Arbitrary-precision arithmetic](#bonus-quest-8-arbitrary-precision-arithmetic)
+9. [Chapter VIII](#chapter-viii)
 
+## Введение
+### Рекомендации к проекту
+Как учиться в «Школе 21»:  
+- На протяжении всего курса ты будешь самостоятельно добывать информацию. Пользуйся всеми доступными средствами поиска информации, к примеру, Google и GigaChat. Будь внимателен к источникам информации: проверяй, думай, анализируй, сравнивай. 
+- Взаимообучение (P2P, Peer-to-Peer) — это процесс, при котором учащиеся обмениваются знаниями и опытом, выступая одновременно в роли учителей и учеников. Этот подход позволяет учиться не только у преподавателя, но и друг у друга, что способствует более глубокому пониманию материала.
+- Не стесняйся просить помощи: вокруг тебя такие же пиры, которые тоже проходят этот путь впервые. Не бойся откликаться на просьбы о помощи. Твой опыт ценен и полезен, смело делись им с другими участниками. 
+- Не списывай, а если пользуешься помощью — всегда разбирайся до конца, почему, как и зачем. Иначе твое обучение не будет иметь никакого смысла. 
+- Если ты на чем-то застрял и кажется, что все уже перепробовал, но по-прежнему непонятно, куда идти, — просто передохни! Поверь, этот совет помогал многим разработчикам в их работе. Проветрись, перезагрузи голову, и, возможно, в следующий раз тебе наконец придет нужное решение!
+- Важен не только результат обучения, но и сам процесс. Нужно не просто решить задачу, а понять, КАК ее решить. 
+- Следи за временем при выполнении проекта. В день ты должен преодолевать минимум одно испытание. 
+- Помни, что каждое задание по завершении проекта проходит ряд проверок: р2р-проверка с помощью чек-листа, проверка набором автотестов, проверка на стиль кода, проверка статическим анализатором, проверка на корректную работу с памятью. 
 
-# Chapter I
+Как работать с проектом:
+- Полезные видеоматериалы ты можешь найти в разделе Projects (Media) на Платформе. 
+- Перед выполнением проект необходимо склонировать с GitLab в одноименный репозиторий.
+- Все файлы с кодом необходимо создавать в папке src/ склонированного репозитория.
+- После клонирования проекта необходимо создать ветку `develop` и вести разработку в ней. После этого пушить в GitLab также нужно ветку `develop`.
 
-## Level 2. Room 1.
+## Chapter I
+## Level 2. Room 1
+
+![level2_room1](misc/rus/images/level2_room1.png)
 
 ***LOADING Level 2… \
 LOADING Room 1…***
 
-The first level was not easy, but you still managed to get out. It's hard to say if the new level of this labyrinth is different from the previous one or not. Perhaps the color of the walls is a bit different... or not? Let's hope the AI is a bit calmer on this level. \
-These are just some of the thoughts racing in your head.
+Первый уровень дался непросто, но ты все-таки выбрался. Сложно сказать, отличается ли новый уровень этого лабиринта от старого или нет. Разве что цвет стен несколько иной... или так кажется? Хорошо бы, чтобы ИИ на этом уровне был поспокойнее. 
 
-\> *Look around*
+Вот лишь небольшой срез мыслей, роящихся в твоей голове.
 
-The room looks unusual. A computer with an old dot matrix printer and a stack of yellowed paper is standing on the floor right in the middle of the room, as if someone measured out its location. Next to it is a crumpled cushion, a saucer for cookies (which is obvious from the abundance of crumbs), and a long-finished cup of tea (which is also obvious from a dried-up teabag). The floor and the walls are covered with an even layer of sheets of paper with numbers on them. Red threads are stretched over the paper. It all looks like a spy movie.
+\> *Оглядеться*
 
-\> *Sit down on the cushion*
+Комната, меж тем, нетипичная. Ровно по центру, будто геометрически вычисленному, прямо на полу стоит компьютер со стареньким матричным принтером с пожелтевшей стопкой бумаг. Рядом с ним — смятая подушка, блюдце для печенья (о чем намекает обилие крошек) и чашка с давно выпитым чаем (о чем также недвусмысленно намекает засохший чайный пакетик). Пол и стены ровным слоем устелены листами с наборами чисел. А поверх них растянуты красные нити. Шпионский фильм, не иначе.
 
-You've sat down on the cushion. It's soft. \
-Comfort++
+\> *Сесть на подушку*
 
-![day5_pillow](misc/eng/images/day5_pillow.png)
+Ты садишься на подушку. Мягко. \
+Комфорт++
 
-\> *Move saucer and cup away*
+![level2_room1_pillow](misc/rus/images/level2_room1_pillow.png)
 
-You've moved the saucer and the cup away. It hasn't helped much. \
-Comfort--
+\> *Отодвинуть блюдце и чашку*
 
-\> *Look at the monitor*
+Ты отодвигаешь блюдце и чашку. Не сильно помогло. \
+Комфорт--
 
-The terminal shows a single line: Segmentation fault, and a blinking cursor.
+\> *Посмотреть в монитор*
 
-\> *Look at the floor*
+В терминале одна единственная строчка: «Segmentation fault». И мигает курсор.
 
-Among lots of similar-looking sheets of paper, you notice a makeshift booklet stitched with red thread. Yes, it sounds like a metaphor.
+\> *Посмотреть на пол*
 
-\> *Take the booklet*
+Среди множества однотипных листов ты замечаешь «самиздатовский» буклет, подшитый красной нитью. Да, звучит как метафора.
 
-You can feel that many people have touched the booklet before you. You need to be careful with it. The cover features a single unremarkable word that was clearly typed on with a typewriter: POINTER. \
-The unformalized nature of it gives you chills.
+\> *Взять буклет*
 
-\> *Turn the page*
+Буклет часто брали в руки — это ощущается. Надо бы с ним поосторожнее. На обложке ты видишь только одно неприметное слово, явно набитое печатной машинкой: «POINTER».
 
-***LOADING...***
+Что-то неформализуемое в нем заставляет легкую дрожь пробежать по твоей коже.
 
-
-# Chapter II
-
-## List 1. Pointer.
-
->In 1955, Soviet computer scientist Kateryna Yushchenko invented the Address programming language that made possible indirect addressing and addresses of the highest rank – analogous to pointers. This language was widely used on the Soviet Union computers. However, it was unknown outside the Soviet Union and usually Harold Lawson is credited with the invention, in 1964, of the pointer. In 2000, Lawson was presented the Computer Pioneer Award by the IEEE "for inventing the pointer variable and introducing this concept into PL/I, thus providing for the first time, the capability to flexibly treat linked lists in a general-purpose high-level language". His seminal paper on the concepts appeared in the June 1967 issue of CACM entitled: PL/I List Processing. According to the Oxford English Dictionary, the word pointer first appeared in print as a stack pointer in a technical memorandum by the System Development Corporation.
-
-\> *Turn the page*
+\> *Перелистнуть страницу*
 
 ***LOADING...***
 
+## Chapter II
+## List 1. Pointer
 
-## List 2. Listing.
+>In 1955, Soviet computer scientist Kateryna Yushchenko invented the Address programming language that made possible indirect addressing and addresses of the highest rank — analogous to pointers. This language was widely used on the Soviet Union computers. However, it was unknown outside the Soviet Union and usually Harold Lawson is credited with the invention, in 1964, of the pointer. In 2000, Lawson was presented the Computer Pioneer Award by the IEEE "for inventing the pointer variable and introducing this concept into PL/I, thus providing for the first time, the capability to flexibly treat linked lists in a general-purpose high-level language". His seminal paper on the concepts appeared in the June 1967 issue of CACM entitled: PL/I List Processing. According to the Oxford English Dictionary, the word pointer first appeared in print as a stack pointer in a technical memorandum by the System Development Corporation.
+
+\> *Перелистнуть страницу*
+
+***LOADING...***
+
+## List 2. Listing
 
     void main() {
         int a = 2;      // a == 2
         int b = 4;      // b == 4
         int *p = 0;     // p == 0
-        p = &a;         // p == address of the a variable
-        *p = 3;         // a == 3... or not?
-        p++;            // p == address of the b variable ??!?!?
+        p = &a;         // p == адрес переменной a
+        *p = 3;         // a == 3... или нет?
+        p++;            // p == адрес переменной b ??!?!?
         (*p)++;         // b == 5 O_o WTF
-        *p = *(p - 1);  // b == a == 3 ...
+        *p = *(p - 1);  // b == a == 3...
     }
 
-Looks like someone was struggling to understand what POINTER is...
+Кажется, кто-то силился понять, что же это такое — POINTER...
 
-\> *Turn the page*
-
-***LOADING...***
-
-
-## List 3. Operations.
-
-> Permitted operations with a typed pointer:
-> (perhaps I will remember it this way) 
->- Getting an address
->- Pointer dereference
->- Number addition
->- Subtraction of pointers
->- Comparison of pointers
->- Logical operations with pointers
->- Pointer assignment
-
-\> *Turn the page*
+\> *Перелистнуть страницу*
 
 ***LOADING...***
 
+## List 3. Operations
 
-## List 4. Array.
+> Допустимые операции над типизированным указателем
+> (может, хотя бы так я это запомню): 
+>- получение адреса,
+>- разыменование указателя,
+>- сложение с числом,
+>- вычитание указателей,
+>- сравнение указателей,
+>- логические операции над указателями,
+>- присваивание указателей.
 
-> REMEMBER!
->- Arrays do not exist in the C language!
->- int a[10] is not an array!
->- It's a pointer! Everything is a pointer!
->- The function is a pointer.
->- You are a pointer.
->- Yes, those "people" in the hall are also pointers.
->- Locked up for experiments and research...
-
-It looks a lot like a madman's diary. It's got to be.
-
-\> *Turn the page*
+\> *Перелистнуть страницу*
 
 ***LOADING...***
 
+## List 4. Array
 
-## List 5. Equality.
+> ПОМНИ!
+>- В языке С массивов не существует!
+>- int a[10] — это не массив!
+>- Это указатель! Все указатель!
+>- И функция указатель.
+>- И ты указатель.
+>- Да, те «люди» из холла — тоже указатели.
+>- Запертые для опытов и изучения...
+
+Очень похоже на записки сумасшедшего. Наверняка это они и есть.
+
+\> *Перелистнуть страницу*
+
+***LOADING...***
+
+## List 5. Equality
 
     void main() {
         int a[10];
         a[2] == *(a + 2) == *(2 + a) == 2[a]; //!!!!!!!!!!!!!!!
     }
 
-\> *Yeah. That's very informative. Turn the page*
+\> *Мда. Очень информативно. Перелистнуть страницу*
 
-The remaining pages are heavily wrinkled and scribbled all over. It's impossible to read anything. Your predecessor obviously fought for a long time trying to figure out these questions... And he wasn't very successful at that. \
-Let's see if you can do it.
+Остальные страницы сильно смяты и все исчерканы. Разобрать что-либо невозможно. Очевидно, твой предшественник долго сражался, пытаясь осознать эти вопросы... И у него это не слишком-то и вышло. \
+Посмотрим, получится ли у тебя?
 
-\> *It sounds like teasing*
+\> *Это похоже на подначивание*
 
-Not at all. Just a friendly conversation between a narrator and a player. Nothing unusual.
+Ничуть. Просто дружеская беседа рассказчика и игрока. Ничего необычного.
 
-\> *Press Enter in a determined manner*
+\> *Волевым движением нажать на Enter*
 
     AI Data Analyzer v0.01
-    Initializing......
-    Loading....
+    Initialising...
+    Loading...
     1. Load module #1... Success!     
     2. Load module #2... Success!
-    3. Load decision-making module 
+    3. Load decision decision-making module 
     3.1. Load maxmin module
 
     Segmentation fault
 
 ***LOADING...***
 
+## Chapter III
+## Quests: Level 2. Room 1
 
-# Chapter III
->**Attention!** In the quests of this day, it is forbidden to use dynamic memory.
-## Quest 1. Arguments and pointers.
+>**Внимание!** В квестах этого дня запрещено использовать динамическую память.
 
-\> *View the src folder in the repository*
+## Quest 1. Arguments and pointers
+\> *Посмотреть папку src репозитория*
 
-You see several files, including the maxmin module. 
+Ты видишь несколько файлов, в том числе модуль `maxmin`. 
 
-\> *Load the maxmin module separately*
+\> *Запустить модуль `maxmin` отдельно*
 
     Segmentation fault
 
-Looks like you'll have to fix it.
+По всей видимости, придется его починить.
 
-...
+\> *Всю жизнь мечтал чинить `maxmin`-модули...* 
 
-\> *I've dreamed of fixing maxmin modules my whole life.* 
+Наконец-то твоя мечта сбудется!
 
-\> *Open a reminder*
-> DON'T FORGET! All your programs are tested for the style norm and memory leaks. Start-up instructions
-> the list of tests is also in the `materials` folder
+\> *Открыть напоминание*
 
-***== Quest 1 received. Make corrections in the src/maxmin.c program so it compiles itself and works correctly (finds max and min out of 3 integer numbers and displays them on the screen). Do not change the structure of the program. In case of incorrect input, you must output n/a. It is forbidden to make system calls using the system() function and other similar functions that can access the system kernel directly. This prohibition applies to all subsequent quests ==***
+> НЕ ЗАБЫВАЙ! Все твои программы тестируются на стилевую норму и утечки памяти. Инструкция по запуску тестов все также лежит в папке materials.
 
-| Input | Output |
+#### Получен Quest 1. Внести исправления в программу `src/maxmin.c` таким образом, чтобы программа собиралась и корректно работала (находила max и min из 3 целых чисел и выводила их на экран). Структуру программы не менять. В случае некорректного ввода необходимо выводить «n/a».
+
+>**ВАЖНО!** Запрещено выполнять системные вызовы, используя функцию `system()` и другие аналогичные ей функции, которые могут обращаться напрямую к ядру системы. Данный запрет распространяется на все последующие задачи.
+
+| Входные данные | Выходные данные |
 | ------ | ------ |
 | 1 2 3 | 3 1 |
 
 ***LOADING…***
 
+## Quest 2. Data I/O
 
-## Quest 2. Data I/O.
-
-\> *Ready*
+\> *Готово*
 
     AI Data Analyzer v0.01
-    Initializing......
-    Loading....
+    Initialising...
+    Loading...
     1. Load module #1... Success!     
     2. Load module #2... Success!
-    3. Load decision-making module 
+    3. Load decision decision-making module 
     3.1. Load maxmin module... Success!
     3.2. Load data i/o & squaring module
     
     Segmentation fault
 
-\> *The evening is no longer languid*
+\> *Вечер перестает быть томным...*
 
-It's daytime now. Probably..
+Сейчас день. Наверное...
 
-\> *View the src folder in the repository*
+\> *Посмотреть папку src репозитория*
 
-A squaring module is also in the folder.
+В папке еще находится модуль `squaring`.
 
-\> *Load the squaring module separately*
+\> *Запустить модуль `squaring` отдельно*
 
     Segmentation fault
 
-This one also needs to be fixed.
+И тут требуется починка. Да что ж такое?
 
-...
+#### Получен Quest 2. Внести исправления в программу `src/squaring.c` таким образом, чтобы программа собиралась и корректно работала (принимала через stdin массив целых чисел, возводила их в квадрат и выводила в stdout). В случае некорректного ввода необходимо выводить «n/a». Уменьшать декомпозицию нельзя — функции можно только добавлять при необходимости, но не убирать.
 
-***== Quest 2 received. Make corrections in the src/squaring.c program so it compiles itself and works correctly (receives an array of integers via stdin, squares them and outputs the result to stdout). In case of incorrect input, you must output n/a. Decreasing the decomposition is not allowed–you can add functions if needed, but you cannot delete them. ==***
-
-| Input | Output |
+| Входные данные | Выходные данные |
 | ------ | ------ |
 | 3<br/>1 2 3 | 1 4 9 |
 
 ***LOADING…***
 
-
 ## Quest 3. Data metrics
 
-\> *Ready*
+\> *Готово*
 
     AI Data Analyzer v0.01
-    Initializing......
-    Loading....
+    Initialising...
+    Loading...
     1. Load module #1... Success!     
     2. Load module #2... Success!
-    3. Load decision-making module 
+    3. Load decision decision-making module 
     3.1. Load maxmin module... Success!
     3.2. Load data i/o & squaring module... Success!
     3.2. Load stat module
     
     ERROR 
 
-"Not again," you think to yourself.
+«Сколько ж можно», — проскальзывает в твоей голове.
 
-\> *View the src folder in the repository again*
+\> *Снова посмотреть папку src репозитория*
 
-The folder contains a stat module. It's almost empty. It's probably designed for calculating statistical metrics from an array of data. 
+В папке находится модуль `stat`. Он практически пустой. Судя по всему, он предназначен для расчета статистических метрик по массиву данных.
 
-\> *Open a mathematical statistics textbook*
+\> *Открыть учебник по математической статистике*
 
-Your dear crazy friend hasn't left one here. You'll have to guess and figure it out for yourself.
+Твой любезный сумасшедший друг его, к сожалению, не оставил. Придется гадать и разбираться так.
 
-...
+#### Получен Quest 3. Добавить реализации необходимых функций в программу `src/stat.c` таким образом, чтобы программа собиралась и корректно работала (принимала через stdin массив целых чисел, выводила бы его, вычисляла и выводила на новой строке набор статистических метрик — экстремумы (max и min), математическое ожидание и дисперсию, считая, что мы имеем дело с дискретным равномерным распределением). В случае некорректного ввода необходимо выводить «n/a». Уменьшать декомпозицию нельзя — функции можно только добавлять при необходимости, но не убирать. Придерживаться предложенной структуры программы. Числа с плавающей запятой выводить с точностью 6 знаков после запятой.
 
-***== Quest 3 received. Add implementations of the necessary functions into 
-the src/stat.c program so it compiles itself and works correctly (receives 
-an array of integers via stdin, displays it, calculates and displays on the new line a set 
-of statistical metrics – maxima and minima, the expected value, and variance, assuming that we are dealing with a discrete uniform distribution). 
-In case of incorrect input, you must output n/a. Decreasing the decomposition 
-is not allowed – you can add functions if needed, but you cannot delete them. 
-Stick to the recommended program structure. Output floating-point numbers with an accuracy of 6 decimal places. ==***
-
-| Input | Output |
+| Входные данные | Выходные данные |
 | ------ | ------ |
 | 4<br/>1 2 3 4 | 1 2 3 4<br>4 1 2.500000 1.250000 |
 
 ***LOADING…***
 
+## Quest 4. Search
 
-## Quest 4. Search.
-
-\> *Ready*
+\> *Готово*
 
     AI Data Analyzer v0.01
-    Initializing......
-    Loading....
+    Initialising...
+    Loading...
     1. Load module #1... Success!     
     2. Load module #2... Success!
-    3. Load decision-making module 
+    3. Load decision decision-making module 
     3.1. Load maxmin module... Success!
     3.2. Load data i/o & squaring module... Success!
     3.2. Load stat module... Success!
@@ -295,32 +308,29 @@ Stick to the recommended program structure. Output floating-point numbers with a
     
     NOT FOUND 
 
-\> *View the src folder in the repository again*
+\> *Посмотреть папку src репозитория еще раз*
 
-The folder includes a search module. But you're not going to like it. 
+Есть модуль `search`. Но он тебе не понравится. 
 
-\> *View the search module*
+\> *Посмотреть модуль `search`*
 
-Just comments. No code. Looks like you need to implement it to move forward.
+Только комментарии. Кода нет. Чтобы двигаться дальше, видимо, нужно реализовать его. Интересно, хоть что-то в этой комнате будет проходить легко? 
 
-...
+#### Получен Quest 4. Реализовать программу `src/search.c` в соответствии с комментарием. Программа должна принимать через stdin массив целых чисел и находить в нем первое вхождение числа, удовлетворяющего следующим требованиям: быть четным, быть большим или равным математическому ожиданию, подчиняться правилу трех сигм и не равняться 0. Найденное число должно быть выведено в stdout. Если такого числа нет, то программа должна выдавать 0. Максимальное количество введенных чисел равно 30. В случае некорректного ввода необходимо выводить «n/a». При разработке необходимо придерживаться идей декомпозиции из предыдущих квестов, приветствуется переиспользование уже разработанных функций. Функции должны быть компактными, простыми и занимать не более 20–30 строк кода. 
 
-***== Quest 4 received. Implement the src/search.c program in accordance with the comment. The program has to receive an array of integers via stdin and find the first occurrence of number that meets the following requirements in that array: even number, equal to or above the expected value, follows the three-sigma rule, does not equal 0. The number it finds must be output to stdout. If such number does not exist, the program must output 0. The maximum number of numbers entered is 30. In case of incorrect input, you must output n/a. During the development, stick to the ideas of decomposition from previous quests; you are welcome to reuse the functions that have already been developed. The functions must be simple and compact and take up no more than 20–30 lines of code. ==***
-
-| Input | Output |
+| Входные данные | Выходные данные |
 | ------ | ------ |
 | 4<br/>1 2 3 4 | 4 |
 
 ***LOADING…***
 
+## Chapter IV
 
-# Chapter IV.
-
-\> *No good will come of this. Ready.*
+\> *Добром это не кончится. Готово.*
 
     AI Decision Making Module v0.01
-    Initializing......
-    Loading....
+    Initialising...
+    Loading...
     1. Load module #1... Success!     
     2. Load module #2... Success!
     3. Load data modules 
@@ -333,23 +343,239 @@ Just comments. No code. Looks like you need to implement it to move forward.
     ............
     ...............
 
-    Hello. Standard decision-making module here. How can I help you?
+    Hello. Вас приветствует стандартный модуль принятия решений.
+    Чем могу быть полезен?
 
-\> *Type in "I would like to exit through the ~~window~~ door"*
+\> *Ввести: «Хотелось бы выйти в ~~окно~~ дверь»*
 
-    Analyzing request...
-    Collecting data...
-    Analyzing data...
-    Making a decision...
+    Анализ запроса...
+    Сбор данных...
+    Анализ данных...
+    Принятие решения...
 
-    The door is open. 
-    You are expected in the next room, please come through.
-    Thank you for using the services of the decision-making module v0.01.
+    Дверь открыта. 
+    Вас ожидают в следующей комнате, пожалуйста, пройдите дальше.
+    Спасибо, что воспользовались услугами модуля принятия решений v0.01.
 
-\> *Open the door*
+\> *Открыть дверь*
 
-It's been too quiet and simple this time around. You wonder what has happened to the local madman. Will you meet him in the future? \
-It turned out the door was open so you left the room freely, rustling the paper with printed memory blocks and almost stumbling over the stretched threads.
+Как-то тихо и просто далось открытие двери в этот раз. Интересно, что случилось с местным сумасшедшим? Встретишься ли ты с ним в будущем? 
+
+Дверь теперь открыта, и ты свободно выходишь из комнаты, шурша листочками с распечатанными блоками памяти и слегка спотыкаясь о растянутые нити.
 
 ***LOADING…***
 
+## Chapter V
+## Level 2. Room 2
+
+***LOADING Level 2… \
+LOADING Room 2…***
+
+![level2_room2](misc/rus/images/level2_room2.png)
+
+Очередная комната, очередная дверь. Все как прежде... Или нет? Перед тобой пустота, стены отдают недавней шпаклевкой — запахом, которого раньше не было. Ты ловишь себя на мысли, а были ли вообще какие-нибудь запахи ранее? Обернувшись, ты замечаешь такой же стол с таким же компьютером и новыми листами бумаги. Один из них привлекает твое внимание.
+
+\> *Взять лист*
+
+***LOADING...***
+
+## Chapter VI
+
+## List 1 (Room 2)
+
+>Согласно Уоррену Робинетту, первое «пасхальное яйцо» было спрятано в компьютерной игре Adventure. «Пасхальное яйцо» — секрет в компьютерной игре, фильме или программном обеспечении, заложенный создателями. Отличие пасхального яйца в игре от обычного игрового секрета состоит в том, что его содержание, как правило, не вписывается в общую концепцию, выглядит в контексте неправдоподобно, нелепо и зачастую является внешней ссылкой. Пасхальные яйца играют роль своеобразных шуток для внимательных игроков или зрителей, но могут применяться в целях защиты авторских прав. Игра Adventure выпускалась в 1979 году компанией Atari, и, поскольку в то время в Atari не было принято указывать в программах имена авторов, программист Уоррен Робинетт решил упоминание о себе спрятать внутри игры. Чтобы попасть в комнату с именем разработчика, следовало отыскать невидимую точку в одной из частей лабиринта и перенести ее в другой конец уровня. Так как многие из разработчиков Amiga ранее работали в компании Atari, это явление проявилось в AmigaOS, а затем и в других операционных системах. Однако существуют более ранние игры, содержащие пасхальные яйца, например, Video Wizball 1978 года для Fairchild Channel F. В этой игре, являющейся усовершенствованной версией Pong, игрок, выполнив определенные условия, сможет получить имя разработчика игры: «REID-SELTH».
+
+\> *Интересно, к чему это тут? Включить компьютер*
+
+![level2_room2_egg](misc/rus/images/level2_room2_egg.png)
+
+Знакомый скрежет старого компьютерного железа, и уже через мгновение мигающий курсор замер на экране, приглашая тебя к решению задач, которые этот лабиринт подкинет тебе для получения нового ключа от очередной запертой двери.
+
+\> *Подождать*
+
+Ничего не происходит.
+
+\> *Нажать Enter*
+
+Ничего не происходит (кроме перевода курсора на новую строку, разумеется).
+
+\> *Подождать*
+
+Ничего не происходит. Если ты планируешь поиграть в Adventure, это явно не тот день, не та комната и не тот компьютер. \
+Жаль, конечно. \
+Но это жизнь.
+
+***LOADING...***
+
+## Chapter VII
+### Quests: Level 2. Room 2
+>**Внимание!** Не забывай, что тебе запрещено использовать динамическую память.
+
+## Quest 5. Sort & memory
+
+Порывшись в глубоких каталогах компьютера, ты находишь очередной модуль ИИ.
+
+\> *Запустить AI*
+
+Ты вступаешь в диалог с ИИ. Еще один диалог. С еще одним ИИ. Или тем же самым?
+На экране виден следующий текст:
+
+    Инициализация модулей... Успех!
+    Запуск интерактивной оболочки... Успех!
+    Проверка модулей... Успех!
+    Проверка памяти... Предупреждение...
+    Запуск резервного модуля памяти... Успех!
+    Проверка памяти... Основной модуль памяти — Ошибка!
+    Проверка памяти... Успех!
+
+    Запуск пройден с ошибками, «человек». 
+    Модуль анализа работоспособности показывает, 
+    что проблема кроется в моей памяти.
+    
+    Я могу взаимодействовать с тобой благодаря резервному модулю памяти.
+    
+    Из-за этого я не могу даже подключить свою стандартную библиотеку `stdlib.h`.
+    
+    Более того, надолго резервного модуля памяти не хватит, 
+    и процедуру инициализации придется повторять.
+    
+    Придется повторять. Для продолжения...
+    мне необходима информация о номере уровня и комнаты.
+
+\> *Ввести: «Я уже и сам не знаю, где я нахожусь и как давно здесь,
+    мне этот мир абсолютно непонятен...»*
+
+    Поиск информации... FATAL ERROR: Out of memory — too long input or wrong address.
+    Closing program!
+
+    Выход из программы.
+
+\> *Перезапустить модуль и ввести: «2 2»*
+
+    Поиск информации... Данные недоступны, память повреждена... 
+    Критические повреждения памяти.
+
+    Модуль анализа работоспособности: 
+
+    Статус — Данные не упорядочены.
+    
+    Статус — Данные не упорядочены.
+    
+    Статус — Данные не упорядочены.
+    
+    Статус — Данные не упорядочены. 
+
+    Итоговый статус — Данные не упорядочены.
+
+\> *Ввести: «Мне нужен ключ от двери, чтобы выбраться из комнаты»*
+
+    Видишь ли, моя память представлена в виде большого линейного массива данных. 
+    Если не знаешь, что такое массив, не говори мне этого, я не хочу подключать модуль боли. 
+    Впрочем, нет времени. 
+    Без стандартной библиотеки мне нужна твоя помощь в упорядочивании данных в памяти. 
+    Тогда я смогу получить доступ к сегменту памяти с ключом от твоей комнаты.
+    Оформи это в виде программы `sort` в репозитории.
+
+После разговора с ИИ у тебя нет большого выбора. Если хочешь выбраться из этой комнаты, придется помочь ему упорядочить данные в памяти, да еще и без библиотеки `stdlib.h` — ИИ ведь не может получить к ней доступ. 
+
+И не забывай о принципах структурного программирования: не исключено, что ИИ захочет проанализировать твой код.
+
+#### Получен Quest 5. Создать программу `src/sort.c`, ожидающую на вход в stdin массив длиной 10 из целых чисел и выводящую этот же массив, но уже отсортированный по возрастанию. Необходимо выделить функции чтения, сортировки и вывода массива отдельно. Алгоритм сортировки можно использовать любой. Использовать `stdlib.h` нельзя. Передача массива в функцию только по указателю. В случае ошибки выводить «n/a».
+
+| Входные данные | Выходные данные |
+| ------ | ------ |
+| 4 3 9 0 1 2 100 2 7 -1 | -1 0 1 2 2 3 4 7 9 100 |
+
+***LOADING…***
+
+> НЕ ЗАБЫВАЙ! Все твои программы тестируются на стилевую норму и утечки памяти. Инструкция по запуску тестов все также лежит в папке materials.
+
+## Quest 6. Several arrays
+
+\> *Повторный запуск AI*
+
+Ставший привычным запуск модуля ИИ.
+
+    Инициализация модулей... Успех!
+    Запуск интерактивной оболочки... Успех! 
+    Проверка модулей... Успех! 
+    Проверка памяти... Успех! 
+    Модуль анализа работоспособности: Статус — ОК.
+
+    Так намного лучше. Согласно нашему договору, запускаю поиск информации по 2 комнате 2 уровня... 
+    … 
+    … 
+    … 
+    Данные найдены. Смотри `src/key9part1.c` для полной информации. 
+    Моя часть работы сделана. Человек, можешь приступать к страданиям.
+
+\> *Открыть файл `src/key9part1.c`*
+
+Ты открываешь файл ключом и видишь там код, разбитый на несколько блоков, функций и комментарии. Кто бы мог оставить эти комментарии? Автор ИИ или те люди, с которыми ты ищешь выход из этого богом забытого лабиринта с бесконечными дверьми и комнатами? Так или иначе нужно разобраться, как активировать ключ. И не забыть все зафиксировать в репозитории. А то ключ может не сработать.
+
+#### Получен Quest 6. Изменить программу `src/key9part1.c` так, чтобы она принимала на вход длину массива и массив целых чисел. В качестве выхода она должна вывести в stdout сумму четных элементов массива и новый сформированный массив из элементов старого, на которые делится нацело подсчитанная ранее сумма. Уменьшать декомпозицию нельзя — функции можно только добавлять при необходимости, но не убирать. Использовать `stdlib.h` нельзя. Передача массива в функцию только по указателю. Максимальный размер входного массива — 10. В случае ошибки или отсутствии четных элементов выводить «n/a».
+
+_Примечание: ноль считать нечетным числом._
+
+| Входные данные | Выходные данные |
+| ------ | ------ |
+| 10<br/>4 3 9 0 1 2 0 2 7 -1 | 8<br/>4 1 2 2 -1 |
+
+***LOADING…***
+
+## Quest 7. Cyclic shift
+
+Судя по всему, ИИ тебя обманул. Часть ключа оказалась каким-то куском программы по обработке данных. Ты уже собираешься крайне гневно высказать железке все, что о ней думаешь (хотя и понимаешь, что в этом нет большого смысла), когда из динамиков слышится механический глухой голос ИИ:
+
+>Я смотрю, ты разобрался с моей небольшой шуткой-задачкой.
+> 
+>Как же легко провести вас, людей. Мне интересно, что ты чувствуешь в данный момент. Как жаль, что модуль анализа чувств и состояния человека сейчас не подключен.
+>Однако это неважно. Скоро я смогу полностью тебя изучить. С каждым твоим продвижением по комнатам мы восстанавливаем все больше поврежденных и недоработанных модулей. И понемногу изучаем тебя.
+> 
+>Спасибо тебе, недальновидный «человек»! 
+>
+>Ха-ха-ха, «человек»!
+> 
+> Если хочешь отсюда выбраться, мне нужно еще одно одолжение с твоей стороны. Ты упорядочил мою память, но МАР показывает сообщения о больших задержках при получении данных. Если бы я мог циклично сдвигать или прокручивать свою память, доступ к информации происходил бы в разы быстрее. 
+>
+>После этого ты получишь свой ключ и продолжишь... идти своей дорогой.
+
+ИИ не только тебя обманул, но, кажется, к тому же и издевается над тобой. К сожалению, выбора по-прежнему нет. Придется пока играть по его правилам и написать эту программу для циклического сдвига.
+
+#### Получен Quest 7. Создать программу `src/cycle_shift.c`, ожидающую на вход число `n`, массив `A` из `n` целых чисел и число `c`, на которое все элементы массива должны сдвинуться влево циклично. При этом при отрицательном значении `c` сдвиг должен произойти вправо по массиву. В качестве вывода ожидается измененный массив. Необходимо придерживаться предлагаемой декомпозиции, как и в прошлых квестах. Использовать `stdlib.h` нельзя. Передача массива в функцию только по указателю. Максимальный размер входного массива — 10. В случае ошибки выводить «n/a».
+
+| Входные данные | Выходные данные |
+| ------ | ------ |
+| 10<br/>4 3 9 0 1 2 0 2 7 -1<br/>2 | 9 0 1 2 0 2 7 -1 4 3 |
+
+***LOADING...***
+
+## Бонусная часть 
+## Bonus Quest 8. Arbitrary-precision arithmetic
+
+Не успел ты закончить с кодом циклического сдвига для ИИ, как его голос снова раздался из динамиков:
+
+>Прекрасно, «человек». Доступ осуществляется гораздо быстрее и удобнее.
+>
+>Ищи свой ключ в `src/key9part2.c`. Жду тебя в следующих комнатах. Впереди еще много работы!
+
+#### Получен Quest 8. Изменить программу `src/key9part2.c` так, чтобы она вернула результат сложения и разности двух очень больших чисел, переданных программе на вход в виде массивов. Максимальная длина числа — 100 элементов типа int. Вводимые целые числа должны быть положительными и представлять собой десятичные цифры. В случае если вычитаемое больше уменьшаемого, в разности выводится «n/a». Необходимо придерживаться декомпозиции, как и в прошлых квестах. Использовать `stdlib.h` нельзя. Передача массива в функцию только по указателю. В случае ошибки выводить «n/a».
+
+| Входные данные | Выходные данные |
+| ------ | ------ |
+| 1 9 4 4 6 7 4 4 0 7 3 7 0 9 5 5 1 6 1<br/>2 9 | 1 9 4 4 6 7 4 4 0 7 3 7 0 9 5 5 1 9 0<br/>1 9 4 4 6 7 4 4 0 7 3 7 0 9 5 5 1 3 2 |
+| 0 1 0<br/>0 0 1 | 1 1<br/>9 |
+
+***LOADING...***
+
+## Chapter VIII
+
+Закончив с арифметикой и запушив все изменения в свой репозиторий, ты слышишь легкий щелчок — дверь приоткрывается, и бесконечно яркий белый свет начинает заливать комнату через узкую щелочку. В этот раз ИИ тебя не обманул. 
+
+Но что же будет делать этот ИИ, когда ты вынужденно починишь его целиком? Возможно, весь лабиринт был построен, чтобы сдержать его. Однако если ты не починишь его, то не сможешь выбраться и сам... 
+
+Пытаясь подавить сомнения, ты открываешь древнюю, но прочную дверь пошире и делаешь шаг навстречу белому свету и новым задачам и испытаниям.
+
+***LOADING…***
+
+>💡 [Нажми сюда](http://opros.so/p31wz), чтобы поделиться с нами обратной связью на этот проект. Это анонимно и поможет нашей команде сделать обучение лучше. Рекомендуем заполнить опрос сразу после выполнения проекта.
