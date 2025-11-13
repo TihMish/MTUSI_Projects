@@ -9,7 +9,7 @@ int main()
     
     //availability_mask = check_available_documentation_module(validate, Documents_count, Documents);
 
-    // Output availability for each document....
+    // Output availability for each document...
 	
     return 0;
 }
