@@ -5,7 +5,7 @@ check your program and its source code. To successfully pass the test, you must
 make sure that your program meets the requirements below. To do this,
 run the commands below locally and make sure that they do not output any errors.
 
-* **Style tests.** To check how much the beauty of your code matches
+* **Style tests.** The _C_ and _C++_ code should follow _Google C++ Style Guide_. To check how much the beauty of your code matches
   for example, you can test your code using the _clang-format_ utility.
   The ```materials/linters``` folder contains the ```.clang-format``` file, which contains
   the necessary settings for the style test. This configuration file extends its action to all files that lie with it in the directory
