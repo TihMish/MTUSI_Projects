@@ -51,5 +51,3 @@ check your program and its source code for the following points:
    ```valgrind --tool=memcheck --leak-check=yes. /main. out```
 
    It is strongly recommended not to use _valgrind_ utility in OS X, use [_leaks_](#leaks-macos) utility  instead.
-
-  Also, you can read the [information on installing the software and Valgrind](https://21-school.ru/install_soft_to_school_IMacs).
