@@ -44,5 +44,3 @@
   ```valgrind --tool=memcheck --leak-check=yes  ./main.out```
 
   Не рекомендуется использовать _valgrind_ на OS X, вместо нее лучше использовать [_leaks_](#leaks-для-macos).
-
-  Также ты можешь ознакомиться с [информацией по установке софта и Valgrind](https://21-school.ru/install_soft_to_school_IMacs).
