@@ -313,7 +313,8 @@ It's obvious the door hasn't been restored yet.
 
 \> *Type: "The room isn't restored. The most important part is missing — the door."*
 
-    Depends who you ask. Those who seek the outside care about the door. Those who look inward care more about the interior.
+    Depends who you ask. Those who seek the outside care about the door. 
+    Those who look inward care more about the interior.
 
 Philosophical musings. That's... concerning. Be careful with artificial intelligence — you never really know what's on its mind.
 
@@ -329,11 +330,13 @@ Unexpectedly, you get a detailed reply:
     We don't need ultra-high precision for pi — accuracy to the 20th decimal is enough.
     Store the value of pi in a separate variable or directive to avoid repetition.  
     We need exactly 42 samples across this interval.
-    The first column in the file is the x value (abscissa). The second, third, and fourth columns are the values of the functions at that x.
+    The first column in the file is the x value (abscissa).
+    The second, third, and fourth columns are the values of the functions at that x.
     No table headers.
     All values must have 7 digits after the decimal point.
     Use "|" as the column separator. And please mind each function's domain.
-    We need three functions, since it's unclear which one will fit the door's shape. Based on the logs, it might be the Witch of Agnesi with unit diameter,
+    We need three functions, since it's unclear which one will fit the door's shape.
+    Based on the logs, it might be the Witch of Agnesi with unit diameter,
     the Bernoulli lemniscate with unit interval in the positive half-plane, and a quadratic hyperbola.
     Prepare the algorithm in `src/door_functions.c`,
     and place the program's output in `src/data/door_data.txt`.
