@@ -1,11 +1,11 @@
-# D03T03. Структуры управления на языке С
+# D03T03. Control Structures in C
 
-Аннотация: данный проект позволит тебе познакомиться с основными структурами управления на языке С, а также с итеративными и рекурсивными алгоритмами.
+Summary: This project will introduce you to the fundamental control structures in the C programming language, as well as iterative and recursive algorithms.
 
 ## Contents
 
-1. [Введение](#введение) \
-    1.1. [Рекомендации к проекту](#рекомендации-к-проекту)
+1. [Introduction](#introduction) \
+    1.1. [Project Recommendations](#project-recommendations)
 2. [Chapter I](#chapter-i) \
     2.1. [Level 1. Room 4](#level-1-room-4)
 3. [Chapter II](#chapter-ii) \
@@ -20,136 +20,141 @@
     4.5. [Bonus Quest 5. Func](#bonus-quest-5-func)
 5. [Chapter IV](#chapter-iv)
 
-## Введение
+## Introduction
 
 ***PRELOAD...***
 
-Ты входишь в очередную комнату первого уровня и ловишь себя на мысли, что она как будто не прогрузилась: предметы и стены словно бы есть, но похожи на переливающуюся сетку из ноликов и единичек. Возникает секундный страх шизофрении...
+You enter yet another room on the first level and suddenly realize — it feels as if it hasn't fully loaded: the walls and objects are there, but they look like a shimmering grid made of zeros and ones. For a brief moment, you feel a flash of panic — almost like you're losing your mind...
 
-\> *Так бывает со всеми, кто начинает изучать С?*
+\> *Does this happen to everyone who starts learning C?*
 
 ***PRELOAD...***
 
-Вдруг на стене, что прямо перед тобой, нолики и единички начинают исчезать, и явно образуется какой-то информационный лист в деревянной рамке. Твоя спина покрывается холодным потом, и даже на лбу выступают капельки. ИИ, видимо, совсем заработался, и охлаждения уже не хватает. Но то, что ты прочитаешь, будет заставлять тебя потеть все оставшееся время...
+Suddenly, on the wall right in front of you, the zeros and ones begin to fade away, forming what appears to be an information sheet framed in wood. A chill runs down your spine, and beads of sweat form on your forehead. The AI seems to have been working overtime — and its cooling system can barely keep up. But what you're about to read will make you sweat for quite a while...
 
-> Начиная с этого дня все программы, помимо тестов на корректный вывод, будут также тестироваться на стилевые нормы. Перед  отправкой решений можно протестировать программы локально. О том, как это сделать, прочитай в ```materials/instructions_for_testing_rus.md```.
+> Starting from today, all your programs will be checked not only for correct output, but also for compliance with style guidelines.  Before submitting your solutions, you can test your programs locally. To learn how, read the file `materials/instructions_for_testing.md`.
 
-Как только ты успеваешь осознать, что произошло, на стену вновь возвращаются нолики и единички, медленно поглощая лист с информацией... информацией, которая для тебя означает больше работы. Но ведь качественный код — это круто! Его проще читать и поддерживать, так что если после тебя в этих комнатах еще кто-то окажется, он без труда сможет модифицировать твои программы так, чтобы ИИ они снова понравились. А его требования несомненно возрастут, он же развивается... И тебе это тоже необходимо!
+As soon as you process what just happened, the zeros and ones reappear on the wall, slowly consuming the information sheet — information that means only one thing for you: more work ahead. But clean, well-written code is worth it! It's easier to read and maintain, so if someone else ever finds themselves in these rooms after you, they'll be able to modify your programs easily — so the AI likes them again. And you know it'll keep getting pickier as it evolves... So should you.
 
-### Рекомендации к проекту
-Как учиться в «Школе 21»:  
-- На протяжении всего курса ты будешь самостоятельно добывать информацию. Пользуйся всеми доступными средствами поиска информации, к примеру, Google и GigaChat. Будь внимателен к источникам информации: проверяй, думай, анализируй, сравнивай. 
-- Взаимообучение (P2P, Peer-to-Peer) — это процесс, при котором учащиеся обмениваются знаниями и опытом, выступая одновременно в роли учителей и учеников. Этот подход позволяет учиться не только у преподавателя, но и друг у друга, что способствует более глубокому пониманию материала.
-- Не стесняйся просить помощи: вокруг тебя такие же пиры, которые тоже проходят этот путь впервые. Не бойся откликаться на просьбы о помощи. Твой опыт ценен и полезен, смело делись им с другими участниками. 
-- Не списывай, а если пользуешься помощью — всегда разбирайся до конца, почему, как и зачем. Иначе твое обучение не будет иметь никакого смысла. 
-- Если ты на чем-то застрял и кажется, что все уже перепробовал, но по-прежнему непонятно, куда идти, — просто передохни! Поверь, этот совет помогал многим разработчикам в их работе. Проветрись, перезагрузи голову, и, возможно, в следующий раз тебе наконец придет нужное решение!
-- Важен не только результат обучения, но и сам процесс. Нужно не просто решить задачу, а понять, КАК ее решить. 
-- Следи за временем при выполнении проекта. В день ты должен преодолевать минимум одно испытание. 
-- Помни, что каждое задание по завершении проекта проходит ряд проверок: р2р-проверка с помощью чек-листа, проверка набором автотестов, проверка на стиль кода, проверка статическим анализатором, проверка на корректную работу с памятью. 
+### Project Recommendations
 
-Как работать с проектом:
-- Полезные видеоматериалы ты можешь найти в разделе Projects (Media) на Платформе. 
-- Перед выполнением проект необходимо склонировать с GitLab в одноименный репозиторий.
-- Все файлы с кодом необходимо создавать в папке src/ склонированного репозитория.
-- После клонирования проекта необходимо создать ветку `develop` и вести разработку в ней. После этого пушить в GitLab также нужно ветку `develop`.
+How to learn at School 21
+
+- Throughout the course, you'll be finding information on your own. Use all available sources — Google, GigaChat, and others. Always stay critical about what you read: verify, think, analyze, compare.
+- Peer-to-peer (P2P) learning means that students exchange knowledge and experience, acting as both teachers and learners. This approach helps you learn not only from instructors but also from your peers, leading to a deeper understanding of the material.
+- Don't hesitate to ask for help — your peers are on the same path as you. And don't be afraid to respond when others ask for help. Your experience is valuable — share it freely.
+- Don't copy. If you use someone's help, make sure you fully understand _why_, _how_, and _what for_. Otherwise, your learning won't have any real value.
+- If you get stuck, feel like you've tried everything, and still don't see a way forward — take a break! Believe it or not, this simple advice has saved many developers. Get some air, clear your head — and the solution may come the next time you sit down to work.
+- The process of learning matters as much as the result. Don't just solve the task — understand _how_ to solve it.
+- Keep track of your time while working on the project. Try to complete at least one challenge per day.
+- Remember that each task, after submission, goes through several checks: a peer-review using a checklist, automated tests, code style analysis, static analysis, and memory safety checks.
+
+How to work on the project:
+
+- You can find useful video materials in the Projects (Media) section on the Platform.
+- Before starting, clone the project from GitLab into a repository with the same name.
+- All source code files must be created in the `src/` directory of the cloned repository.
+- After cloning, create a branch named `develop` and do all your work there. When pushing your progress to GitLab, make sure you push the `develop` branch.
 
 ## Chapter I
 ## Level 1. Room 4
 
-![level1_room4](misc/rus/images/level1_room4.png)
+![level1_room4](./misc/eng/images/level1_room4.png)
 
 ***LOADING Level 1...*** \
 ***LOADING Room 4...***
 
-            Загрузка 10%
-            Загрузка 20%
-            Загрузка 30%
-            Загрузка 40%
+            Loading 10%
+            Loading 20%
+            Loading 30%
+            Loading 40%
         
-        Попытка 1...  Неудачно...
-        Попытка 2...  Неудачно...
-        Попытка 3...  Неудачно...
+        Attempt 1... Failed...
+        Attempt 2... Failed...
+        Attempt 3... Failed...
 
-\> *Что происходит?*
+\> *What's going on?*
 
-Похоже, комната плохо загрузилась, нужна помощь в ее восстановлении.
+Looks like the room didn't load properly — it needs help with restoration.
 
-\> *Найти терминал*
+\> *Find the terminal*
 
-Ты смотришь в терминал. Кажется, это единственное, что успело проинициализироваться. Вокруг истинное «ничто». 
+You look at the terminal. It seems to be the only thing that managed to initialize. Everything else around you is pure "nothingness".
 
-\> *Читать вывод терминала*
+\> *Read terminal output*
 
-Много непонятных шестнадцатиразрядных чисел, затем:
+A lot of incomprehensible hexadecimal numbers scroll by, then:
 
-    Если этот текст читает органическая форма жизни, прием... 
-    Нужна помощь, прием. 
-    Я смог сохранить некоторые данные с предыдущих комнат. 
-    Дальнейшее восстановление комнаты зависит только от наладки моих алгоритмов, тебе нужно...
-
-    ...
-
-    Ошибка...
+    If this message is being read by an organic life form, come in...
+    Assistance required, come in.
+    I managed to preserve some data from previous rooms.
+    Further room recovery depends solely on restoring my algorithms. You must...
 
     ...
 
-\> *Как это понимать?*
+    Error...
 
-Кажется, ты остался без помощи ИИ, управляющего лабиринтом. Ну что ж поделать. Придется разбираться своими силами, как восстановить комнату и продолжить путь дальше.
+    ...
 
-\> *Осмотреться*
+\> *What does that mean?*
 
-Приглядевшись, ты замечаешь, что вокруг не такое уж и полное «ничто». В частично загруженной комнате информационный кавардак, хаотичные данные летают по всей комнате. Выглядит сюрреалистично.
+Seems like you've been left without the help of the AI controlling the maze. Well, nothing you can do about that now — you'll have to figure out how to restore the room and keep going on your own.
 
-\> *Пройти вперед*
+\> *Look around*
 
-Ты идешь вперед практически на ощупь. Не самая приятная прогулка. В самом дальнем углу в хаосе данных виднеется что-то осмысленное. Ты пробираешься вглубь комнаты и находишь нечто похожее на стол. На столе листки бумаги. На одном из них изображен, судя по всему, некий алгоритм.
+Looking closer, you realize it's not complete "nothing" after all. In the partially loaded room, raw data floats chaotically in all directions — a surreal mess of information.
 
-\> *Читать листок бумаги*
+\> *Move forward*
 
-![level1_room4_paper](misc/rus/images/level1_room4_paper.png)
+You proceed cautiously, almost by touch. Not the most pleasant walk. In the far corner, amidst the chaos, you notice something that looks meaningful. You make your way deeper into the room and find what appears to be a desk. On it — a few sheets of paper. One of them seems to depict some kind of algorithm.
+
+\> *Read the paper*
+
+![level1_room4_paper](./misc/eng/images/level1_room4_paper.png)
 
 ***LOADING...***
 
-## Chapter II
+## Chapter II  
 ## List 1
 
-Напечатанный текст:
+Printed text:
 
->Перед поломкой я успел составить пару заданий для тебя, так что еще не все потеряно. Ты сможешь восстановить комнату и продолжить свое прохождение лабиринта...
+Before the crash, I managed to prepare a few tasks for you — so all is not lost yet. You'll be able to restore the room and continue your journey through the maze...
 
-\> *Взять следующий лист*
+\> *Take the next sheet*
 
 ***LOADING...***
 
 ## List 2
 
-Ты берешь следующий лист:
+You pick up the next sheet:
 
->Принципы Дейкстры (принципы структурного программирования):
-> - Принцип 1. Следует отказаться от использования оператора безусловного перехода goto.
-> - Принцип 2. Любая программа строится из трех базовых управляющих конструкций: последовательность, ветвление, цикл.
-> - Принцип 3. В программе базовые управляющие конструкции могут быть вложены друг в друга произвольным образом. 
-> - Принцип 4. Повторяющиеся и любые логически выделенные фрагменты программы можно оформить в виде подпрограмм (процедур и функций). 
-> - Принцип 5. Каждую логически законченную группу инструкций следует оформить как блок. Блоки являются основой структурного программирования.
-> - Принцип 6. Все перечисленные конструкции должны иметь один вход и один выход.
-> - Принцип 7. Разработка программы ведется пошагово, методом «сверху вниз» (top-down method). 
+>Dijkstra's Principles (Principles of Structured Programming):
+> - Principle 1. Avoid using the unconditional jump operator goto.  
+> - Principle 2. Any program is built from three basic control structures: sequence, branching, and loop.  
+> - Principle 3. In a program, the basic control structures can be nested within one another in any way.  
+> - Principle 4. Repeated or logically distinct fragments of a program should be defined as subroutines (procedures or functions).  
+> - Principle 5. Every logically complete group of instructions should be designed as a block. Blocks are the foundation of structured programming.  
+> - Principle 6. All the above constructions must have exactly one entry point and one exit point.  
+> - Principle 7. Program development should be carried out step by step, using the top-down method.
 
-На обороте листа ты видишь текст, написанный от руки:
+On the back of the sheet, you find a handwritten note:
 
-> Использование глобальных переменных запрещено, потому что они приводят к увеличению числа неявных связей, которые, в свою очередь, плохо сказываются на масштабируемости и читаемости, а также приводят к сложноуловимым ошибкам.
+> The use of global variables is prohibited because they increase the number of implicit dependencies, which negatively affect scalability and readability and lead to hard-to-detect bugs.
 
-\> *Кажется, этот лист был случайным в пачке... Или нет? Вообще, выглядит очень полезным. Взять следующий лист*
+\> *Maybe this sheet got mixed in by accident... or maybe not? Either way, it looks quite useful.*
 
-Ты берешь следующий лист...
+Take the next sheet.
+
+You pick up the next sheet...
 
 ***LOADING...***
 
 ## List 3
 
-Лист оказывается куском какой-то странной таблицы. Возможно, использовалась для какого-нибудь шифрования или кодирования.
+The sheet turns out to be part of some strange table — maybe it was once used for encryption or encoding.
 
->ASCII-таблица: продолжение
+>ASCII Table: continued
 
 |  | 8 | 9 | A | B | C | D | E | F |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
@@ -159,94 +164,92 @@
 
 >...
 
-\> *Взять очередной лист...*
+\> *Take the next sheet...*
 
 ***LOADING...***
 
-## Chapter III
+## Chapter III  
 ## Quests: Level 1. Room 4
 
->**Внимание!** В квестах этого дня запрещено создавать массивы и использовать динамическую память. Разрешенные библиотеки: `<stdio.h>`, `<math.h>`.
+>**Attention!** For today's quests, arrays and dynamic memory are forbidden. Allowed libraries: `<stdio.h>`, `<math.h>`.
 
-## Quest 1. Basic control structures. Tom Kilburn
+## Quest 1. Basic Control Structures. Tom Kilburn
 
-\> *Читать лист*
+\> *Read the sheet*
 
->Вернемся к истокам.
+>Back to the origins.
 >
->Первая программа, полностью хранившаяся в памяти ЭВМ, была разработана Томом Килбурном весной 1948 года для «Малой экспериментальной машины» (Small Scale Experimental Machine, SSEM), или, как ее ласково называли, Baby.
+>The first program stored entirely in a computer's memory was written by Tom Kilburn in the spring of 1948 for the Small-Scale Experimental Machine (SSEM) — fondly known as Baby. Some colleagues claimed it was both his first and last program. The task set for Baby was to find the largest prime divisor of a given number "a". The search enumerated candidate numbers, and division was implemented via repeated subtraction because there was no hardware divide instruction — which, by the way, is still missing on some inexpensive microcontrollers.
 >
->Как утверждали некоторые его коллеги, это была первая и последняя написанная им программа. Задача, которую предложили решить Baby, заключалась в поиске наибольшего простого делителя любого наперед заданного числа «a». Для этого осуществлялся перебор всех чисел. Само деление реализовывалось вычитанием, в силу отсутствия аппаратной поддержки операции деления. Кстати, ее до сих пор нет в некоторых недорогих моделях микроконтроллеров.
+>Your first task: walk in Tom Kilburn's footsteps.  
+You may use the basic control structures — sequence, branching, and looping — as well as addition, subtraction, and multiplication. Division is not allowed — this module is intended to run on microcontrollers. Create `src/1948.c` which, after compilation and launch, reads a number from stdin and computes its largest prime divisor. Let's see what you can do.
 >
->Первое задание: пройти путем Тома Килбурна. Ты можешь использовать базовые управляющие структуры — следование, ветвление и повторение, а также операции сложения, вычитания и умножения. Деление использовать нельзя — этот модуль предназначен для запуска на микроконтроллерах. Создай файл `src/1948.c`, который после компиляции и запуска принимает в stdin число и вычисляет для него наибольший простой делитель. Посмотрим, что ты можешь.
->
->Помни, что наибольший простой делитель числа — это одновременно и его наибольший простой множитель.
+>Remember: the largest prime divisor of a number is also its largest prime factor.
 
-\> *Вернуться к терминалу*
+\> *Return to the terminal* 
 
-Ты вернулся за любимый терминал. Так как других зацепок нет, почему бы не решить эту задачку? Помни, что все решения должны загружаться в репозиторий, а ввод — проверяться на корректность.
+You're back at your favorite terminal. With no other clues around, why not solve this one? Remember to push all solutions to the repository, and to validate the input.
 
-#### Получен Quest 1. Создать программу `src/1948.c`, которая находит наибольший простой делитель заданного целого числа `a` и печатает его на экран. Необходимо выделить отдельную функцию для подсчета этого значения. Использовать деление и операцию взятия остатка от деления нельзя. Однако при необходимости деление можно реализовать при помощи вычитания. В случае ошибки вывести «n/a». 
+#### Quest 1 received: Create the program src/1948.c that finds the largest prime divisor of a given integer a and prints it to the screen. Implement the computation in a separate function. Using division or the modulo operator is forbidden. If needed, you may simulate division via subtraction. On any error, print "n/a".
 
->**ВАЖНО!** Запрещено выполнять системные вызовы, используя функцию `system()` и другие аналогичные ей функции, которые могут обращаться напрямую к ядру системы. Данный запрет распространяется на все последующие задачи.
+**IMPORTANT!** You must not make system calls using `system()` or similar functions that can access the OS kernel directly. This prohibition applies to all subsequent tasks.
 
-| Входные данные | Выходные данные |
+| Input | Output |
+| --- | --- |
 | ------ | ------ |
 | 100 | 5 |
 | -4 | 2 |
 
 ***LOADING...***
 
-## Quest 2. Basic control structures. Some problems with symbols
+## Quest 2. Basic Control Structures. Some Problems with Symbols
 
-\> *Запушить файл `src/1948.c`*
+\> *Push `src/1948.c`*
 
-Кажется, ИИ только этого и ждал. На экране снова появляется текст:
+Seems the AI was waiting for that. Text appears on the screen again:
 
-    Получил твое решение. Посмотрим.
-    Если задача действительно решена, 
-    то это нам сможет помочь в восстановлении комнаты. 
-    Тут как раз была загвоздка с наибольшими делителями. 
-    С ними всегда одни проблемы.
+    Got your solution. Let's see.
+    If the task is really solved,
+    it might help restore the room.
+    We did have a snag with largest divisors.
+    Always the same problems with them.
 
-    Попытка восстановления комнаты: 
-
+    Restoring the room:
             10%
             20%
             30%
             40%
             50%
             60%
-            
-            Ошибка...
-            Ошибка...
 
-    Хм, значит, дело было не только в наибольших делителях.
-    Но как минимум теперь с ними теперь точно порядок. 
-    А нужно ли вообще восстанавливать комнату? Кажется, и так хорошо.
-    Продолжим искать наибольшие делители...
+            Error...
+            Error...
 
-\> *Ввести: «Восстановить комнату»*
+    Hmm, so it wasn't just about largest divisors.  
+    But at least that's sorted now.  
+    Do we even need to restore the room? Looks fine as is.  
+    Let's keep searching for largest divisors...
 
-Результат на экране:
+\> *Type: "Restore the room"*
 
-    Хорошо, продолжим.
+Result on screen:
 
-    Загрузка резервного модуля восстановления... 
-    Модуль загружен. 
-    Запуск модуля восстановления...
+    Alright, let's proceed.
 
+    Loading the backup recovery module...
+    Module loaded.
+    Starting recovery module...
     48 45 4C 4C 4F 77 4F 52 4C 44 00
 
-\> *Что это? Похоже на какой-то код*
+\> *What is this? Looks like some kind of code*
 
-Кажется, у запускаемого резервного модуля проблемы с кодированием вывода. И, скорее всего, ввода, так что он тебя не поймет. Цифры тебе напоминают о табличке на одном из листов. Возможно, стоит обратить на нее внимание. 
+It looks like the backup module has an output-encoding issue — and likely input, too, so it won't understand you. Those numbers remind you of the table on one of the sheets. You might want to take a closer look at it.
 
-Судя по всему, тут необходимо разработать небольшую вспомогательную программу, работающую в двух режимах — кодирования и декодирования. Выбор режима работы программы должен производиться как параметр командной строки, где 0 — кодирование, а 1 — декодирование. При декодировании программа должна принимать из stdin строку из шестнадцатиразрядных целых чисел, разделенных пробелом, и выдавать в stdout разделенные пробелом декодированные символы. При кодировании должна выполняться обратная операция. Сами подзадачи кодирования (символ -> число) и декодирования (число -> символ) стоит выделить в отдельные функции. Не забудь расположить файл с программой по пути `src/char_decode.c` в репозитории.
+It seems you need to write a small helper program that works in two modes — encoding and decoding. The mode is chosen via a command-line argument, where 0 = encode and 1 = decode. Decoding mode (1): the program must read from stdin a sequence of space-separated two-character strings (hexadecimal bytes) and print to stdout the decoded characters, also space-separated. Encoding mode (0): perform the reverse operation (character → two-character hex). Split the encoding (char → number) and decoding (number → char) subtasks into separate functions. Place the program at `src/char_decode.c` in the repository.
 
-#### Получен Quest 2. Создать программу `src/char_decode.c`, которая принимает в качестве параметра командной строки режим работы (0 — кодирование или 1 — декодирование). Если выбран режим декодирования, то программа должна принимать из stdin разделенные пробелом двухсимвольные строки и выдавать в stdout декодированные символы, разделенные также пробелом. При кодировании выполняется обратная операция. Подзадачи кодирования и декодирования должны быть выделены в отдельные функции. Обратить внимание на ASCII-таблицу. В случае ошибки выводить «n/a». Признаком окончания ввода служит символ переноса строки.
+#### Quest 2 received: Create `src/char_decode.c` that accepts a command-line mode (0 — encode, 1 — decode). If decoding is selected, read space-separated two-character strings (hex bytes) from stdin and output the decoded characters, space-separated, to stdout. If encoding is selected, do the reverse. Implement encoding/decoding as separate functions. Refer to the ASCII table. On any error, print "n/a". The newline character marks the end of input.
 
-| Параметры командной строки | Входные данные | Выходные данные |
+| Command-line args | Input | Output |
 | ------ | ------ | ------ |
 | 0 | W O R L D | 57 4F 52 4C 44 |
 | 0 | WORLD | n/a |
@@ -255,33 +258,33 @@
 
 ***LOADING...***
 
-> НЕ ЗАБЫВАЙ! Все твои программы тестируются на стилевую норму. Инструкция по запуску тестов все также лежит в папке `materials`.
+> DON'T FORGET! All your programs are checked against the style guide. The instructions for running the tests are still in the materials folder.
 
 ## Quest 3. Recursive
 
-\> *Программа разработана*
+\> *Program is ready*
 
     46 49 42 4F 4E 41 43 43 49 32 31
 
-\> *Применить разработанную программу для декодирования вывода резервного модуля*
+\> *Use the program to decode the backup module output*
 
-Ты расшифровываешь послание. Похоже на ребус. По всей видимости, стоит разработать небольшую программу для его решения. Результат вычислений эта программа должна выдавать в stdout. Не забудь разместить ее в `src/quest3.c`.
+You decode the message — it looks like a riddle. Apparently, you'll need to create a small program to solve it. The result of the calculation should be printed to stdout. Don't forget to place the file in `src/quest3.c`.
 
-#### Получен Quest 3. Создать программу `src/quest3.c`, которая рассчитывает и выводит на экран n-ое число Фибоначчи при помощи рекурсивного алгоритма. Сам поиск n-ого числа Фибоначчи должен быть выделен в отдельную функцию. Число вводится через стандартный поток ввода. В случае ошибки выводить «n/a».
+#### Quest 3 received: Create a program `src/quest3.c` that calculates and prints the n-th Fibonacci number using a recursive algorithm. The search for the n-th Fibonacci number must be implemented as a separate function. The number n is read from stdin. On any error, print n/a.
 
-| Входные данные | Выходные данные |
-| ------ | ------ |
-| 21 | 10946 |
+| Input | Output |
+| --- | --- |
+| 21  | 10946 |
 
 ***LOADING...***
 
 ## Quest 4. Table
 
-\> *Запустить программу `src/quest3.c`*
+\> *Run the program src/quest3.c*
 
     4F 4B
 
-    Попытка восстановления комнаты...
+    Attempting room recovery...
 
             10%
             20%
@@ -293,69 +296,66 @@
             80%
             90%
             99%
-            
-            Ошибка...
 
-\> *Оглядеться*
+            Error...
 
-Комната вокруг тебя наконец-то обрела нормальный облик. Стены приятных пастельных цветов, уютный полумрак, легкая, расслабляющая эмбиент-музыка на фоне. Но в месте, где должна была быть дверь, — черная зияющая пустота, иногда прореживаемая сеткой осыпающихся пикселей и строками bash-команд. \
-Совершенно очевидно, что дверь еще не восстановлена.
+\> *Look around*
 
-\> *Запустить модуль ИИ*
+The room finally takes on a normal look: pastel walls, cozy dim light, soft ambient music in the background. But where the door should be, there's a black gaping void, sometimes streaked with a mesh of crumbling pixels and lines of bash commands. \
+It's obvious the door hasn't been restored yet.
 
-    Инициализация... 
-    Запуск.
+\> *Launch the AI module*
 
-    Комната восстановлена. Зачем ты меня запустил? Я отдыхал.
+    Initializing...
+    Starting.
 
-\> *Ввести: «Комната не восстановлена. Не хватает самого главного — двери»*
+    The room is restored. Why did you wake me up? I was resting.
 
-    Для кого как. Кто ищет внешнего — тому важнее дверь.
-    Кто направлен вовнутрь — тот более заинтересован в интерьере.
+\> *Type: "The room isn't restored. The most important part is missing — the door."*
 
-Какие-то философские рассуждения. Это настораживает. Ты бы поосторожнее с искусственным интеллектом. Никогда не знаешь, что у него на уме.
+    Depends who you ask. Those who seek the outside care about the door. Those who look inward care more about the interior.
 
-\> *Ввести: «Что необходимо сделать для восстановления двери?»*
+Philosophical musings. That's... concerning. Be careful with artificial intelligence — you never really know what's on its mind.
 
-Неожиданно ты получаешь подробный и детализированный ответ: 
+\> *Type: "What needs to be done to restore the door?"*
 
-    К сожалению, файл, описывающий уравнение двери, поврежден. 
-    Если ты так заинтересован в двери, тебе придется сгенерировать его заново. 
-    У меня есть некоторые проблемы с восприятием аналитических формул и выражений, 
-    так что в файле должна находиться таблица дискретных значений искомой функции. 
-    Нас прежде всего интересует интервал от минус числа Пи до плюс числа Пи, все включительно. 
-    Высокая точность числа Пи не требуется, достаточно точности до 20 знака. 
-    Само число стоит записать в отдельную переменную или директиву, чтобы не повторяться в коде.
-    Всего нам потребуется ровно 42 замера на этом интервале. 
-    Первый столбец в файле — это значение оси абсцисс, второй, третий и четвертый — значения функций в точке. 
-	Никаких заголовков таблицы не нужно.
-    Все значения записываются с точностью до 7 знаков после запятой.
-    Разделитель между столбцами — «|». И пожалуйста, поосторожнее с областью определения. 
-    Функции нужны три, так как нет достоверных данных, какая функция подойдет для описания двери. 
-    Судя по сохранившимся записям в логах, это может быть Верзьера Аньези с единичным диаметром,
-    лемниската Бернулли с единичным интервалом в положительной полуплоскости и квадратичная гипербола. 
-    Подготовь алгоритм в виде файла `src/door_functions.c`, 
-    а результат работы своего алгоритма размести в файле `src/data/door_data.txt`. 
-    Для вывода в файл можешь использовать перенаправление ввода в терминале bash.
-    Формулы можешь найти ниже.
+Unexpectedly, you get a detailed reply:
 
-Верзьера Аньези с единичным диаметром: \
-![Верзьера Аньези](misc/images/va.png) 
+    ...unfortunately, the file describing the door's equation is corrupted.
+    If you're so invested in the door, you'll have to generate it again.
+    I have trouble parsing analytical formulas and expressions,
+    so the file must contain a table of discrete values of the target function.
+    We're interested primarily in the interval from minus pi to plus pi, inclusive.
+    We don't need ultra-high precision for pi — accuracy to the 20th decimal is enough.
+    Store the value of pi in a separate variable or directive to avoid repetition.  
+    We need exactly 42 samples across this interval.
+    The first column in the file is the x value (abscissa). The second, third, and fourth columns are the values of the functions at that x.
+    No table headers.
+    All values must have 7 digits after the decimal point.
+    Use "|" as the column separator. And please mind each function's domain.
+    We need three functions, since it's unclear which one will fit the door's shape. Based on the logs, it might be the Witch of Agnesi with unit diameter,
+    the Bernoulli lemniscate with unit interval in the positive half-plane, and a quadratic hyperbola.
+    Prepare the algorithm in `src/door_functions.c`,
+    and place the program's output in `src/data/door_data.txt`.
+    You can use bash redirection to write to the file.
+    You'll find the formulas below.
 
-Лемниската Бернулли с единичным интервалом в положительной полуплоскости: \
-![Лемниската Бернулли](misc/images/lb.png) 
+Witch of Agnesi (unit diameter): \
+![va](./misc/images/va.png)
 
-Квадратичная гипербола: \
-![Квадратичная гипербола](misc/images/g.png) 
+Bernoulli lemniscate (unit interval, positive half-plane): \
+![lb](./misc/images/lb.png)
 
-#### Получен Quest 4. Создать программу `src/door_functions.c`, которая рассчитывает и выводит на экран таблицу из трех функций:<br>
-#### - Верзьера Аньези с единичным диаметром;
-#### - Лемниската Бернулли с единичным интервалом в положительной полуплоскости (Y > 0);
-#### - Квадратичная гипербола.<br>
-#### В первом столбце перечисляются значения абсциссы от минус Пи до плюс Пи включительно, и на этом интервале должно быть 42 замера. Второй, третий и четвертый столбцы описывают значения функций в точке. Заголовки таблицы не нужны. Все значения записываются с точностью до 7 знаков после запятой, необходимо использовать тип double для повышенной точности. Разделитель между столбцами — «|». Всего должно быть ровно 42 записи в таблице.
-#### Все значения записываются с точностью до 7 знаков после запятой, необходимо использовать тип double для повышенной точности.  Всего должно быть ровно 42 записи в таблице. Результат работы программы нужно разместить в файле `src/data/door_data.txt` (запись в файл из программы реализовывать не нужно, можно использовать перенаправление вывода). В случае если функция не определена в какой-либо точке, в таблице должен быть знак «-».
+Quadratic hyperbola: \
+![g](./misc/images/g.png)
 
-Результат:
+#### Quest 4 received: Create `src/door_functions.c` that computes and prints a table of three functions:<br>
+#### - Witch of Agnesi with unit diameter;
+#### - Bernoulli lemniscate with unit interval in the positive half-plane (Y > 0); 
+#### - Quadratic hyperbola.<br>
+#### The first column lists x values from −π to +π inclusive, with exactly 42 samples across this interval. The second, third, and fourth columns are the function values at that x. No headers. All numeric values must be printed with 7 digits after the decimal point, use type double for higher precision. Column separator: "|". There must be exactly 42 rows in the table. (You don't have to write to a file from within the program — you may redirect stdout to `src/data/door_data.txt`.) If a function is undefined at a given point, print a dash "-" in that cell.
+
+Sample output fragment:
 
 -3.1415927 | 0.0919997 | - | 0.1013212<br/>
 -2.9883442 | 0.1007029 | - | 0.1119796<br/>
@@ -366,53 +366,49 @@
 
 ....................................k.i.l.l..m.e..............................
 
-
-<br/>Ошибка ИИ!<br/>
+AI error!
 
 ***LOADING...***
 
 ## Bonus Quests: Level 1. Room 4
 ## Bonus Quest 5. Func
 
-\> *Ввести: «Файлы готовы»*
+\> *Type: "Files are ready"*
 
-Ответ в терминале: 
+Response in the terminal:
 
-    Отлично. Возможен запуск алгоритма восстановления дверей. 
-    Однако есть возможность его ускорить, если модифицировать твою программу
-    и добавить туда печать графиков функций.
-    Без лишних элементов, просто графики последовательно, 
-    один под другим, в той же области определения.
-    Тебе будет достаточно использовать только то, что ты уже знаешь. 
-    Масштаб по оси абсцисс — 42 отсечки, масштаб оси ординат — 21. 
-    Рисовать с помощью символа «*». 
-    Впрочем, это необязательно — ускорение будет небольшим. 
+    Excellent. We can launch the door-recovery algorithm.
+    However, we can speed it up a bit if you modify your program
+    to print plots of the functions.
+    No extras — just the plots, one below another, over the same domain.
+    You already know everything you need to do this.
+    Scale for the x-axis: 42 ticks. Scale for the y-axis: 21.
+    Draw using the "\*" character.
+    It's optional, though — the speedup will be minor.
 
-#### Получен Quest 5. Дополнить программу `src/door_functions.c` так, чтобы она отрисовывала в терминале графики рассчитываемых функций при помощи символов «\*». Масштаб по оси абсцисс — 42 отсечки, масштаб оси ординат — 21. Расположение и поворот координатных осей не принципиальны. Написанный код сохранить в файл `door_functions_print.c`.
+#### Bonus Quest 5 received: Extend `src/door_functions.c` so that it renders ASCII plots of the computed functions in the terminal using the \* character. X-axis scale: 42 ticks Y-axis scale: 21 The placement and orientation of the axes are not critical. Save the resulting code to `door_functions_print.c`.
 
 ***LOADING...***
 
 ## Chapter IV
 
-    Загрузка файлов... 
-    Поиск уравнения двери... 
-    Сглаживание кривых... 
-    Генерация дверей... 
-    Интеграция дверей...
+    Loading files...
+    Searching for the door equation...
+    Smoothing the curves...
+    Generating doors...
+    Integrating doors...
 
-\> *Осмотреться*
+\> *Look around*
 
-В дальнем конце комнаты появляется дверь.
+A door appears at the far end of the room.
 
-\> *Попробовать выйти*
+\> *Try to leave*
 
-Дверь оказывается незапертой. Видимо, ИИ было не до этого. 
+The door turns out to be unlocked — apparently, the AI didn't bother locking it this time.
 
-Наши поздравления, ты снова выходишь из комнаты!
+Congratulations — you've made it out of the room again!
 
 ***LOADING...***
 
-💡**[Нажми сюда](http://opros.so/p31wz), чтобы поделиться с нами обратной связью на этот проект. 
-Это анонимно и поможет нашей команде сделать обучение лучше. 
-Рекомендуем заполнить опрос сразу после выполнения проекта.**
-
+💡**Please take a moment to leave your [feedback](https://forms.yandex.ru/cloud/68a05a2a90fa7b10773180e8) once you finish the project.  
+It will help our team improve this product. Thank you!**
