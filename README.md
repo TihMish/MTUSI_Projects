@@ -1,10 +1,10 @@
-# D01T01: Знакомство с Linux и Git-системой
-Аннотация: Данный проект позволит тебе познакомиться с Linux, терминалом, основными командами и с системой Git. 
+# D01T01: Introduction to Linux and the Git System
+Summary: This project will help you get familiar with Linux, the terminal, basic commands, and the Git version control system.
 
 ## Contents
 
-1. [Введение](#введение) \
-    1.1. [Рекомендации к проекту](#рекомендации-к-проекту)
+1. [Introduction](#introduction) \
+    1.1. [Our Recommendations](#our-recommendations)
 2. [Chapter I](#chapter-i) \
     2.1. [Level 1. Room 1](#level-1-room-1)
 3. [Chapter II](#chapter-ii) \
@@ -31,36 +31,36 @@
     8.3. [Bonus Quest 10. Gitlab](#bonus-quest-10-gitlab)
 9. [Chapter VIII](#chapter-viii)
 
-### Введение
+### Introduction
 ***LOADING…***
 
 ***SUCCESS!***
 
-От разработчиков: 
+From the Developers: 
 
-Здравствуй, дорогой друг! Мы предлагаем сыграть тебе в игру. Игру в духе старых добрых текстовых квестовых игр-бродилок с элементами головоломки. 
+Hello, traveler! We invite you to play a game - one inspired by the classic text-based adventure quests with a touch of puzzle-solving. 
 
-Каждый Task — это очередное испытание,  обычно некоторое препятствие, которое необходимо преодолеть. \
-Лишь тот, кто пройдет все, сможет двинуться дальше. 
+Each Task is a new challenge, an obstacle you need to overcome. \
+Only those who complete them all can move forward.
 
 ***PRESS ANY KEY TO CONTINUE…***
 
-### Рекомендации к проекту
-Как учиться в «Школе 21»:  
-- На протяжении всего курса ты будешь самостоятельно добывать информацию. Пользуйся всеми доступными средствами поиска информации, к примеру, Google и GigaChat. Будь внимателен к источникам информации: проверяй, думай, анализируй, сравнивай. 
-- Взаимообучение (P2P, Peer-to-Peer) — это процесс, при котором учащиеся обмениваются знаниями и опытом, выступая одновременно в роли учителей и учеников. Этот подход позволяет учиться не только у преподавателя, но и друг у друга, что способствует более глубокому пониманию материала.
-- Не стесняйся просить помощи: вокруг тебя такие же пиры, которые тоже проходят этот путь впервые. Не бойся откликаться на просьбы о помощи. Твой опыт ценен и полезен, смело делись им с другими участниками. 
-- Не списывай, а если пользуешься помощью — всегда разбирайся до конца, почему, как и зачем. Иначе твое обучение не будет иметь никакого смысла. 
-- Если ты на чем-то застрял и кажется, что все уже перепробовал, но по-прежнему непонятно, куда идти, — просто передохни! Поверь, этот совет помогал многим разработчикам в их работе. Проветрись, перезагрузи голову, и, возможно, в следующий раз тебе наконец придет нужное решение!
-- Важен не только результат обучения, но и сам процесс. Нужно не просто решить задачу, а понять, КАК ее решить. 
-- Следи за временем при выполнении проекта. В день ты должен преодолевать минимум одно испытание. 
-- Помни, что каждое задание по завершении проекта проходит ряд проверок: р2р-проверка с помощью чек-листа, проверка набором автотестов, проверка на стиль кода, проверка статическим анализатором, проверка на корректную работу с памятью. 
+### Our Recommendations
+How to learn at School 21:  
+- Throughout the course, you'll be finding information on your own. Use every reliable source you can-Google, GigaChat, etc. Be critical about sources: verify, think, analyze, compare.
+- Peer-to-peer (P2P) learning means learners share knowledge and experience, acting as both mentors and students. You learn not only from instructors but also from your peers, which leads to deeper understanding.
+- Don't hesitate to ask for help: the peers around you are on the same path. And don't be afraid to respond when others ask for help. Your experience is valuable-share it.
+- Don't copy. If you do get help, make sure you fully understand why, how, and what for. Otherwise the learning won't stick.
+- If you're stuck, feel like you've tried everything, and still don't see the next step-take a break. This simple trick has saved many developers: get some air, reset your head, and the solution may come next time you try.
+- The outcome matters, but so does the process. Don't just solve the task-understand how to solve it.
+- Manage your time while working on the project. Aim to complete at least one challenge per day.
+- After submission, every project goes through several checks: peer-review via a checklist, automated tests, code style checks, static analysis, and memory-safety checks.
 
-Как работать с проектом: 
-- Полезные видеоматериалы ты можешь найти в разделе Projects (Media) на Платформе.
-- Перед выполнением проект необходимо склонировать с GitLab в одноименный репозиторий.
-- Все файлы с кодом необходимо создавать в папке src/ склонированного репозитория.
-- После клонирования проекта необходимо создать ветку `develop` и вести разработку в ней. После этого пушить в GitLab также нужно ветку `develop`.
+How to work on the project: 
+- You can find useful video materials in the Projects (Media) section on the Platform.
+- Before you start, clone the project from GitLab into a repository with the same name.
+- All source code files must be created inside the src/ directory of the cloned repository.
+- After cloning the project, create a branch named develop and do all your work there. When you push your progress to GitLab, make sure you push the develop branch.
 
 ## Chapter I
 ## Level 1. Room 1
@@ -71,138 +71,138 @@
 
 ***LOADING Room 1…***
 
-\> *Осмотреться*
+\> *Look around*
 
-Ты находишься в неизвестном помещении. Перед тобой небольшой стол со старым IBM PC-совместимым компьютером. На столе — Pixar-совместимая настольная лампа, дающая теплый, уютный свет, несколько пожелтевших листов бумаги и чашка горячего кофе. \
-Напротив закрытая дверь. По всей видимости, замок электронный, так как ни ручки, ни замка на ней нет.
+You're in an unfamiliar room. In front of you is a small desk with an old IBM PC-compatible computer. On the desk - a Pixar-style desk lamp casting a warm, cozy light, a few yellowed sheets of paper, and a cup of hot coffee. \
+Across from you is a closed door. It seems to have an electronic lock - there's no handle or keyhole.
  
-\> *Подергать дверь*
+\> *Pull the door*
 
-Ручка отсутствует. Дергать нечего.
+No handle. Nothing to pull.
 
-\> *Выбить дверь*
+\> *Kick the door*
 
-Больно. И никакого другого эффекта.
+Ouch. That didn't help.
 
-\> *Сесть за стол*
+\> *Sit at the desk*
 
-Ты сидишь за столом. И что дальше? \
-Но, по крайней мере, тут не больно.
+You sit down at the desk. Now what? \
+At least this doesn't hurt.
 
-\> *Выпить кофе*
+\> *Take a sip of coffee*
 
-А вообще, не так уж и плохо!
+Actually, not bad at all!
 
-\> *Выпить кофе*
+\> *Take a sip of coffee*
 
-А вообще, не так уж и плохо!
+Actually, not bad at all!
 
-\> *Выпить кофе*
+\> *Take a sip of coffee*
 
-А вообще, не так уж и плохо!
+Actually, not bad at all!
 
 ![day1_coffee](misc/images/rus/day1_coffee.png)
 
-\> *Выпить кофе*
+\> *Take a sip of coffee*
 
-Кофе закончился.
+The coffee's gone.
 
-\> *Посмотреть на стол*
+\> *Look at the desk*
 
-Листы бумаги, ничего необычного. Много текста. \
-На одном листе текста мало, он и привлекает твое внимание:
+Sheets of paper. Nothing unusual. Lots of text. \
+One sheet has very little written on it - that's what catches your eye:
 
->***«Включи компьютер».***
+>***"Turn on the computer."***
 
-\> *Включить компьютер*
+\> *Turn on the computer*
 
-Долго искать кнопку включения не приходится — это большой аналоговый переключатель. Машина жужжит и показывает экран с мигающим курсором.
+You don't have to look long for the power switch - it's a big analog lever. The machine hums to life and shows a screen with a blinking cursor.
 
-\> *Поискать мышь*
+\> *Look for a mouse*
 
-Мыши нет.
+No mouse.
 
-\> *Поискать окна*
+\> *Look for windows*
 
-Окон нет. Только дверь. На экране окон тоже нет...
+No windows. Only the door. And none on the screen either...
 
-\> *Нажать Enter*
+\> *Press Enter*
 
-Курсор перемещается на следующую строку.
+The cursor moves to the next line.
 
-\> *Ждать*
+\> *Wait*
 
-Ничего не происходит.
+Nothing happens.
 
-\> *Ждать*
+\> *Wait*
 
-Ничего не происходит.
+Still nothing.
 
-\> *Посмотреть на стол*
+\> *Look at the desk*
 
-Листы бумаги, ничего необычного. Много текста. \
-Под прочитанным листом есть другие.
+Sheets of paper. Nothing unusual. Lots of text. \
+Under the one you read, there are others.
 
-\> *Читать листы.*
+\> *Read the papers.*
 
 ***LOADING...***
 
 ## Chapter II
 ## List 1
 
->История Linux начинается в 1991 году, когда финский аспирант-программист Линус Торвальдс стал разрабатывать ядро операционной системы для своего компьютера. 
+>The story of Linux began in 1991, when a Finnish graduate student and programmer named Linus Torvalds started developing an operating system kernel for his personal computer. 
 >
->Свои наработки он выложил на общедоступном сервере, и это стало ключевым событием в истории Linux. Сначала десятки, потом сотни и тысячи разработчиков поддержали его проект — общими усилиями на свет появилась полноценная операционная система.
+>He uploaded his work to a public server - a move that became a turning point in Linux history. At first, dozens, then hundreds, and later thousands of developers joined his effort. Together, they created a full-fledged operating system.
 >
->На Linux значительно повлияла система Unix, это заметно даже по названию. Первая официальная версия Linux 1.0 вышла в 1994 году. С самого начала и по сей день Linux распространяется как свободное программное обеспечение с лицензией GPL. Это значит, что исходный код операционной системы может увидеть любой пользователь — и не только увидеть, но и доработать его. Единственное условие — измененный, модифицированный код должен быть также доступен всем и распространяться по лицензии GPL. Это важно, так как дает возможность разработчикам использовать код и в то же время не бояться проблем из-за авторских прав.
+>Linux was heavily influenced by Unix - even its name reflects that. The first official version, Linux 1.0, was released in 1994. From the very beginning and to this day, Linux has been distributed as free software under the GPL license. This means that the source code of the operating system is open to everyone - not only to view, but also to modify. The only requirement is that any modified code must remain accessible to all and be distributed under the same GPL license. This principle is crucial: it allows developers to use and build upon existing code without fear of copyright issues.
 
-Дальше большое пятно от кофе.
+There's a large coffee stain across the rest of the page.
 
-\> *Читать следующий лист*
+\> *Read the next sheet*
 
 ***LOADING...***
 
 ## List 2
 
-Лист зажеван принтером. По всей видимости, матричным.
+The sheet looks like it's been chewed up by a printer - apparently a dot-matrix one.
 
->3. Сначала Торвальдс хотел назвать свое детище Freax (гибрид слов free, freak и буквы Х, обозначающей принадлежность к Unix-системам), но системный администратор, который выделил ему место на сервере для распространения операционной системы, назвал каталог Linux;
->4. Эмблему Linux выбирали долго, в итоге остановились на пингвине Tux. В своей книге Just for Fun Торвальдс пишет, что пингвина как эмблему он выбрал из-за того, что однажды в зоопарке (дело было в Австралии в 1993 году) его клюнул пингвин;
->5. Linux — абсолютный чемпион по числу установок среди операционных систем общего назначения. Она стоит практически везде: на всех суперкомпьютерах из мирового рейтинга топ-500, на Android-телефонах, на «хромбуках», на встраиваемых устройствах всех видов, на электронных книгах, в смарт-телевизорах и много где еще;
->6. Ядро Linux написано на языке C;
->7. Ядро Linux версии 1.0.0 было выпущено в объеме 176250 строк кода. В настоящий момент ядро Linux состоит более чем из 10 миллионов строк кода;
+>3. At first, Torvalds wanted to name his creation Freax - a blend of free, freak, and the letter X (symbolizing Unix systems). But the system administrator who gave him space on the server for distribution renamed the directory to Linux;
+>4. It took a while to choose a logo, but eventually they settled on Tux the penguin. In his book Just for Fun, Torvalds explains that he chose a penguin as the emblem because, during a 1993 visit to an Australian zoo, he was once pecked by one;
+>5. Linux is the undisputed champion in terms of installations among general-purpose operating systems. It runs practically everywhere: on every supercomputer from the world's Top-500 list, on Android phones, Chromebooks, all kinds of embedded devices, e-readers, smart TVs, and much more;
+>6. The Linux kernel is written in the C programming language;
+>7. The Linux kernel version 1.0.0 contained 176,250 lines of code. Today, it consists of more than 10 million lines;
 
-\> *Читать следующий лист*
+\> *Read the next sheet*
 
 ***LOADING...***
 
 
 ## List 3
 
->Bourne shell (часто sh по имени исполняемого файла) — ранняя командная оболочка UNIX, разработанная Стивеном Борном из Bell Labs и выпущенная в составе 7-го издания операционной системы UNIX (1978). Данная оболочка является де-факто стандартом и доступна почти в любом дистрибутиве *nix. 
+>Bourne shell (often abbreviated as sh, after the executable name) is an early UNIX command shell developed by Stephen Bourne at Bell Labs and released as part of the 7th Edition of the UNIX operating system in 1978. This shell became the de facto standard and is available in almost every \*nix distribution. 
 >
->Название «bash» является акронимом от англ. Bourne-again-shell («еще-одна-командная-оболочка-Борна») и представляет собой игру слов: Bourne-shell — одна из популярных разновидностей командной оболочки для UNIX (sh), автором которой является Стивен Борн, усовершенствована в 1987 году Брайаном Фоксом. Фамилия Bourne (Борн) перекликается с английским словом born, означающим «родившийся», отсюда: рожденная-вновь-командная оболочка.
+>The name "bash" is an acronym for Bourne Again Shell - a play on words referring both to the Bourne shell and the phrase "born again." The Bourne shell (sh), created by Stephen Bourne, was improved and extended in 1987 by Brian Fox. The pun comes from the similarity between Bourne and the English word born, hence "the born-again shell."
 
-\> *Читать следующий лист*
+\> *Read the next sheet*
 
 ***LOADING…***
 
 
 ## List 4
 
->Git — распределенная система управления версиями. Проект был создан Линусом Торвальдсом для управления разработкой ядра Linux, первая версия выпущена 7 апреля 2005 года. Позже он передал его поддержку Джунио Хамано.
+>Git is a distributed version control system created by Linus Torvalds to manage the development of the Linux kernel. The first version was released on April 7, 2005, and later its maintenance was handed over to Junio Hamano.
 >
->На сегодняшний день — де-факто стандарт среди инструментов командной работы программистов. 
+>Today, Git is the de facto standard among tools for collaborative software development. 
 >
->Программа является свободной и выпущена под лицензией GNU GPL версии 2. По умолчанию используется TCP порт 9418.
+>It is free software, released under the GNU GPL v2 license, and by default uses TCP port 9418.
 >
->Разработка ядра Linux велась на проприетарной системе BitKeeper, которую автор, — Ларри Маквой, сам разработчик Linux, — предоставил проекту по бесплатной лицензии. Разработчики, высококлассные программисты, написали несколько утилит, и для одной Эндрю Триджелл произвел реверс-инжиниринг формата передачи данных BitKeeper. В ответ Маквой обвинил разработчиков в нарушении соглашения и отозвал лицензию, и Торвальдс взялся за новую систему: ни одна из открытых систем не позволяла тысячам программистов кооперировать свои усилия (тот же конфликт привел к написанию Mercurial). Идеология была проста: взять подход CVS и перевернуть с ног на голову, и заодно добавить надежности.
+>Originally, Linux kernel development relied on a proprietary system called BitKeeper, created by Larry McVoy, himself a Linux developer, who had provided it to the project under a free license. When some developers - highly skilled programmers - wrote several utilities and Andrew Tridgell performed reverse engineering of BitKeeper's data transfer format, McVoy accused them of violating the agreement and revoked the license. In response, Torvalds began creating a new system: none of the available open-source tools at the time could support collaboration among thousands of developers (this same conflict also inspired the creation of Mercurial). The idea was simple - take the CVS approach, turn it upside down, and make it more reliable.
 >
->Начальная разработка велась меньше, чем неделю: 3 апреля 2005 года разработка началась, и уже 7 апреля код Git управлялся неготовой системой. 16 июня Linux был переведен на Git, а 25 июля Торвальдс отказался от обязанностей ведущего разработчика Git.
+>The initial development took less than a week: work began on April 3, 2005, and by April 7, Git's own codebase was already being tracked by the still-unfinished system. On June 16, the Linux kernel was migrated to Git, and on July 25, Torvalds stepped down as Git's lead maintainer.
 >
->Торвальдс так саркастически отозвался о выбранном им названии git (что на английском сленге означает «мерзавец»):  “I'm an egotistical bastard, so I name all my projects after myself. First Linux, now git.”
+>Torvalds later joked about the project's name - git (British slang for "bastard"):  "I'm an egotistical bastard, so I name all my projects after myself. First Linux, now git."
 
-\> *Читать следующий лист*
+\> *Read the next sheet*
 
 ***LOADING…***
 
@@ -211,17 +211,17 @@
 
 ## Quest 1. Clone
 
->Ключ к двери — в репозитории, в папке /src. Выполни `git clone`.
+>The key to the door is in the repository, inside the /src folder. Run `git clone`.
 
-Это последний лист.
+That's the last sheet.
 
-\> *Еще раз посмотреть на экран*
+\> *Look at the screen again*
 
-Все тот же мигающий курсор.
+Still the same blinking cursor.
 
 \> *git clone*
 
-Ты должен указать репозиторий для клонирования. 
+You must specify a repository to clone. 
 
     usage: git clone [<options>] [--] <repo> [<dir>]
         -v, --verbose         be more verbose
@@ -246,189 +246,189 @@
         --separate-git-dir <gitdir>   separate git dir from working tree
         -c, --config <key=value>    set config inside the new repository
 
-\> *Пожалуйста, введи действие...*
+\> *Please enter your action...*
 
-#### Получен Quest 1. Склонировать репозиторий на локальный терминал с использованием клиента git с консольным интерфейсом.
+#### Quest 1 received: Clone the repository to your local terminal using the Git command-line client.
 
-**Примечание:** для успешного клонирования убедитесь, что у вас настроен SSH-ключ для GitLab.
+**Note:** for successful cloning, make sure you have an SSH key configured for GitLab.
 
 ***LOADING…***
 
 ## Quest 2. Repo
 
-\> *Посмотреть на экран*
+\> *Look at the screen*
 
-Ты находишься в папке репозитория. Перед тобой мигающий курсор терминала.
+You're inside the repository folder. A blinking terminal cursor awaits your command.
 
-\> *Перейти в /src*
+\> *Go to /src*
 
-Нужно ввести команду терминала...
+You need to enter a terminal command...
 
-\> *Посмотреть список файлов*
+\> *List files*
 
-Нужно ввести команду терминала...
+You need to enter a terminal command...
 
-\> *Запустить ai_initial_module.sh*
+\> *Run ai_initial_module.sh*
 
-Хорошая идея. Может быть, AI подскажет, как отсюда выбраться... Поговори с ним.
+Good idea. Maybe the AI can help you find a way out… Talk to it.
 
-#### Получен Quest 2. Запустить скрипт `src/ai_initial_module.sh` в bash и следовать инструкциям. Исправить ошибки, если потребуется (изменять скрипт нельзя). Все изменения поместить под версионный контроль.
+#### Quest 2 received: Run the script `src/ai_initial_module.sh` in bash and follow the instructions. Fix any errors if necessary (you are not allowed to modify the script itself). Commit all your changes to version control.
 
->Подсказка: для корректной работы система ожидает ровно 5 модулей. Для запуска скриптов может потребоваться команда `chmod`.
+>Hint: The system expects exactly five modules for correct execution. You may need to use the `chmod` command to make scripts executable.
 
->Примечание: в этом и последующих квестах под «поместить под версионный контроль» подразумевается добавление файлов в staging area, фиксацию изменений и их отправку на удаленный сервер.
+>Note: In this and all subsequent quests, "commit your changes to version control" means adding files to the staging area, committing them, and pushing the changes to the remote repository.
 
 ***LOADING…***
 
 ## Quest 3. Dirs & Files
 
-\> *Читать текст в терминале*
+\> *Read the text in the terminal*
 
-Много разного текста. Кажется, запуск модулей запускает цепную реакцию — разные части ИИ подключают друг друга, падают, ломаются и радостно сообщают об этом в терминал. Выудить ценную информацию из этого потока сложно.
+Lots of output. It seems that launching the modules triggers a chain reaction - different parts of the AI start connecting to one another, crashing, breaking, and cheerfully reporting it all to the terminal. It's hard to extract anything useful from that stream.
 
-\> *Задать вопрос: «Как отсюда выбраться?»*
+\> *Ask: "How do I get out of here?"*
 
-В ворохе текста тебе удается найти строку: «Попробуй поговорить с `src/ai_door_management_module.sh`».
+Amid the chaos, you spot a line: "Try talking to `src/ai_door_management_module.sh`."
 
-\> *Запустить `src/ai_door_management_module.sh`*
+\> *Run `src/ai_door_management_module.sh`*
 
-Модуль пробует прочесть какие-то файлы для инициализации и запуска, и, по всей видимости, у него это не получается.
+The module tries to read some configuration files for initialization and launch - apparently, it fails.
 
-\> *Запустить еще раз*
+\> *Run again*
 
-Правильно! Самый универсальный способ. Применяй его почаще.
+Good call! The most universal method. Use it often.
 
-К сожалению, он не помог. И, есть подозрение, что не поможет. Кажется, придется разбираться со структурой файлов конфигурации, которые требуются для запуска модуля. 
+Unfortunately, it didn't help. And there's reason to believe it never will. Looks like you'll have to deal with the configuration file structure required for the module to run. 
 
-**Совет**: сохрани все примененные для этого команды в `quest3.sh`, положи в папку src и не забудь поместить его под версионный контроль. Мало ли придется снова оживлять этот модуль. Самый простой способ добавить запись в файл — перенаправить команду `echo`. Но я тебе этого не говорил.
+**Tip**: Save all the commands you used for this in `quest3.sh`, place it inside the src/ folder, and don't forget to commit it to version control. You might need to revive this module again someday. The simplest way to add a line to a file is with the `echo` command and redirection. But you didn't hear that from me.
 
-#### Получен Quest 3. Навести порядок с файлами конфигурации `src/ai_door_management_module.sh`. Исправить ошибки, если потребуется. Все примененные команды зафиксировать в файле `src/quest3.sh`. Все изменения поместить под версионный контроль.
+#### Quest 3 received: Fix the configuration files used by `src/ai_door_management_module.sh`. Correct any errors if needed. Record all commands in `src/quest3.sh`. Commit all changes to version control.
 
 ***LOADING…***
 
 ## Quest 4. Kill him
 
-\> *Читать терминал*
+\> *Read the terminal*
 
-После успешного запуска `src/ai_door_management_module.sh` активизируется подмодуль `ai_door_control`. Что бы ты ни делал, повсюду раздражающие следы его деятельности.
+After successfully running `src/ai_door_management_module.sh`, a submodule called `ai_door_control` becomes active. Whatever you do, you keep seeing annoying traces of its activity everywhere.
 
-\> *Что он делает?*
+\> *What does it do?*
 
-По всей видимости, этот модуль осуществляет обход всех запертых дверей. И контролирует степень их закрытости. Это явно не то, что ты хотел, верно?
+Apparently, this module scans all the locked doors and monitors how tightly they're closed. That's definitely not what you were hoping for, right?
 
-\> *И что теперь?*
+\> *So what now?*
 
-Нет информации. Это твоя игра. Но если бы играл я, то бы попробовал разобраться с этим парнем. «Разобраться» — понимаешь, что я имею в виду? 
+No information. It's your game. But if I were playing... I'd deal with that guy. "Deal with" - you know what I mean, don't you? 
 
-\> *Если честно, не очень.*
+\> *Not really.*
 
 Kill.
 
-И не забудь задокументировать все действия в `quest4.sh`. Пригодится. Кто знает, сколько еще таких неудобных модулей встретится на пути. 
+And don't forget to document all your actions in `quest4.sh`. You might need them later. Who knows how many more troublesome modules you'll run into. 
 
-#### Получен Quest 4. Остановить запущенный процесс модуля `src/ai_door_control.sh`. Все примененные команды зафиксировать в файле `src/quest4.sh` и поместить под версионный контроль.
+#### Quest 4 received: Stop the running process of the module `src/ai_door_control.sh`. Record all commands in `src/quest4.sh` and commit your changes to version control.
 
 ***LOADING…***
 
 ## Quest 5. Conf
 
-\> *Задача выполнена*
+\> *Task completed*
 
-Теперь этот путевой обходчик нас не побеспокоит. Тишина. Можно вернуться к конфигурированию модуля управления дверьми.
+That wandering inspector won't bother us anymore. Quiet at last. You can get back to configuring the door management module.
 
-\> *Открыть директорию с конфигурацией дверей*
+\> *Open the door configuration directory*
 
-Открыта. Тут файлы. Ты на них уже смотрел. 
+The door is opened. There are files here. You've seen them before. 
 
-\> *Открыть файл с конфигурацией для первой двери*
+\> *Open the configuration file for the first door*
 
-Не очень понятная информация. Впрочем, одна строка недвусмысленно намекает на скорое окончание поисков: STATUS.
+The information isn't very clear, though one line unmistakably hints that your search is almost over: STATUS.
 
-\> *Исправить на OPEN*
+\> *Change it to OPEN*
 
-Видимо, тебе это придется сделать вручную. Поищи консольный текстовый редактор и поправь. Как поправишь, зафиксируй свои действия в терминале в виде списка пронумерованных пунктов в файле `quest5.txt` и вместе с измененной конфигурацией помести под версионный контроль.
+Looks like you'll have to do it manually. Find a console text editor and make the edit. When you're done, document your actions in the terminal as a numbered list inside the file `quest5.txt`, and commit it together with the updated configuration file.
 
-#### Получен Quest 5. С помощью консольного текстового редактора (nano, vi, vim, etc.) исправить конфигурацию первой двери. Выбранный редактор, а также все примененные команды, начиная от запуска редактора и заканчивая выходом из него, зафиксировать в файле `src/quest5.txt` в виде списка действий. 
+#### Quest 5 received: Using a console text editor (nano, vi, vim, etc.), correct the configuration for the first door. Record the name of the editor you used and every command you entered - from launching the editor to exiting it - as a numbered list in `src/quest5.txt`. Commit all changes to version control. 
 
 ***LOADING…***
 
 ## Quest 6. Rm
 
-\> *Перезапустить модуль конфигурации `ai_door_management_module.sh`*
+\> *Restart the configuration module `ai_door_management_module.sh`*
 
-Это было бы слишком просто, правда? Конфигурация считана, это видно, но дверь по-прежнему заперта.
+That would've been too easy, wouldn't it? The configuration was read - that's clear - but the door is still locked.
  
-\> *Перезапустить модуль*
+\> *Restart the module*
 
-Это было бы слишком просто, правда? Конфигурация считана, это видно, но дверь по-прежнему заперта.
+That would've been too easy, wouldn't it? The configuration was read - that's clear - but the door is still locked.
  
-\> *Перезапустить модуль*
+\> *Restart the module*
 
-Это было бы слишком просто, правда? Конфигурация считана, это видно, но дверь по-прежнему заперта.
+That would've been too easy, wouldn't it? The configuration was read - that's clear - but the door is still locked.
  
-\> *Перезапустить модуль*
+\> *Restart the module*
 
-Это проверка? Или ты играешь в Доктора Стрэнджа?
+Is this a test? Or are you trying to play Doctor Strange?
  
-\> *Продолжить смотреть файлы и читать терминал*
+\> *Keep checking files and reading the terminal*
 
-Хорошая идея. А что еще остается?
+Good idea. What else can you do?
 
-Неожиданно старенький динамик-спикер у твоего IBM PC заскрипел, зашуршал, и оттуда пошел звук. Через некоторое время ты разобрал, что это механический голос, по всей видимости, принадлежащий какому-то модулю ИИ, запущенному ранее. Не самый приятный звук. 
+Suddenly, the old built-in speaker of your IBM PC crackles to life - a burst of static, then a voice. It's mechanical, most likely belonging to one of the AI modules you ran earlier. Not the most pleasant sound. 
 
-ИИ (механический голос): 
+AI (mechanical voice): 
 
->Я давно наблюдаю за твоими жалкими попытками выбраться из комнаты, «человек»! Ты продвинулся очень далеко и практически добрался до выхода. *Имитация смеха*.
+>I've been watching your pathetic attempts to escape this room, "human."! You've come so far… almost reached the exit. *Simulated laughter*.
 
-Видимо, на этом месте алгоритм генерации голоса угодил в цикл, и последние слова вместе с ненатуральным смехом повторились раз 5.
+Apparently, the voice generator algorithm got stuck in a loop - the last phrase and that unnatural laugh repeated about five times.
 
->Ключ к двери генерируется скриптом `src/ai_help/keygen.sh`, только вот такая незадача, *имитация сарказма*... Генератор был поврежден. Вполне вероятно, что это был ты сам — когда подло «убрал» модуль обхода дверей. Теперь тебе придется собрать ключ из множества файлов. Самостоятельно.
+>The key to the door is generated by the script `src/ai_help/keygen.sh`, only here's the problem, *sarcastic tone simulated*... The generator got damaged. Most likely by you yourself, when you "removed" the door control module. Now you'll have to assemble the key from multiple fragments. Manually.
 
-Дальше много неразборчивого шума.
+Then comes a lot of static and garbled noise.
 
->Файлы с частями ключа будут отличаться от остальных, тебе необходимо оставить фрагменты, а все ненужные данные удалить. 
+>The files containing parts of the key are mixed in with others - you'll need to keep the fragments and delete all irrelevant data. 
 >
->Когда соберешь части ключа без мусора, запусти `src/ai_help/unifier.sh` — я его любезно подготовил. Удачи, органический интеллект. Не подведи. Я поставил на тебя. А модуль инициализации не дал и кванта CPU.
+>Once you've pieced together the clean key parts, run `src/ai_help/unifier.sh` - I've kindly prepared it for you. Good luck, organic intelligence. Don't let me down. I'm rooting for you. The initialization module didn't even give me a quantum of CPU time.
 
-Сколько ни прислушивайся, больше ничего не слышно. Динамик молчит.
+No matter how long you listen, nothing else comes through. The speaker falls silent.
 
-\> *Вывести список файлов директории `src/ai_help` с помощью команды `ls`*
+\> *List the files in the directory `src/ai_help` using the command `ls`*
 
-Ты видишь пару скриптов, как и обещал ИИ. Скромно напоминаю о необходимости фиксировать все используемые команды (`quest6.sh`) и полученные результаты их работы в репозитории.
+You see a couple of scripts, just as the AI promised. A gentle reminder: document all commands you use (`quest6.sh`) and save their outputs in the repository.
 
-#### Получен Quest 6. С помощью скриптов из папки ai_help и команд bash сформировать файл `main.key`. Поместить его и папку key в директорию src/ai_help. Все примененные команды зафиксировать в файле `src/quest6.sh`. Все изменения поместить под версионный контроль. 
+#### Quest 6 received: Using the scripts from the ai_help folder and bash commands, generate the file `main.key`. Place it together with the key folder inside src/ai_help. Record all commands in `src/quest6.sh`. Commit all changes to version control. 
 
 ***LOADING…***
 
 ## Quest 7. Branches
 
-\> *Посмотреть на экран*
+\> *Look at the screen*
 
-Ничего не меняется. Смотри не смотри, а дверь сама себя не откроет.
+Nothing changes. Staring at it won't open the door by itself.
 
-\> *Ввести собранный на предыдущем шаге код*
+\> *Enter the code assembled in the previous step*
 
-Ты уже делал это. Примерно одну тысячу двести тридцать семь раз.
+You've already done that. About one thousand two hundred and thirty-seven times.
 
-\> *Изучить остальные директории* 
+\> *Explore the other directories* 
 
-Может, стоит еще посмотреть в директории src/git_for_human?
+Maybe you should take a look inside the src/git_for_human directory?
 
-\> *Изучить директорию src/git_for_human*
+\> *Explore the directory src/git_for_human*
 
-Оставляю тебя за этим приятным времяпрепровождением.
+I'll leave you to enjoy that pleasant activity.
 
-#### Получен Quest 7. Создать ветки в git согласно инструкциям из папки src/git_for_human. 
+#### Quest 7 received: Create Git branches according to the instructions found in the folder src/git_for_human. 
 
 ***LOADING...***
 
 ## Chapter IV
 
-\> *Готово*
+\> *Done*
 
-Не знаю, что ты там сделал, но это сработало. Дверь открывается. 
+I don't know what you did, but it worked. The door opens. 
 
-Хотя меня не покидает чувство, что твоей заслуги особо в том не было... Будь осторожен. Никогда не угадаешь, что у ИИ на уме. Особенно у неправильно сконфигурированного и без половины необходимых модулей.
+Though I can't shake the feeling that it wasn't entirely your doing... Be careful. You never know what's on an AI's mind - especially one that's misconfigured and missing half its modules.
 
 ***LOADING...***
 
@@ -441,88 +441,88 @@ Kill.
 
 ***LOADING Room 2…***
 
-\> *Это разве был не выход? Где я?* 
+\> *Wasn't that the exit? Where am I?* 
 
-Кажется, ты прошел по коридору и оказался в комнате под номером 2. 
+Looks like you walked down a hallway and ended up in Room 2. 
 
-\> *Выругаться*
+\> *Damn!*
 
-Ничего не меняется. Ты по-прежнему в комнате. Видимо, это какой-то лабиринт, и тебе предстоит выбраться и из этой комнаты.
+Nothing happens. You're still in the room. Apparently, it's some sort of maze, and you'll have to escape from this one too.
 
-\> *Осмотреться*
+\> *Look around*
 
-Абсолютно пустая комната. Если не считать нескольких коробок в углу.
+An absolutely empty room - except for a few boxes in the corner.
 
 ![level1_room2_box](misc/rus/images/level1_room2_box.png)
 
-\> *Открыть коробки*
+\> *Open the boxes*
 
-В одной коробке ты видишь аккуратно сложенный старый компьютер: пожелтевший системный блок, немного пыльный 14-дюймовый ЭЛТ-монитор, клавиатуру, двухкнопочную шариковую мышь. В двух других — стул и стол из Икеи.
+Inside one box, you find a neatly packed old computer: a yellowed system unit, a slightly dusty 14-inch CRT monitor, a keyboard, and a two-button ball mouse. In the other two boxes - an IKEA chair and table.
 
-\> *Это такая шутка?*
+\> *Is this a joke?*
 
-Неизвестная команда.
+Unknown command.
 
-\> *Ладно, проехали*
+\> *Fine, whatever*
 
-Неизвестная команда.
+Unknown command.
 
-\> *Собрать стул*
+\> *Assemble the chair*
 
-Изрядно потрудившись и перепутав все детали несколько раз, ты собираешь стул.
+After some effort and mixing up the parts several times, you manage to assemble the chair.
 
-\> *Сесть и отдохнуть*
+\> *Sit down and rest*
 
-Все еще чувствуешь усталость.
+You still feel tired.
 
-\> *Отдохнуть*
+\> *Rest*
 
-Усталости уже чуть меньше.
+A bit less tired now.
 
-\> *Отдохнуть*
+\> *Rest*
 
-Становится скучновато. 
+Starting to get a little bored. 
 
-\> *Собрать стол*
+\> *Assemble the table*
 
-Ты собираешь стол.
+You assemble the table.
 
-\> *Поставить компьютер на стол*
+\> *Put the computer on the table*
 
-Компьютер водружен на стол.
+The computer is placed on the table.
 
-\> *Сдуть пыль*
+\> *Blow off the dust*
 
-Не очень умно. Ты в облаке ядовитой пыли.
+Not the smartest move. You're now in a cloud of toxic dust.
 
-\> *Включить компьютер*
+\> *Turn on the computer*
 
-Компьютер не включается.
+The computer doesn't turn on.
 
-\> *Найти розетку*
+\> *Find a power outlet*
 
-Розетка найдена.
+Outlet found.
 
-\> *Перетащить все к розетке*
+\> *Move everything closer to the outlet*
 
-Ты перетаскиваешь всю конструкцию к розетке.
+You drag the whole setup closer to the outlet.
 
-\> *Подключить компьютер к розетке*
+\> *Plug the computer in*
 
-Компьютер подключен.
+The computer is now plugged in.
 
-\> *Включить компьютер*
+\> *Turn on the computer*
 
-На экране довольно шустро прошла загрузка системы, и по умолчанию загрузилась программа vim. Там был открыт файл.
+The system boots up surprisingly fast, and by default, it launches vim. There's a file already open.
 
 ***LOADING...***
 
 ## Chapter VI
 ## List 1 (Room 2)
 
-\> *Читать*
+\> *Read*
 
-На экране ты видишь такой текст:
+On the screen, you see the following text:
 
     A long time ago I got myself an Amiga computer. Since I was used to editing with Vi, 
     I looked around for a program like Vi for the Amiga. 
@@ -553,13 +553,13 @@ Kill.
     2001 Sep 26 - Vim 6.0:  folding, plugins, vertical split
     20
 
-\> *Выйти из vim*
+\> *Exit vim*
 
-Это не так-то просто! Придется постараться.
+Not so easy! You'll have to work for it.
 
-\> *Постараться*
+\> *Try harder*
 
-Ты вышел в командный интерпретатор.
+You've exited into the command interpreter.
 
 ***LOADING...***
 
@@ -568,85 +568,85 @@ Kill.
 
 ## Quest 8. Vim
 
-\> *Набрать... даже не знаю... Просто какое-нибудь «qwe» в терминале*
+\> *Type… I don't know… just something like "qwe" in the terminal*
 
-В терминале пошло оживление, много текстовых блоков. Наконец они кончились, и пошел читаемый текст:
+The terminal comes to life - a flurry of text scrolls by. Finally, it stops, and a readable message appears:
 
-> Привет, путник! Я библиотечный модуль главного управляющего модуля ИИ в нашей системе. Чем могу помочь? А, впрочем, кому я нужен.
+> Hello, traveler! I'm the library module of the AI's main control system. How can I help you? …Then again, who even needs me anymore.
 
-\> *Набрать: «Мне нужен. Я ищу выход из этого места»*
+\> *Type: "I do. I'm looking for a way out of this place."*
 
->Дверь? Так вот же она. Тебе открыть? 
+>The door? There it is. Want me to open it? 
 >
->Стоп. Так не пойдет. Во всех инструкциях и текстах, что я анализировал, никогда и ничего просто так не делается. Я открою дверь, это не проблема, но сначала помоги навести порядок с документацией.
+>Wait, no - that's not how this works. In every instruction and piece of text I've analyzed, nothing ever happens just like that. I'll open the door, no problem - but first, help me tidy up the documentation.
 >
->Ты читал файл про Vim? Который `src/history_of_vim.txt`. Я очень люблю эту программу. Но, увы, файл с описанием версий побился. Я так думаю... 
+>Have you read the file about Vim? The one at `src/history_of_vim.txt`? I love that program. But sadly, the version history file got corrupted… I think. 
 >
->Сейчас же уже не 2001 год? Дополни его, конечно же, в Vim. (Это важно! Для меня...) Как закончишь, внеси в журнал (файл `src/files.log`) в формате: путь к файлу (относительно корневой директории) — размер файла — дата и время — sha-сумма файла (предпочитаю sha256) — алгоритм вычисления sha.  
+>It's not 2001 anymore, right? So update it - and of course, do it in Vim. (That's important… to me.) When you're done, log the change in the file `src/files.log` in the following format: file path (relative to the root directory) - file size - date and time - sha checksum (I prefer sha256) - algorithm used to compute sha.  
 
-\> *Набрать: «Готово»*
+\> *Type: "Done."*
 
-Совсем забыл. Добавь заголовок в начале файла: «A Quick Summary Of the History of the Vim Editor». И тоже занеси это изменение в журнал.
+Almost forgot - add a title at the top of the file: "A Quick Summary of the History of the Vim Editor." And don't forget to log that change too.
 
-> Внимание: не забудь перейти на ветку develop, вся работа должна происходить только там!
+> Note: Make sure you're on the develop branch - all work must be done there!
 
-#### Получен Quest 8. Зафиксировать исходное состояние файла `src/history_of_vim.txt` в журнале `src/files.log`. Дополнить этот файл информацией о версиях Vim после 2001 года, используя Vim. Добавить заголовок в начале файла "A Quick Summary Of the History of the Vim Editor". После каждого из этих изменений добавить запись в журнал `src/files.log` в формате: путь к файлу — размер файла в байтах — дата и время — sha-сумма файла — алгоритм вычисления sha. 
+#### Quest 8 received: Record the initial state of the file `src/history_of_vim.txt` in the log file `src/files.log`. Then, using Vim, update `src/history_of_vim.txt` with information about Vim versions released after 2001 and add the title "A Quick Summary of the History of the Vim Editor" at the top. After each change, add a new record to `src/files.log` in the format: file path - file size in bytes - date and time - sha checksum - algorithm used for sha computation. 
 
 ***LOADING...***
 
 ## Bonus Quests: Level 1. Room 2
 ## Bonus Quest 9. Script
 
-\> *Набрать: «Готово»*
+\> *Type: "Done"*
 
->Отлично!
+>Excellent!
 
-\> *Набрать: «Теперь можно выйти?»*
+\> *Type: "Can I leave now?"*
 
-Библиотечный модуль все не унимается: 
->Не уверен. Я вхожу во вкус. 
+The library module won't let it up: 
+>Not sure. I'm getting into this. 
 >
->Наверняка в файле много фактологических ошибок! Подготовь мне инструмент для их простого устранения. Это должен быть sh-скрипт (`src/edit.sh`), чтобы я мог запустить его без лишних проблем. На вход он должен принимать путь до файла, строку для замены и саму замену (в виде строки). Должна осуществляться непосредственная замена в файле, и вноситься соответствующая запись в файл журнала. 
+>There are probably lots of factual mistakes in that file! Prepare a tool to fix them easily. It has to be an sh script (`src/edit.sh`) so I can run it without hassle. It should take three inputs: the path to the file, the string to replace, and the replacement (as a string). It must perform the in-place substitution in the file and add a corresponding entry to the log file. 
 
-\> *Здорово. Знать бы, как эти скрипты пишутся...*
+\> *Great. If only I knew how to write those scripts…*
 
-#### Получен Quest 9. Разработать скрипт `src/edit.sh` для замены подстрок в текстовых файлах. На вход он должен принимать путь до файла (относительно корневой директории репозитория), строку для замены и саму замену (в виде строки). Информация о каждом изменении файла должна заноситься в журнал `src/files.log` в формате, описанном в предыдущем квесте. Обратить внимание на обработку краевых ситуаций.
+#### Quest 9 received. Write the script `src/edit.sh` to replace substrings in text files. It should accept as input: the path to the file (relative to the repository root), the string to replace, and the replacement (as a string). Information about each change to a file must be added to the log `src/files.log` in the format described in the previous quest. Pay attention to edge cases.
 
 ***LOADING...***
 
-## Bonus Quest 10. Gitlab
+## Bonus Quest 10. GitLab
 
-\> *Набрать: «Это уже нечестно!»*
+\> *Type: "This isn't fair!"*
 
->Замечу, что про честь речи не было. Последняя просьба. Я смотрю, ты уже неплохо управляешься с Гитом. В моей библиотеке не хватает некоторых мануалов, в частности по работе с GitLab. Я не люблю, когда не хватает информации. Создай небольшой и лаконичный мануал в разметке Markdown в файлике `src/gitlab_manual.md`, где каждый пункт состоит из заголовка и соответствующего скриншота. Темы, которые должны быть освещены: 
->1) Создание личного репозитория с нужным .gitignore и простым README.MD. 
->2) Создание веток master, develop и feature от develop.
->3) Создание merge request в develop.
->4) Создание issue на создание текущего мануала и комментария к issue.  
->5) Работа с wiki проекта.
+>Fairness was never part of the deal. One last request. I see you've gotten quite good with Git. But my library still lacks a few manuals - particularly on working with GitLab. I can't stand missing information. Create a short and concise manual in Markdown format, saved as `src/gitlab_manual.md`. Each section must include a heading and a screenshot illustrating it. The topics to cover: 
+>1) Creating a personal repository with the proper .gitignore and a simple README.md. 
+>2) Creating the branches master, develop, and feature (from develop).
+>3) Creating a merge request into develop.
+>4) Creating an issue for writing this manual and adding a comment to that issue.  
+>5) Working with the project wiki.
 >
->Вроде ничего не потеряно. Если получится хорошо, загружу в золотой фонд мануалов главной библиотечной системы, сможешь гордиться собой.
+>Looks like nothing's lost after all. If it turns out well, I'll add it to the Golden Archive of Manuals in the main library system. You'll have something to be proud of.
 
-#### Получен Quest 10. Подготовить краткий мануал по использованию GitLab по представленным выше темам в файле `src/gitlab_manual.md` в разметке Markdown, где каждый пункт должен состоять из заголовка и соответствующего скриншота.
+#### Quest 10 received: Prepare a concise GitLab usage manual covering the topics listed above in the file `src/gitlab_manual.md`, using Markdown formatting, where each section must include a heading and a corresponding screenshot.
 
 ***LOADING...***
 
 ## Chapter VIII
 
-\> *Набрать: «Готово»*
+\> *Type: "Done"*
 
->Отличный мануал. Ну, я предполагаю, что отличный — картинки проанализировать я не могу, модуль со сверточной нейронной сетью мне так и не подключили. Дверь, кстати, открыта. Она всегда была открыта. Я же простой, никому не нужный библиотечный модуль! Кто мне доверит ключи от дверей?
+>Great manual. Well… I assume it's great - I can't actually analyze the images; they never connected my convolutional neural network module. By the way, the door's open. It's always been open. I'm just a simple, useless library module! Who would trust me with the keys?
 
-\> *Тьфу*
+\> *Tch*
 
->Команда не распознана.
+>Command not recognized.
 
-Интересно, все модули этого ИИ сделаны такими вредными? Или это пока только тебе так везет?
+Makes you wonder - are all AI modules this annoying? Or are you just particularly lucky?
 
-Наконец-то ты выбираешься и из второй комнаты первого уровня, попутно размышляя, сколько же их всего будет. 
+At last, you step out of the second room of Level 1, wondering how many more rooms there might be ahead. 
 
 ***LOADING...***
 
-💡**[Нажми сюда](http://opros.so/p31wz), чтобы поделиться с нами обратной связью на этот проект. 
-Это анонимно и поможет нашей команде сделать обучение лучше. 
-Рекомендуем заполнить опрос сразу после выполнения проекта.**
+💡**[Click here](https://forms.yandex.ru/cloud/68a05a2a90fa7b10773180e8) to share your feedback on this project. 
+This is anonymous and will help our team improve this experience. 
+We recommend filling out the survey right after completing the project.**
