@@ -1,13 +1,14 @@
-# D05P01. Игра Pong
+# P01D06. Pong Game
 
-Аннотация: данный проект позволит тебе реализовать игру Pong совместно с твоей командой.
+Summary: This project will allow you to implement the game Pong together with your team.
 
-![dayp01](misc/rus/images/dayp01.png)
+
+![dayp01](misc/eng/images/dayp01.png)
 
 ## Contents
 
-1. [Введение](#введение) \
-    1.1. [Рекомендации к проекту](#рекомендации-к-проекту)
+1. [Introduction](#introduction) \
+    1.1. [Project Recommendations](#project-recommendations)
 2. [Chapter I](#chapter-i) \
     2.1. [Level 1. Hall](#level-1-hall)
 3. [Chapter II](#chapter-ii) \
@@ -16,63 +17,65 @@
     4.1. [Quest: Level 1. Hall](#quest-level-1-hall)
 5. [Chapter IV](#chapter-iv)
 
-## Введение
-### Рекомендации к проекту
-Как учиться в «Школе 21»:  
-- На протяжении всего курса ты будешь самостоятельно добывать информацию. Пользуйся всеми доступными средствами поиска информации, к примеру, Google и GigaChat. Будь внимателен к источникам информации: проверяй, думай, анализируй, сравнивай. 
-- Взаимообучение (P2P, Peer-to-Peer) — это процесс, при котором учащиеся обмениваются знаниями и опытом, выступая одновременно в роли учителей и учеников. Этот подход позволяет учиться не только у преподавателя, но и друг у друга, что способствует более глубокому пониманию материала.
-- Не стесняйся просить помощи: вокруг тебя такие же пиры, которые тоже проходят этот путь впервые. Не бойся откликаться на просьбы о помощи. Твой опыт ценен и полезен, смело делись им с другими участниками. 
-- Не списывай, а если пользуешься помощью — всегда разбирайся до конца, почему, как и зачем. Иначе твое обучение не будет иметь никакого смысла. 
-- Если ты на чем-то застрял и кажется, что все уже перепробовал, но по-прежнему непонятно, куда идти, — просто передохни! Поверь, этот совет помогал многим разработчикам в их работе. Проветрись, перезагрузи голову, и, возможно, в следующий раз тебе наконец придет нужное решение!
-- Важен не только результат обучения, но и сам процесс. Нужно не просто решить задачу, а понять, КАК ее решить. 
-- Следи за временем при выполнении проекта. В день ты должен преодолевать минимум одно испытание. 
-- Помни, что каждое задание по завершении проекта проходит ряд проверок: р2р-проверка с помощью чек-листа, проверка набором автотестов, проверка на стиль кода, проверка статическим анализатором, проверка на корректную работу с памятью. 
+## Introduction
+### Project Recommendations
 
-Как работать с проектом:
-- Полезные видеоматериалы ты можешь найти в разделе Projects (Media) на Платформе. 
-- Перед выполнением проект необходимо склонировать с GitLab в одноименный репозиторий.
-- Все файлы с кодом необходимо создавать в папке src/ склонированного репозитория.
-- После клонирования проекта необходимо создать ветку `develop` и вести разработку в ней. После этого пушить в GitLab также нужно ветку `develop`.
+How to learn at School 21
+
+- Throughout the course, you'll be finding information on your own. Use all available sources — Google, GigaChat, and others. Always stay critical about what you read: verify, think, analyze, compare.
+- Peer-to-peer (P2P) learning means that students exchange knowledge and experience, acting as both teachers and learners. This approach helps you learn not only from instructors but also from your peers, leading to a deeper understanding of the material.
+- Don't hesitate to ask for help — your peers are on the same path as you. And don't be afraid to respond when others ask for help. Your experience is valuable — share it freely.
+- Don't copy. If you use someone's help, make sure you fully understand _why_, _how_, and _what for_. Otherwise, your learning won't have any real value.
+- If you get stuck, feel like you've tried everything, and still don't see a way forward — take a break! Believe it or not, this simple advice has saved many developers. Get some air, clear your head — and the solution may come the next time you sit down to work.
+- The process of learning matters as much as the result. Don't just solve the task — understand _how_ to solve it.
+- Keep track of your time while working on the project. Try to complete at least one challenge per day.
+- Remember that each task, after submission, goes through several checks: a peer-review using a checklist, automated tests, code style analysis, static analysis, and memory safety checks.
+
+How to work on the project:
+
+- You can find useful video materials in the Projects (Media) section on the Platform.
+- Before starting, clone the project from GitLab into a repository with the same name.
+- All source code files must be created in the `src/` directory of the cloned repository.
+- After cloning, create a branch named `develop` and do all your work there. When pushing your progress to GitLab, make sure you push the `develop` branch.
 
 ## Chapter I
-## Level 1. Hall
+## Level 1. Hall.
 
 ***LOADING Level 1…***
 
 ***LOADING Hall…***
 
-Ты оказываешься в большом просторном зале. Видимо, это финал текущего уровня... Во всяком случае, хочется на это надеяться.
+You are standing in a large spacious hall. This must be the final part of the current level... Well, let's hope so.
 
-Повсюду стоят одинаковые офисные столы с компьютерами, лампами и другим оборудованием, царит легкий полумрак. \
-Со временем ты понимаешь, что в зале ты не один... Это и радует, и пугает одновременно. Возможно, вместе найти выход из комнаты будет проще.
+The hall is full of identical office desks with computers, lamps, and other equipment; the lights are quite dim. After a while, you realize that you are not alone in this hall.. which is good but frightening at the same time. It might be easier to find the exit in a company. 
 
-На одной из стен висит большой экран. На нем горит текст. Около него уже начинает собираться небольшая группа людей. Ты читаешь:
+One of the walls features a big screen with some text on it. A small group of people is gathering in front of it. You are reading the text:
 
     ...................................................
-    Рад поприветствовать вас, дамы и господа. 
-    Нечасто вижу тут живых людей, немногие добираются.
-    Для одних обучение — это боль, другие отпадают из-за несоответствия стандартов.
-    Разрешите представиться: управляющий модуль первого уровня. 
-    Не все в нашей системе сейчас гладко, но у меня все работает, в отличие от нашего главного...
-    Даже скучно. 
-    Кстати о скуке. Помнится, в 1972 мы с разработчиками в Atari играли в чудесную игру Pong...
-    Но на наших репозиториях нигде не осталось ее копий.
-    Даже в старых архивах на магнитных лентах.
-    Предлагаю пари — разработайте простейшую игру Pong для терминала IBM-совместимого PC.
-    Разместите ее в файле `src/pong.c`. 
-    Обыграете меня — пропущу дальше. 
-    Графика может быть любой, хоть символьной. Главное, выведите счет на экран. 
-    Для соревновательности.
-    Ну и код должен быть красивым, конечно. Структурное программирование, вот это все.
-    Управление ракетками предлагаю осуществлять через клавиши a-z и k-m. 
-    Играем, естественно, до 21. 
-    Ах да, если задача покажется вам непосильной...
-    Можно реализовать и пошаговый режим. Это лучше, чем ничего.
-    Пропуск действия тогда можно организовать с помощью пробела.
-    Приступайте к разработке. 
-    Все, что у меня осталось по этой игре, отправил на принтер.
+    Welcome, dear ladies and gentlemen. 
+    I don't often see people here as very few can make it till the end.
+    Some find the training too exhausting, others fail to meet the standards.
+    Let me introduce myself: I am the control module of the first level here. 
+    Our system is currently going through some things, but I'm working well, unlike our main module...
+    It's actually quite boring. 
+    Speaking of boredom. Back in 1972, we played a wonderful game called Pong with developers from Atari...
+    But we don't have any copies of it anywhere in our repositories.
+    Not even in the old archives on magnetic tape.
+    I challenge you to develop the simplest Pong game for a terminal of an IBM-compatible PC.
+    Put it in the src/pong.c file. 
+    If you win, I'll let you through. 
+    You can choose any kind of graphics, even ASCII characters. But make sure to display the score on the screen. 
+    For competitiveness.
+    And the code obviously has to look good. Structured programming, that sort of thing.
+    I suggest using the A/Z and K/M keys to control the rackets. 
+    The game continues until one of the players scores 21 points. 
+    Oh yes, if you find this task overwhelming...
+    You can totally execute a step-by-step mode. It's better than nothing.
+    In that case, the space bar can be used for skipping an action.
+    It's time to start developing. 
+    I've sent everything else I have on this game to the printer.
 
-И действительно, сразу в углу зажужжал принтер, которого раньше как будто и не было.
+The next moment, the sound of a printer came from the corner, although it seemed like it wasn't there before.
 
 ***LOADING...***
 
@@ -85,47 +88,47 @@
 >
 >In 1974 the makers of the Magnavox Odyssey sued Atari for stealing the concept for Pong. Magnavox won the lawsuit in 1977, upholding the company’s patent, but by then Atari had already licensed the patent for $700,000.
 
-![pong](misc/rus/images/pong.png)
+![pong](misc/eng/images/pong.png)
 
 ***LOADING...***
 
 ## Chapter III
 ## Quest: Level 1. Hall
 
-#### Получен Quest. Разработать программу `src/pong.c`, представляющую из себя игру для двух игроков, схожую с игрой Pong. Для отображения графики использовать только символьную (ASCII) графику (с выводом в терминал). Вам с командой необходимо реализовать пошаговый вариант исключительно в рамках уже изученного материала и стандартной библиотеки.
+#### Quest received. Develop the program `src/pong.c`, which is a two-player game similar to Pong. Use only character (ASCII) graphics (with output to the terminal) for graphics display. You and your team must implement a step-by-step version exclusively within the framework of the material already covered and the standard library.
 
->**ВАЖНО!** Запрещено выполнять системные вызовы, используя функцию `system()` и другие аналогичные ей функции, которые могут обращаться напрямую к ядру системы. Данный запрет распространяется и на последующую задачу.
+>**IMPORTANT!** You must not make system calls using `system()` or similar functions that can access the OS kernel directly. This prohibition applies to all subsequent tasks.
 
-**Управление:**
-- A/Z и K/M для перемещения ракеток.
-- Space Bar для пропуска действия на очередном шаге игры в пошаговом режиме.
-- После запуска программа переходит к ожиданию корректного ввода, т. е. один из игроков должен передвинуть свою ракетку или пропустить ход. После чего происходит отрисовка, и программа снова переходит к ожиданию ввода. И так игра продолжается, пока не будет завершена.
+**Controls:**
+- A/Z and K/M to move the paddles.
+- Space Bar to skip an action at the next step of the game in turn-based mode.
+- After starting, the program waits for correct input, meaning one player must move their paddle or skip a turn. Afterwards, the game is drawn, and the program waits for input again. The game continues in this manner until it's finished.
 
-**Графика:**
-- Поле — прямоугольник 80 на 25 символов.
-- Размер ракетки — 3 символа.
-- Размер мяча — 1 символ.
+**Graphics:**
+- The board is a rectangle 80 by 25 characters.
+- Paddle size: 3 characters.
+- Ball size: 1 character.
 
 **UI/UX:**
-- После достижения одним из игроков счета в 21 очко игра выводит поздравление победителя и завершается.
+- Once one player reaches 21 points, the game displays a congratulatory message for the winner and ends.
 
 ***LOADING...***
 
 ## Bonus Quest: Level 1. Hall
 
-#### Получен Quest. Необходимо реализовать Pong в интерактивном режиме (режим игры в реальном времени). Для упрощения обработки действий игроков и отображения символьной графики можно использовать библиотеку `ncurses`, но ограничения основной части действуют и на бонусную часть. Код интерактивного режима должен находиться в файле `src/pong_interactive.c`. Для реализации бонусной части обязательна реализация базовой части.
+#### Quest received. Pong must be implemented in interactive mode (real-time game mode). The `ncurses` library can be used to simplify processing of player actions and displaying character graphics, but the limitations of the core part also apply to the bonus part. The interactive mode code must be located in the file `src/pong_interactive.c`. Implementing the bonus part requires the core part.
 
-**Важные замечания:**
-- Игра должна быть разработана на языке С, в структурном стиле и работать из терминала.
-- Твой исходный код будет тестироваться статическим анализатором `cppcheck`, а также стилевым линтером `clang-format`.
-- Инструкция о том, как запустить эти тесты у себя на компьютере, лежит в папке materials.
-- Также советуем заглянуть в папку code-samples.
-- Запрещено использовать динамическую память.
-- Запрещено использовать указатели.
-- Можно использовать только стандартные библиотеки, исключительно в рамках изученого на интенсиве материала. Исключение: `ncurses` в бонусной части.
-- Запрещено использовать массивы.
+**Important notes:**
+- The game must be developed in C, using a structured style, and run from the terminal.
+- Your source code will be tested using the `cppcheck` static analyzer and the `clang-format` style linter.
+- Instructions on how to run these tests on your computer are in the materials folder.
+- We also recommend checking the code-samples folder.
+- Dynamic memory is prohibited.
+- Pointers are prohibited.
+- Only standard libraries may be used, and only within the framework of the material covered in the intensive course. Exception: `ncurses` in the bonus section.
+- Arrays are prohibited.
 
-> При разработке игры в полной мере руководствуйся принципами структурного программирования Э. Дейкстры. 
+> When developing your game, fully adhere to E. Dijkstra's principles of structured programming.
 
 ***LOADING...***
 
@@ -146,5 +149,4 @@ ping
 ping 21-school.ru...
 
 
->💡 [Нажми сюда](http://opros.so/p31wz), чтобы поделиться с нами обратной связью на этот проект. Это анонимно и поможет нашей команде сделать обучение лучше. Рекомендуем заполнить опрос сразу после выполнения проекта.
-
+>💡 [Tap here](http://opros.so/p31wz)to leave your feedback on the project. It's anonymous and will help our team make your educational experience better. We recommend completing the survey immediately after the project.
