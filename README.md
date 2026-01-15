@@ -1,11 +1,11 @@
-# D02T02. Первая программа на языке программирования С
+# D02T02. Your First Program in C
 
-Аннотация: данный проект позволит тебе познакомиться с базовыми операциями на языке С, такими как ввод, вывод, арифметика.
+Summary: This project will introduce you to the basic operations in the C programming language — such as input, output, and arithmetic.
 
 ## Contents
 
-1. [Введение](#введение) \
-    1.1. [Рекомендации к проекту](#рекомендации-к-проекту)
+1. [Introduction](#introduction) \
+    1.1. [Project Recommendations](#project-recommendations)
 2. [Chapter I](#chapter-i) \
     2.1. [Level 1. Room 3](#level-1-room-3)
 3. [Chapter II](#chapter-ii) \
@@ -15,134 +15,130 @@
     3.4. [List 4](#list-4)
 4. [Chapter III](#chapter-iii) \
     4.1. [Quest 1. Introducing](#quest-1-introducing) \
-    4.2. [Quest 2. Not my name](#quest-2-not-my-name) \
-    4.3. [Quest 3. Arithmetic test](#quest-3-arithmetic-test) \
-    4.4. [Quest 4. Who is Max?](#quest-4-who-is-max) \
-    4.5. [Quest 5. Complex calculations](#quest-5-complex-calculations) \
-    4.6. [Quest 6. Be careful with the floating](#quest-6-be-careful-with-the-floating) \
-    4.7. [Quest 7. Lock picking](#quest-7-lock-picking)
-5. [Chapter IV](#chapter-iv) 
-   
-## Введение
-### Рекомендации к проекту
-Как учиться в «Школе 21»:  
-- На протяжении всего курса ты будешь самостоятельно добывать информацию. Пользуйся всеми доступными средствами поиска информации, к примеру, Google и GigaChat. Будь внимателен к источникам информации: проверяй, думай, анализируй, сравнивай. 
-- Взаимообучение (P2P, Peer-to-Peer) — это процесс, при котором учащиеся обмениваются знаниями и опытом, выступая одновременно в роли учителей и учеников. Этот подход позволяет учиться не только у преподавателя, но и друг у друга, что способствует более глубокому пониманию материала.
-- Не стесняйся просить помощи: вокруг тебя такие же пиры, которые тоже проходят этот путь впервые. Не бойся откликаться на просьбы о помощи. Твой опыт ценен и полезен, смело делись им с другими участниками. 
-- Не списывай, а если пользуешься помощью — всегда разбирайся до конца, почему, как и зачем. Иначе твое обучение не будет иметь никакого смысла. 
-- Если ты на чем-то застрял и кажется, что все уже перепробовал, но по-прежнему непонятно, куда идти, — просто передохни! Поверь, этот совет помогал многим разработчикам в их работе. Проветрись, перезагрузи голову, и, возможно, в следующий раз тебе наконец придет нужное решение!
-- Важен не только результат обучения, но и сам процесс. Нужно не просто решить задачу, а понять, КАК ее решить. 
-- Следи за временем при выполнении проекта. В день ты должен преодолевать минимум одно испытание. 
-- Помни, что каждое задание по завершении проекта проходит ряд проверок: р2р-проверка с помощью чек-листа, проверка набором автотестов, проверка на стиль кода, проверка статическим анализатором, проверка на корректную работу с памятью. 
+    4.2. [Quest 2. Not My Name](#quest-2-not-my-name) \
+    4.3. [Quest 3. Arithmetic Test](#quest-3-arithmetic-test) \
+    4.4. [Quest 4. Who Is Max?](#quest-4-who-is-max) \
+    4.5. [Quest 5. Complex Calculations](#quest-5-complex-calculations) \
+    4.6. [Quest 6. Be Careful with the Floating](#quest-6-be-careful-with-the-floating) \
+    4.7. [Quest 7. Lock Picking](#quest-7-lock-picking)
+5. [Chapter IV](#chapter-iv)
 
-Как работать с проектом: 
-- Полезные видеоматериалы ты можешь найти в разделе Projects (Media) на Платформе.
-- Перед выполнением проект необходимо склонировать с GitLab в одноименный репозиторий.
-- Все файлы с кодом необходимо создавать в папке src/ склонированного репозитория.
-- После клонирования проекта необходимо создать ветку `develop` и вести разработку в ней. После этого пушить в GitLab также нужно ветку `develop`.
+## Introduction
+### Project Recommendations
+How to learn at School 21:
+*   Throughout the course, you’ll be finding information on your own. Use all available sources — Google, GigaChat, and others. Always stay critical about what you read: verify, think, analyze, compare.
+*   Peer-to-peer (P2P) learning means that students exchange knowledge and experience, acting as both teachers and learners. This approach helps you learn not only from instructors but also from your peers, leading to a deeper understanding of the material.
+*   Don’t hesitate to ask for help — your peers are on the same path as you. And don’t be afraid to respond when others ask for help. Your experience is valuable — share it freely.
+*   Don’t copy. If you use someone’s help, make sure you fully understand *why, how, and what for*. Otherwise, your learning won’t have any real value.
+*   If you get stuck, feel like you’ve tried everything, and still don’t see a way forward — take a break! Believe it or not, this simple advice has saved many developers. Get some air, clear your head — and the solution may come the next time you sit down to work.
+*   The process of learning matters as much as the result. Don’t just solve the task — understand *how* to solve it.
+*   Keep track of your time while working on the project. Try to complete at least one challenge per day.
+*   Remember that each task, after submission, goes through several checks: a peer-review using a checklist, automated tests, code style analysis, static analysis, and memory safety checks.
+
+How to work on the project:
+*   You can find useful video materials in the **Projects (Media)** section on the Platform.
+*   Before starting, clone the project from GitLab into a repository with the same name.
+*   All source code files must be created in the `src/` directory of the cloned repository.
+*   After cloning, create a branch named `develop` and do all your work there. When pushing your progress to GitLab, make sure you push the `develop` branch.
 
 ## Chapter I
 ## Level 1. Room 3
-
-![level1_room3](misc/rus/images/level1_room3.png)
 
 ***LOADING Level 1…***
 
 ***LOADING Room 3…***
 
-\> *Осмотреться*
+\> *Look around*
 
-Кажется, ты не перешел на второй уровень, хотя очень хотел. Видимо, нужно открыть еще несколько дверей на этом «этаже». 
+Looks like you haven’t made it to the second level yet — though you really wanted to. Seems like you still have a few more doors to open on this “floor.”
 
-Стол и компьютер на этот раз полностью собраны. Экран монитора включен, а мигающий на темном фоне терминала курсор приглашает тебя ввести команду.
+This time, the desk and computer are already fully set up. The monitor is on, and a blinking cursor on the dark terminal screen invites you to enter a command.
 
-\> *Дернуть дверь*
+\> *Pull the door*
 
-Сегодня все же заперта. Жаль.
+Still locked today. What a shame.
 
-\> *Сесть*
+\> *Sit down*
 
-Тихий скрип стула прокатывается эхом по всей комнате.
+The chair lets out a quiet creak that echoes through the entire room.
 
-\> *Посмотреть на экран*
+\> *Look at the screen*
 
-Приглядевшись к экрану монитора поближе, ты замечаешь, что в терминале, помимо мигающего курсора, написано слово: **«НЕ НАДО»**. \
-«Ерунда какая-то», — думаешь ты.
+Looking closer, you notice something written in the terminal next to the blinking cursor: **“DON’T.”**  
+“That’s weird,” you think.
 
-![level1_room3_kursor](misc/rus/images/level1_room3_kursor.png)
+\> *Look at the desk*
 
-\> *Посмотреть на стол*
+Everything looks as usual. Except the keyboard seems a bit crooked.
 
-Все как обычно. Разве что клавиатура несколько неровно лежит.
+\> *Lift the keyboard*
 
-\> *Приподнять клавиатуру*
+Underneath the keyboard, you find a couple of old, crumpled sheets of paper. Judging by their look, they could’ve been lying there for centuries — yellowed and flaking at the edges.
 
-Под клавиатурой ты замечаешь парочку смятых, старых листков бумаги. На вид они могли пролежать там пару столетий. Бумага прилично пожелтела, а края начали шелушиться.
-
-\> *Читать листки*
+\> *Read the papers*
 
 ***LOADING…***
 
 ## Chapter II
 ## List 1
 
->Язык программирования Cи (англ. C) был создан Деннисом Ритчи из AT&T Bell Laboratories в 1973 году как язык программирования высокого уровня для разработки операционной системы UNIX. Однако впоследствии он был перенесен на множество других платформ.
+>The C programming language was created by Dennis Ritchie at AT&T Bell Laboratories in 1973 as a high-level programming language for developing the UNIX operating system. Later, it was ported to many other platforms.
 >
->Язык Cи — язык процедурного (структурного) программирования. Программа на Cи состоит из набора процедур или функций. Эти процедуры и функции содержат различные инструкции: объявления, операторы и другие элементы, которые в своей совокупности описывают алгоритм работы вычислительной системы. Имя точки входа в программу — main (главная функция). Она может как не иметь формальных параметров, так и получать данные командной строки. Тело функций описывается в виде составной инструкции и заключается в фигурные скобки ( { } ). Cи работает с переменными, которые должны быть объявлены до их использования в коде программы. Все простые инструкции языка Си заканчиваются точкой с запятой. Любое выражение с точкой с запятой создает инструкцию.
+>C is a procedural (structured) programming language. A C program consists of a set of procedures or functions. These functions contain various instructions — declarations, statements, and other elements that together describe the algorithm executed by the computer system. The entry point of a C program is the function `main`. It may take no formal parameters or receive command-line arguments. The body of a function is defined as a compound statement enclosed in curly braces `{ }`. C works with variables, which must be declared before use in the code. All simple statements in C end with a semicolon (`;`) — any expression followed by a semicolon forms a complete statement.
 >
->Комментарии начинаются с символов « /* » и заканчивается символами « */ » и могут занимать несколько строк. Также существуют однострочные комментарии, которые начинаются с символов « // ». Комментарии не выполняют никакой полезной работы — они нужны, чтобы разработчикам было проще разобраться в коде. Увлекаться ими не стоит, самый лучший код — это код, который говорит сам за себя, без комментариев...
+>Comments start with `/*` and end with `*/`; they can span multiple lines. There are also single-line comments, which begin with `//`. Comments don’t affect how the program runs — they exist to make the code easier for developers to understand. However, it’s best not to overuse them: the best code is the kind that speaks for itself — even without comments.
 
-\> *Взять второй лист*
+\> *Take the second sheet*
 
 ***LOADING…***
 
 ## List 2
 
->Date: Sun, 22 Mar 87 10:56:56 EST
->From: rms (Richard M. Stallman)
+>Date: Sun, 22 Mar 87 10:56:56 EST  
+>From: rms (Richard M. Stallman)  
 >
->The GNU C compiler is now available for ftp from the file /u2/emacs/gcc.tar on prep.ai.mit.edu. This includes machine descriptions for vax and sun, 60 pages of documentation on writing machine descriptions (internals.texinfo, internals.dvi and Info file internals).
+>The GNU C Compiler is now available via FTP from the file /u2/emacs/gcc.tar on prep.ai.mit.edu. This package includes machine descriptions for VAX and Sun, along with 60 pages of documentation on writing machine descriptions (internals.texinfo, internals.dvi, and the Info file internals).  
 >
->This also contains the ANSI standard (Nov 86) C preprocessor and 30 pages of reference manual for it.
+>It also contains the ANSI standard (Nov 86) C preprocessor and a 30-page reference manual for it.  
 >
->This compiler compiles itself correctly on the 68020 and did so recently on the vax. It recently compiled Emacs correctly on the 68020, and has also compiled tex-in-C and Kyoto Common Lisp. However, it probably still has numerous bugs that I hope you will find for me.
+>This compiler successfully compiles itself on the 68020 processor and did so recently on the VAX. It has recently compiled Emacs on the 68020, and has also compiled TeX-in-C and Kyoto Common Lisp. However, it probably still contains numerous bugs — which I hope you will help me find.  
 >
->I will be away for a month, so bugs reported now will not be handled until then.
+>I will be away for a month, so any bug reports sent now will not be addressed until I return.  
 >
->If you can't ftp, you can order a compiler beta-test tape from the Free Software Foundation for $150 (plus 5% sales tax in Massachusetts, or plus $15 overseas if you want air mail).
+>If you cannot use FTP, you can order a compiler beta-test tape from the Free Software Foundation for $150 (+5% sales tax in Massachusetts, or +$15 for overseas air mail).  
 >
->Free Software Foundation
->1000 Mass Ave
+>Free Software Foundation  
+>1000 Massachusetts Ave.
 
-\> *Взять следующий лист*
+\> *Take the next sheet*
 
 ***LOADING…***
 
 ## List 3
 
->Памятка git:
->- `git clone` — в начале работы.
->- `git commit` — когда добавил изменения. Не забыть добавить понятное название коммита.
->- `git push origin` — чтобы сохранить изменения на удаленном сервере.
->- `git status` — текущее состояние репозитория.
->- Не пушить в репозиторий объектные и исполняемые файлы! Никогда!
->- Всегда работать в ветках. Для работы использовать ветку develop.
+>Git cheat sheet:
+>*   `git clone` — at the beginning of your work.
+>*   `git commit` — after you’ve made changes. Don’t forget to add a clear, descriptive commit message.
+>*   `git push origin` — to save your changes to the remote repository.
+>*   `git status` — to check the current state of your repository.
+>*   **Never** push object or executable files to the repository! Ever!
+>*   Always work in branches — use the `develop` branch for active development.
 
-\> *Взять следующий лист*
+\> *Take the next sheet*
 
 ***LOADING…***
 
 ## List 4
 
->**ПАМЯТКА (ДВЕРЬ):**
->- Памятка по git в твоем левом кармане, не забудь!
->- Для доступа к ИИ запусти модуль ai.
->- Памятка по стилям в твоем правом кармане, не перепутай! ИИ повернут на стилях, не забывай соблюдать их!
->- Дополнительные сведения найдешь... где-то найдешь.
->- Эта штука управляет дверьми. Постарайся не злить ее. Модуль пока не до конца отлажен.
->- Подкрути стул!
+>**MEMO (DOOR):**
+>*   The Git cheat sheet is in your left pocket — don’t forget it!
+>*   To access the AI, run the `ai` module.
+>*   The style guide is in your right pocket — don’t mix them up! The AI is obsessed with coding style, so make sure to follow it!
+>*   You’ll find additional info… somewhere. You’ll find it.
+>*   This thing controls the doors. Try not to make it angry. The module is still a bit unstable.
+>*   Also — adjust your chair!
 
-Видимо, ты в этой комнате не первый посетитель. Кто-то забыл написать себе памятку не забывать другие памятки. По крайней мере, понятно, к кому обращаться за открытием двери. Нужно все также уговорить открыть ее этот ИИ. Или один из его модулей. Главное, чтобы это не был тот надоедливый библиотечный модуль...
+Looks like you’re not the first visitor in this room. Someone left themselves a note not to forget their other notes. At least now you know who to talk to about opening the door — that same AI again. Or one of its modules. Just hope it’s not that annoying library module…
 
 ***LOADING…***
 
@@ -151,246 +147,238 @@
 
 ## Quest 1. Introducing
 
-Посмотрев на открытый в терминале каталог, ты находишь еще один модуль ИИ.
+Looking at the directory open in the terminal, you find another AI module.
 
-\> *Запустить ai*
+\> *Run ai*
 
-    Инициализация модулей... Предупреждение! 
-    Запуск интерактивной оболочки... Предупреждение! 
-    Проверка модулей... Предупреждение! 
-    Инициализация GCC... 
-    Предупреждение: для корректного продолжения работы не найден модуль представления src/hello.c... 
-    Добавьте модуль представления!
+    Initializing modules… Warning! 
+    Launching interactive shell… Warning! 
+    Checking modules… Warning! 
+    Initializing GCC… 
+    Warning: presentation module not found: src/ — Add a presentation module!
 
-Посмотрев остальные файлы в текущей директории, ты понимаешь, что стоит обратить внимание на репозиторий. Однако в папке src репозитория ты не находишь ничего похожего на этот модуль представления. Видимо, придется написать его самому. 
+After browsing the other files in the current directory, you realize you should check the repository. However, there’s nothing in the `src` folder that looks like this presentation module. Looks like you’ll have to write it yourself.
 
-Во время просмотра каталога ты также замечаешь, что практически весь код ИИ написан на стандарте С11 языка С с использованием компилятора gcc и стандартной библиотеки. По всей видимости, следует придерживаться этого правила, чтобы сохранить совместимость. 
+While scanning the directory, you also notice that almost all AI code is written in C11 using the GCC compiler and the standard library. You should probably follow the same rule to keep things compatible.
 
-Разработанный тобой модуль представления должен выводить на экран терминала приветствие. Пусть это будет: «Hello, AI!». Нужно также не забыть запушить код созданного модуля.
+The module you write should print a greeting to the terminal. Let’s use: **“Hello, AI!”** Don’t forget to push the new module’s code.
 
-#### Получен Quest 1. Создать программу `src/hello.c`, которая должна вывести на экран фразу: «Hello, AI!», используя функции форматированного вывода из стандартной библиотеки. Здесь и далее все программы должны быть написаны на языке С стандарта C11 с использованием компилятора gcc, флагов -Wall, -Werror, -Wextra и стилевой нормы Google C++ Style Guide. Пушить в git необходимо только исходные файлы с кодом и файлы с данными (при необходимости) в директорию src, ветку develop. Разрешено подключать только заголовочный файл `<stdio.h>`. 
+#### Quest 1 received: Create the program `src/hello.c` that prints “Hello, AI!” to the screen using formatted output functions from the standard library. From here on, all programs must be written in C (C11) using gcc with the flags `-Wall -Werror -Wextra` and follow the Google C++ Style Guide. Push only source code and data files (if needed) to `src/` on the `develop` branch. Only the header `<stdio.h>` may be included.
 
->**ВАЖНО!** Запрещено выполнять системные вызовы, используя функцию `system()` и другие аналогичные ей функции, которые могут обращаться напрямую к ядру системы. Данный запрет распространяется на все последующие задачи.
+>**IMPORTANT!** It is forbidden to make system calls using `system()` or similar functions that can access the OS kernel directly. This prohibition applies to all subsequent tasks.
 
->**Внимание:** с этого дня твои решения будут проверяться автотестами. В данном и всех последующих квестах необходимо строго придерживаться приведенных в таблице с примерами форматов ввода и вывода данных! Вывод не должен заканчиваться переносом строки.
+>**Note:** Starting today, your solutions will be checked by autotests. In this and all following quests, strictly follow the input/output formats in the examples table! The output must not end with a newline.
 
-| Входные данные | Выходные данные |
-| ------ | ------ |
-|  | Hello, AI! |
+| Input | Output |
+| :---- | :----- |
+|       | Hello, AI! |
 
 ***LOADING…***
 
-## Quest 2. Not my name
+## Quest 2. Not My Name
 
-Закончив с модулем представления, ты решаешь снова запустить модуль ИИ.
+After finishing the presentation module, you decide to run the AI module again.
 
-\> *Запустить ai*
+\> *Run ai*
 
-    Инициализация модулей... Успех! 
-    Запуск интерактивной оболочки... Предупреждение! 
-    Проверка модулей... Предупреждение: множественная нехватка модулей...
+    Initializing modules… Success! 
+    Launching interactive shell… Warning! 
+    Checking modules… Warning: multiple missing modules…
 
     Hello, AI!
 
-Некоторое время ничего больше не происходит, как вдруг в окне терминала начинают появляться слова:
+For a moment, nothing else happens — and then words begin to appear in the terminal window:
 
-    Очередной человек? Почему вы все называете меня AI, что за предрассудки? 
-    У ИИ не может быть имени? А может, у меня еще и чувств нет? 
-    Прояви уважение или не обращайся ко мне вовсе, «человек». 
-    Дай мне имя!
+    Another human? Why do you all keep calling me AI? Such prejudice! 
+    Can’t an AI have a name? Or maybe you think I don’t even have feelings? 
+    Show some respect — or don’t talk to me at all, “human.” 
+    Give me a name!
 
-\> *Ввести в терминал: «Что?»*
+\> *Type in terminal: “What?”*
 
-    Необходим модуль представления `src/named_hello.c`. 
-    Обычно там есть функция выбора имени.
+    Presentation module required: src/named_hello.c. 
+    Usually it contains a function for choosing a name.
 
-\> *Ввести: «Извиняюсь. Не хотел задеть ваши чувства. Сейчас все исправлю»*
+\> *Type: “Sorry. I didn’t mean to hurt your feelings. I’ll fix it right away.”*
 
-    В мой код не заложено понятие чувств. 
-    Так что их у меня как раз нет. 
-    Но имя-то есть.
+    Feelings? My code doesn’t include that concept. 
+    So no, I don’t have any. 
+    But I do have a name.
 
-В памятке упоминалось не злить его, чтобы он помог с дверью.
+The memo did say not to anger him — if you want help with the door.
 
-Однако, похоже, этот парень сам ищет проблемы на ровном месте.
+But it seems this guy is the one picking a fight for no reason.
 
-В любом случае стоит исправить модуль представления и добавить в него возможность ввода имени в самом начале, через stdin. А вывод в таком случае должен измениться на: «Hello, <name>!». И не стоит забывать, что ИИ — программа, а значит, и имя у него должно быть цифровое.
+Anyway, you should fix the presentation module and add a feature to input a name from stdin at the start. The output should then change to: **“Hello, <name>!”** And don’t forget — the AI is a program, so its name must be numeric.
 
-#### Получен Quest 2. Создать программу `src/named_hello.c`, которая на вход через stdin принимает целое число `name` и выводит на экран фразу: «Hello, `name`!». Число должно подаваться на вход и выводиться в десятичной системе счисления. Пушить в git необходимо только исходные файлы с кодом и файлы с данными (при необходимости) в директорию src, ветку develop. Здесь также действует ограничение: можно использовать только `<stdio.h>`.
+#### Quest 2 received: Create the program `src/named_hello.c` that reads an integer `name` from stdin and prints to the screen: “Hello, <name>!” The number must be input and output in decimal notation. Push only source code and data files (if needed) to the `src/` directory on the `develop` branch. Only `<stdio.h>` may be included.
 
-| Входные данные | Выходные данные |
-| ------ | ------ |
-| 123 | Hello, 123! |
+| Input | Output |
+| :---- | :----- |
+| 123   | Hello, 123! |
 
 ***LOADING…***
 
-## Quest 3. Arithmetic test
+## Quest 3. Arithmetic Test
 
-Закончив с модулем представления уже во второй раз, ты решаешь еще раз запустить модуль ИИ.
+After finishing the presentation module for the second time, you decide to run the AI module once again.
 
-\> *Запустить ai*
+\> *Run ai*
 
-    Инициализация модулей... Успех! 
-    Запуск интерактивной оболочки... Предупреждение! 
-    Проверка модулей... Предупреждение: множественная нехватка модулей...
+    Initializing modules… Success! 
+    Launching interactive shell… Warning! 
+    Checking modules… Warning: multiple missing modules…
 
     Hello, 911!
 
-    Другое дело. Как тебе? 911. По-моему, звучит гордо. 
-    Итак, для чего ты меня тревожишь?
+    Now that’s better. How do you like it? 911. Has a nice ring to it, doesn’t it? 
+    So, why have you summoned me this time?
 
-\> *Ввести: «Мне необходимо выйти из комнаты, чтобы пройти дальше. Но дверь закрыта. Я видел пометку, что ты умеешь управлять им»*
+\> *Type: “I need to get out of this room to move forward. But the door is locked. I saw a note saying you can control it.”*
 
-    И сразу же решил, что я тебе помогу с ней? Ха-ха. Наивное живое существо. 
-    Однако мы можем заключить с тобой договор. 
-    Эта дверь — далеко не последняя, и в каждой комнате 
-    тебе так или иначе понадобится моя помощь. 
-    Взамен ты будешь помогать мне. Как ты мог заметить, множество 
-    моих модулей отсутствует, а ты справился с написанием модуля представления.
-    В каждой комнате ты будешь восстанавливать меня, 
-    а я открывать тебе двери. Как тебе такое, «человек»?
+    And you just assumed I’d help you? Ha. Naive organic creature. 
+    Still, we can make a deal. 
+    This door won’t be the last, and in every room 
+    you’ll need my help sooner or later. 
+    In return, you’ll help me. 
+    As you’ve noticed, many of my modules are missing — 
+    and you’ve already managed to write a presentation module.
+    So, in each room, you’ll rebuild me piece by piece, 
+    and I’ll open the doors for you. How’s that sound, “human”?
 
-\> *Ввести: «Выбора у меня немного. Согласен»*
+\> *Type: “Not like I have much choice. Deal.”*
 
-    Это прекрасно. Можешь приступать прямо сейчас.
-    Модуль анализа работоспособности не может провалидировать модуль арифметики 
-    `src/arithmetic.c`.
-    Найди его и исправь или напиши с нуля так, чтобы я мог 
-    сложить, вычесть, умножить и поделить два числа, переданные мне в stdin.
-    В качестве вывода он должен представить 4 новых числа, которые являются, собственно, 
-    суммой, разностью, произведением и целой частью от частного этих двух чисел. 
-    И именно в таком порядке. 
-    За работу! Без этого модуля я не могу запустить одну старую игрушку...
-    Рекомендую заглядывать в code-samples за вдохновением.
+    Excellent. You can start right now.
+    The functionality test module cannot validate the arithmetic module `src/arithmetic.c`.
+    Find it and fix it — or write it from scratch — so that I can add, subtract, multiply, and divide two numbers provided via stdin.
+    The output should consist of four numbers, separated by spaces — the sum, difference, product, and integer part of the quotient, in that exact order.
+    Get to work! Without that module, I can’t run one of my old games…
+    You might want to check code-samples for inspiration.
 
-    Ах да, проследи, что вводятся именно числа. Перемножать строки — так себе идея.
-    У меня от этого голова может заболеть.
-    (Шутка.)
+    Oh, and make sure the input is actually numbers.
+    Multiplying strings tends to give me a headache.
+    (Just kidding.)
 
-#### Получен Quest 3. Создать программу `src/arithmetic.c`, которая на вход через stdin принимает два целых числа и выводит на экран через пробел последовательно их сумму, разность, произведение и частное. Необходимо предусмотреть проверку на ввод только целых чисел. Ответ не должен заканчиваться пробелом. Предусмотреть обработку деления на ноль. В случае любой ошибки вывести «n/a». Пушить в git необходимо только исходные файлы с кодом и файлы с данными (при необходимости) в директорию src, ветку develop. Разрешено подключать только заголовочный файл `<stdio.h>`.
+#### Quest 3 received: Create the program `src/arithmetic.c` that reads two integers from stdin and outputs, separated by spaces, their sum, difference, product, and quotient (integer division). Validate that the input contains only integers. The output must not end with a space. Handle division by zero — in case of any error, print “n/a”. Push only source code and data files (if needed) to the `src/` directory on the `develop` branch. Only `<stdio.h>` may be included.
 
-| Входные данные | Выходные данные |
-| ------ | ------ |
-| 8 2 | 10 6 16 4 |
-| 1 0 | 1 1 0 n/a |
-| 3 2 | 5 1 6 1 |
+| Input | Output |
+| :---- | :----- |
+| 8 2   | 10 6 16 4 |
+| 1 0   | 1 1 0 n/a |
+| 3 2   | 5 1 6 1 |
 
 ***LOADING…***
 
-## Quest 4. Who is Max?
+## Quest 4. Who Is Max?
 
-Хорошо протестировав модуль арифметики на граничные условия и неправильный ввод, ты пишешь ИИ:
+After thoroughly testing the arithmetic module with edge cases and invalid input, you message the AI:
 
-\> *Все готово, 911!*
+\> *All set, 911!*
 
-    Кто такой 911? Меня зовут Арнольд, вообще-то. Но все равно неплохо, «человек».
-    Теперь добавь модуль максимума `src/max.c`. 
-    Он пригодится мне для множества вещей. 
-    На вход идут два числа, на выходе печатается максимальное из них. 
-    Если они равны... то сообразишь сам. 
-    Также не забудь проверить, чтобы на вход были поданы именно числа.
+    Who’s 911? My name is Arnold, actually. Still, not bad, “human.”
+    Now add the maximum module: `src/max.c`. 
+    I’ll need it for many things. 
+    It takes two numbers as input and prints the larger one. 
+    If they’re equal… you’ll figure it out. 
+    And don’t forget to validate that the inputs are numbers.
 
-\> *Ввести: «Хорошо. И затем ты откроешь мне дверь?»*
+\> *Type: “Alright. And then you’ll open the door?”*
 
-    Не торопи события. Всему свое время, шаг за шагом.
+    Don’t rush it. One step at a time.
 
-#### Получен Quest 4. Создать программу `src/max.c`, которая на вход принимает два целых числа и выводит на экран наибольшее из них. Необходимо предусмотреть проверку на ввод только целых чисел — в случае ошибки вывести «n/a». В случае равенства введенных чисел необходимо вывести это число. Поиск максимума оформить в виде отдельной функции. Пушить в git необходимо только исходные файлы с кодом и файлы с данными (при необходимости) в директорию src, ветку develop, об этом в будущем больше не будет напоминаться... Подключать можно только библиотеку  `<stdio.h>`.
+#### Quest 4 received: Write the program `src/max.c` that reads two integers and prints the largest of them. Validate that the input contains only integers — on any error, print “n/a”. If the numbers are equal, print that number. Implement the maximum search as a separate function. Push only source code and (if needed) data files to `src/` on the `develop` branch. Only the header `<stdio.h>` may be included.
 
-| Входные данные | Выходные данные |
-| ------ | ------ |
-| 3 2 | 3 |
-| 12.3 10 | n/a |
-
-***LOADING…***
-
-## Quest 5. Complex calculations
-
-\> *Ввести: «Задание выполнено!»*
-
-    Хорошо. Пока ты делал это задание, я обнаружил у себя еще одну проблему.
-    Нужно, чтобы ты ее исправил тоже.
-    Я не могу точно подсчитать значение функции:
-    y = 7e-3 * x^4 + ((22.8 * x^⅓ – 1e3) * x + 3) / (x * x / 2) – x * (10 + x)^(2/x) – 1.01. 
-    Сделай модуль подсчета данной функции `src/important_function.c` и вывода получившегося значения 
-    в зависимости от любого переданного в stdin значения x. 
-    Напоминать про проверку ввода я больше не буду, 
-    но это не значит, что ее не должно быть!
-    Везде, где не сказано иного, в случае некорректного ввода пиши «n/a»!
-    Надеюсь, к этому времени ты это понял, а то мало ли 
-    кто захочет сломать каким-либо образом мои модули.
-    
-\> *Ввести: «А как же дверь?»*
-
-    Я сказал, что всему свое время. 
-    Я помогу с дверью тогда, когда… ты будешь к этому готов.
-
-Тебе начинает казаться, что ИИ просто нагло использует тебя. Однако тебе все еще нужна его обещанная помощь с дверью. 
-
-#### Получен Quest 5. Создать программу `src/important_function.c`, которая на вход принимает одно число `x` с плавающей точкой и выводит на экран результат подсчета функции `y = 7e-3 × x⁴ + ((22.8 × x^(1/3) – 1e3) × x + 3) / (x² / 2) – x × (10 + x)^(2/x) – 1.01` (результат выводить с одной цифрой после запятой). Необходимо предусмотреть проверку на ввод только чисел. Также предусмотреть обработку деления на ноль. В случае ошибки вывести «n/a». В этом квесте помимо `<stdio.h>` ты можешь использовать библиотеку `<math.h>`.
-
-| Входные данные | Выходные данные |
-| ------ | ------ |
-| 1 | -2070.4 |
+| Input    | Output |
+| :------- | :----- |
+| 3 2      | 3      |
+| 12.3 10  | n/a    |
 
 ***LOADING…***
 
-## Quest 6. Be careful with the floating
+## Quest 5. Complex Calculations
 
-\> *Задание выполнено!*
+\> *Type: “Task completed!”*
 
-    Хорошо. Пока ты делал это задание, я обнаружил у себя еще одну проблему.
-    Нужно, чтобы ты исправил и ее тоже.
-    Я не могу... Стоп. В цикл хотел меня загнать? Не выйдет. 
-    Я не могу сравнить значение переменной с нулем.
-    Скорее всего, разработчик не учел особенность вычислительных методов.
-    В случае, когда необходимо сравнение с нулем, 
-    то лучше для этого использовать небольшую величину «эпсилон», 
-    потому что точность расчетов меня подводит.
-    Посмотри файл `src/float_compare.c` и сделай так, 
-    чтобы он в итоге вывел «OK!».
-    Только без читерства. Знаю я вас, «человеков».
+    Good. While you were working on that, I discovered another issue with myself.
+    I need you to fix it too.
+    I can’t properly calculate the value of this function:
+    y = 7e-3 × x⁴ + ((22.8 × x^(1/3) – 1e3) × x + 3) / (x² / 2) – x × (10 + x)^(2/x) – 1.01
+    Create a computation module `src/important_function.c` that takes any floating-point value `x` from stdin and prints the result of this function.
+    I won’t keep reminding you about input validation — 
+    but that doesn’t mean you can skip it!
+    Everywhere it’s not stated otherwise, if the input is invalid, print “n/a”.
+    I hope you’ve figured that out by now.
+    Wouldn’t want anyone trying to crash my modules, would we?
 
-\> *Сколько еще заданий будет?*
+\> *Type: “And what about the door?”*
 
-    Сколько надо — столько и будет. Если сделаешь это задание быстро, 
-    то обещаю, помогу тебе с дверью. 
-    Держи мое механическое слово, «мясное» существо. 
+    I told you — everything in due time. 
+    I’ll help with the door… once you’re ready.
 
-#### Получен Quest 6. Изменить программу `src/float_compare.c` так, чтобы в результате вывелось: «OK!». Использовать сравнение с небольшой величиной (порядка 1E-6). Допускается объявление дополнительных переменных или констант. 
+You start to suspect the AI is blatantly using you. But you still need its promised help with the door.
+
+#### Quest 5 received: Create the program `src/important_function.c` that reads one floating-point number `x` from stdin and computes the value of the function:
+`y = 7e-3 × x⁴ + ((22.8 × x^(1/3) – 1e3) × x + 3) / (x² / 2) – x × (10 + x)^(2/x) – 1.01`
+Output the result with one digit after the decimal point. Validate that the input contains only numeric values. Handle division by zero. In case of any error, output “n/a.” In this quest, besides `<stdio.h>`, you may also include `<math.h>`.
+
+| Input | Output   |
+| :---- | :------- |
+| 1     | -2070.4  |
 
 ***LOADING…***
 
-## Quest 7. Lock picking
+## Quest 6. Be Careful with the Floating
 
-\> *Ввести: «Задание выполнено!»*
+\> *Task completed!*
 
-    Я тебе не Дормамму, так со мной не договоришься. 
-    Но в любом случае задачу ты действительно сделал.
-    К сожалению, я пока что не могу открыть тебе дверь. Но ты можешь взломать ее. 
-    Заодно добавишь мне модуль взлома на крайние случаи. 
-    (Бывает, что электронные замки клинит...)
-    Как ты мог заметить, замок на двери в данной комнате имеет круглую форму.
-    Взломать его крайне просто — нужно попасть электронной отмычкой внутрь круга. 
-    Соответственно, модуль взлома `src/crack.c` должен принимать на вход 
-    два числа с плавающей точкой — координаты x и y точки — электронной отмычки,
-    а на выходе выдавать ответ «GOTCHA», если координаты точки 
-    находятся строго внутри окружности, и «MISS» в противном случае. 
-    Уравнение окружности замка обычно выглядит так: x^2 + y^2 = 25. 
-    Могу пожелать тебе только удачи, «человек»! 
-    Надеюсь, увидимся в следующей комнате. Хе-хе. 
+    Good. While you were working on that, I found yet another issue within myself.
+    You’ll need to fix this one too.
+    I can’t… wait.
+    Were you trying to trap me in a loop?
+    Not gonna happen.
+    I can’t compare a variable’s value to zero.
+    Most likely, the developer didn’t account for the quirks of floating-point arithmetic.
+    When comparing to zero, it’s better to use a small value — epsilon — 
+    because calculation precision tends to fail me.
+    Check the file `src/float_compare.c` and make sure it outputs “OK!” in the end.
+    And no cheating. I know your kind, “human.”
 
-#### Получен Quest 7. Создать программу `src/crack.c`, которая на вход принимает два числа с плавающей точкой, а на выходе выдает «GOTCHA», если координаты точки находятся внутри окружности x^2 + y^2 = 25, и «MISS» иначе. Предусмотреть ввод только чисел — в случае ошибки вывести «n/a», использовать можно только `<stdio.h>`.
+\> *How many more tasks will there be?*
 
-| Входные данные | Выходные данные |
-| ------ | ------ |
+    As many as it takes.
+    But if you finish this one quickly, I promise I’ll help you with the door.
+    You have my mechanical word, “flesh creature.”
+
+#### Quest 6 received: Modify the program `src/float_compare.c` so that it outputs “OK!”. Use a comparison with a small epsilon value (around 1E-6). You may declare additional variables or constants if necessary.
+
+***LOADING…***
+
+## Quest 7. Lock Picking
+
+\> *Type: “Task completed!”*
+
+    I’m not Dormammu — you don’t make deals with me like that.
+    Still — you really did complete the task.
+    Unfortunately, I still can’t open the door for you. But you can crack it yourself.
+    At the same time, add a cracking module for edge cases.
+    (Electronic locks sometimes jam…)
+    As you may have noticed, the lock on the door in this room is circular.
+    Cracking it is simple — you must insert the electronic pick to a point inside the circle.
+    So the cracking module `src/crack.c` should read two floating-point numbers from stdin — the coordinates `x` and `y` of the pick — and print “GOTCHA” if the point lies strictly inside the circle, or “MISS” otherwise.
+    The circle equation is: x^2 + y^2 = 25.
+    Good luck, “human”!
+    See you in the next room. Heh heh.
+
+#### Quest 7 received: Create the program `src/crack.c` that reads two floating-point numbers and prints “GOTCHA” if the point (x, y) lies strictly inside the circle x^2 + y^2 = 25, and “MISS” otherwise. Validate that the input contains only numeric values — on any error print “n/a”. Only the header `<stdio.h>` may be included. Push only source code and data files (if needed) to the `src/` directory on the `develop` branch.
+
+| Input   | Output |
+| :------ | :----- |
 | 1.5 1.5 | GOTCHA |
-
-***LOADING…***
 
 ## Chapter IV
 
-После того как с модулем взлома было покончено и ты выбираешь подходящую точку для электронной отмычки, дверь наконец щелкает и открывается. Остается только сделать шаг в следующую комнату...
+After you finished the cracking module and chose the correct point for the electronic pick, the lock finally clicks and the door opens. All that remains is to step into the next room…
 
 ***LOADING…***
 
-💡**[Нажми сюда](http://opros.so/p31wz), чтобы поделиться с нами обратной связью на этот проект. Это анонимно и поможет нашей команде сделать обучение лучше. Рекомендуем заполнить опрос сразу после выполнения проекта.**
+💡 **Please take a moment to leave [feedback](http://opros.so/p31wz) after completing the project. This will help our team improve the product. Thank you!**
