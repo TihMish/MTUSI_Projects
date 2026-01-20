@@ -1,11 +1,11 @@
-# D10T07. Структуры и колбэки
+# D10T07. Structures and Callbacks
 
-Аннотация: данный проект позволит тебе познакомиться со структурами и объединениями в С, а также с колбэк-функциями и дополнительно с вызовами функций, переменными, списками аргументов и динамическими структурами.
+Abstract: this project will introduce you to structures and unions in C, as well as callback functions, with additional coverage of function calls, variables, argument lists, and dynamic structures.
 
 ## Contents
 
-1. [Введение](#введение) \
-    1.1. [Рекомендации к проекту](#рекомендации-к-проекту)
+1. [Introduction](#introduction) \
+    1.1. [Project Recommendations](#project-recommendations)
 2. [Chapter I](#chapter-i) \
     2.1. [Level 3. Room 3](#level-3-room-3)
 3. [Chapter II](#chapter-ii) \
@@ -30,23 +30,23 @@
     8.3. [Bonus Quest 8. Three styles of traversing](#bonus-quest-8-three-styles-of-traversing)
 9. [Chapter VIII](#chapter-viii)
 
-## Введение
-### Рекомендации к проекту
-Как учиться в «Школе 21»:  
-- На протяжении всего курса ты будешь самостоятельно добывать информацию. Пользуйся всеми доступными средствами поиска информации, к примеру, Google и GigaChat. Будь внимателен к источникам информации: проверяй, думай, анализируй, сравнивай. 
-- Взаимообучение (P2P, Peer-to-Peer) — это процесс, при котором учащиеся обмениваются знаниями и опытом, выступая одновременно в роли учителей и учеников. Этот подход позволяет учиться не только у преподавателя, но и друг у друга, что способствует более глубокому пониманию материала.
-- Не стесняйся просить помощи: вокруг тебя такие же пиры, которые тоже проходят этот путь впервые. Не бойся откликаться на просьбы о помощи. Твой опыт ценен и полезен, смело делись им с другими участниками. 
-- Не списывай, а если пользуешься помощью — всегда разбирайся до конца, почему, как и зачем. Иначе твое обучение не будет иметь никакого смысла. 
-- Если ты на чем-то застрял и кажется, что все уже перепробовал, но по-прежнему непонятно, куда идти, — просто передохни! Поверь, этот совет помогал многим разработчикам в их работе. Проветрись, перезагрузи голову, и, возможно, в следующий раз тебе наконец придет нужное решение!
-- Важен не только результат обучения, но и сам процесс. Нужно не просто решить задачу, а понять, КАК ее решить. 
-- Следи за временем при выполнении проекта. В день ты должен преодолевать минимум одно испытание. 
-- Помни, что каждое задание по завершении проекта проходит ряд проверок: р2р-проверка с помощью чек-листа, проверка набором автотестов, проверка на стиль кода, проверка статическим анализатором, проверка на корректную работу с памятью. 
+## Introduction
+### Project Recommendations
+How to study at "School 21":  
+- Throughout the course, you will independently gather information. Use all available search tools, such as Google and GigaChat. Be attentive to your sources: verify, think, analyze, compare. 
+- Peer-to-peer learning (P2P) is a process where learners exchange knowledge and experience, acting simultaneously as teachers and students. This approach allows learning not only from the instructor but also from each other, leading to a deeper understanding of the material.
+- Don’t hesitate to ask for help: around you are peers who are also navigating this path for the first time. Don’t be afraid to respond to requests for help. Your experience is valuable and useful—share it boldly with other participants. 
+- Do not copy; if you use help, always understand fully why, how, and for what purpose. Otherwise, your learning will have no meaning. 
+- If you are stuck on something and feel you've tried everything, but still don’t know where to go—just take a break! Believe it, this advice has helped many developers in their work. Get some fresh air, reset your mind, and maybe next time the right solution will come to you!
+- The learning process is just as important as the result. You must not only solve the problem but understand HOW to solve it. 
+- Keep track of time while working on the project. You should complete at least one challenge per day. 
+- Remember that each task, upon project completion, goes through a series of checks: peer review using a checklist, testing with autotests, code style check, static analyzer check, and check for correct memory handling. 
 
-Как работать с проектом:
-- Полезные видеоматериалы ты можешь найти в разделе Projects (Media) на Платформе. 
-- Перед выполнением проект необходимо склонировать с GitLab в одноименный репозиторий.
-- Все файлы с кодом необходимо создавать в папке src/ склонированного репозитория.
-- После клонирования проекта необходимо создать ветку `develop` и вести разработку в ней. После этого пушить в GitLab также нужно ветку `develop`.
+How to work with the project:
+- Useful video materials can be found in the Projects (Media) section on the Platform. 
+- Before starting, clone the project from GitLab into a repository with the same name.
+- All code files must be created in the `src/` folder of the cloned repository.
+- After cloning the project, create a `develop` branch and do all development in it. Then push to GitLab in the `develop` branch as well.
 
 ## Chapter I
 ## Level 3. Room 3
@@ -56,205 +56,203 @@
 ***LOADING Level 3...*** \
 ***LOADING Room 3...***
 
-\> *Осмотреться*
+\> *Look around*
 
-Все тот же третий уровень. Очередная комната со столом, компьютером, лампой и без книг. Вот только в этот раз там, где должна быть одна дверь, их стало пятнадцать штук. На каждой из них висит странный электронный замок с клавиатурой. Очень подозрительно. Но хотя бы лампа есть — с ней всегда уютнее.
+The same third level. Another room with a table, computer, lamp, and no books. Except this time, where there should be one door, there are now fifteen. Each has a strange electronic lock with a keypad. Very suspicious. But at least there's a lamp—it always feels cozier with one.
 
-\> *Дернуть первую дверь*
+\> *Try the first door*
 
-Закрыто.
+Locked.
 
-\> *Дернуть вторую дверь*
+\> *Try the second door*
 
-Заперто.
+Bolted.
 
-\> *Дернуть третью дверь*
+\> *Try the third door*
 
-Не поддается.
+Won't budge.
 
-\> *Дернуть четвертую дверь*
+\> *Try the fourth door*
 
-Не-а.
+Nope.
 
-\> *Для i = 5, пока i <= 15 -> Дернуть i-ую дверь и увеличить i*
+\> *For i = 5, while i <= 15 -> Try the i-th door and increment i*
 
-Напрасно потраченное процессорное время...
+Wasted processor time...
 
-\> *Осмотреться снова*
+\> *Look around again*
 
-Ты замечаешь, что рядом с кучей листов на столе лежит оставленная кем-то газетная вырезка. Оставил ли каким-то образом ее ИИ, или это был кто-то до тебя? Хотя странно было бы предположить, что ИИ читает газеты и тем более делает газетные вырезки.
+You notice that next to the stack of papers on the table lies a newspaper clipping left by someone. Did the AI leave it somehow, or was it someone before you? Though it's odd to think that the AI reads newspapers, let alone cuts out clippings.
 
-\> *Пробежаться глазами по вырезке*
+\> *Glance over the clipping*
 
 ***LOADING...***
 
 ## Chapter II
 ## List 1. MCO
 
-Листок пожелтевший и явно видавший виды. К тому же вырезанный крайне неаккуратно. 
+The sheet is yellowed and clearly well-worn. Also cut out very sloppily.
 
->Mars Climate Orbiter был запущен 11 декабря 1998 года на РН «Дельта-2». Аппарат прибыл к Марсу через 9 месяцев. Mars Climate Orbiter 23 сентября 1999 года должен был выдать тормозной импульс и перейти на высокоэллиптическую орбиту с периодом 14 часов, а затем в течение двух месяцев с помощью ряда аэродинамических маневров в верхней атмосфере Марса довести орбиту до круговой. В расчетное время на высоте 193 км аппарат включил двигатели на торможение. Через 5 минут MCO запланировано ушел за Марс, и больше никаких сигналов с него не поступало. Из анализа данных было предположено, что аппарат прошел над поверхностью Марса на высоте 57 км вместо расчетных 110 км и распался в атмосфере. Столь большое отклонение было вызвано ошибкой в программном обеспечении миссии: команды по тяге двигателя в программном обеспечении Mars Climate Orbiter использовали единицу измерения силы «ньютон», в то время как программное обеспечение на Земле, которое создавало эти команды, использовало британскую единицу измерения (фунт-сила)...
+>Mars Climate Orbiter was launched on December 11, 1998, on a Delta II rocket. The spacecraft reached Mars after 9 months. Mars Climate Orbiter was supposed to fire its braking thrusters on September 23, 1999, and enter a highly elliptical orbit with a 14-hour period, then over two months use a series of aerobraking maneuvers in the upper Martian atmosphere to circularize the orbit. At the calculated time at an altitude of 193 km, the spacecraft fired its engines for braking. After 5 minutes, MCO was scheduled to go behind Mars, and no further signals were received from it. Data analysis suggested the spacecraft passed over Mars’ surface at an altitude of 57 km instead of the planned 110 km and disintegrated in the atmosphere. Such a large deviation was caused by a software error in the mission: the thrust commands in the Mars Climate Orbiter software used the unit of force "newton," while the ground software that generated these commands used the imperial unit (pound-force)...
 
-\> *Взять первый лист из стопки под газетной вырезкой*
+\> *Take the first sheet from the stack under the newspaper clipping*
 
 ***LOADING...***
 
 ## List 2. Instructions
 
-Лист похож на вырванную страницу из какой-то книги по программированию... Вероятно, стоит его внимательно прочесть.
+The sheet looks like a page torn from some programming book... Probably worth reading carefully.
 
->Структура — определенный пользователем тип, позволяющий совместно хранить и перемещать несколько значений разного типа. Определение структуры происходит следующим образом:
+>A structure is a user-defined type that allows storing and moving multiple values of different types together. A structure is defined as follows:
 
-    struct [имя структуры] {
-    определение элемента;
-    определение элемента;
+    struct [structure name] {
+    element definition;
+    element definition;
     ...
-    определение элемента;
-    } [одна или несколько переменных];
+    element definition;
+    } [one or more variables];
 
->Использование структур позволяет объединять совместно используемые данные, а также оставляет возможность для дальнейшей модификации передаваемых данных без изменений заголовков функций.
+>Using structures allows grouping related data and provides the ability to later modify the passed data without changing function headers.
 >
->Объем памяти, занимаемый структурой, равен сумме занимаемой памяти всех ее элементов. В связи с этим структуры в языке С являются абстракциями с нулевой стоимостью. Элементы структуры располагаются в памяти в том порядке, в котором определены.
+>The memory occupied by a structure equals the sum of memory occupied by all its elements. Thus, structures in C are zero-cost abstractions. Structure elements are placed in memory in the order they are defined.
 
-\> *Взять следующий лист*
+\> *Take the next sheet*
 
->Объединение — тип данных, позволяющий переиспользовать память для хранения значений различного типа. Определение объединения происходит следующим образом:
+>A union is a data type that allows reusing memory to store values of different types. A union is defined as follows:
 
-    union [имя объединения] {
-    определение элемента;
-    определение элемента;
+    union [union name] {
+    element definition;
+    element definition;
     ...
-    определение элемента;
-    } [одна или несколько переменных];
+    element definition;
+    } [one or more variables];
 
->Занимаемая объединением память определена как память, необходимая для хранения наибольшего элемента объединения...
+>The memory occupied by a union is defined as the memory required to store its largest element...
 
-Далее текст нечитаем.
+Further text is illegible.
 
->Одним из применений объединений и структур являются т. н. объединения с меткой. Это структуры, позволяющие хранить в себе один из нескольких допустимых типов данных и содержащие в себе метку — целое число, по которому можно определить, какой конкретно тип данных находится в объединении в данный момент.
+>One application of unions and structures is so-called tagged unions. These are structures that can store one of several allowed data types and contain a tag—an integer by which you can determine which specific data type is currently in the union.
 
-\> *Взять следующий лист*
+\> *Take the next sheet*
 
->Односвязный список — структура данных, состоящая из последовательно связанных узлов, содержащих однотипные данные. Каждый элемент списка имеет указатель на следующий элемент, последний хранит там пустой указатель (0/NULL в C). Списки имеют переменную длину, позволяют легко выполнять объединение множества списков, однако занимают больше памяти и требуют больше элементарных операций на их обход, чем массивы.
+>A singly linked list is a data structure consisting of sequentially linked nodes containing homogeneous data. Each list element has a pointer to the next element; the last one stores a null pointer (0/NULL in C). Lists have variable length, allow easy merging of multiple lists, but occupy more memory and require more elementary operations to traverse than arrays.
 
 ***LOADING...***
 
 ## Chapter III
 ## Quests: Level 3. Room 3
 
-## Quest 1. The Doors 
+## Quest 1. The Doors
 
-\> *Внимательно оглядеть комнату в поисках дополнительных подсказок*
+\> *Carefully examine the room for additional clues*
 
-Пусто.
+Empty.
 
-\> *Внимательно оглядеть стол в поисках дополнительных подсказок*
+\> *Carefully examine the table for additional clues*
 
-Ты замечаешь небольшую оранжевую бумажку под клавиатурой. Такие бумажки часто используют как стикеры для напоминаний. 
+You notice a small orange paper under the keyboard. Such papers are often used as reminder sticky notes.
 
-\> *Взять и прочесть*
+\> *Take and read*
 
-Ты уверен? Это может быть личным...
+Are you sure? This could be personal...
 
 ![level3_room3_sticker](misc/rus/images/level3_room3_sticker.png)
 
-\> *Да. Раньше это никого не смущало. Да и выбора у меня немного*
+\> *Yes. That never bothered anyone before. And I don't have much choice*
 
->`src/dmanager_module.c` — модуль управления дверьми. \
->Не трогать функцию инициализации дверей, рушится логика ядра комнаты. \
->Все двери не открывать, от этого крашится протокол передачи. \
->Для управления выделить функцию сортировки дверей по возрастанию и функцию закрытия «открытых» дверей. 
-> 
->Структура дверей: целочисленный id и числовой статус (0 — закрыто, 1 — открыто).
+>`src/dmanager_module.c` — door management module. \
+>Do not touch the door initialization function; it breaks the room core logic. \
+>Do not open all doors; it crashes the transmission protocol. \
+>For management, allocate a door sorting function in ascending order and a function to close "open" doors.
+>
+>Door structure: integer id and numeric status (0 — closed, 1 — open).
 
-Выглядит как напоминалка, оставленная кем-то задолго до тебя. Стоит обратить внимание на этот модуль управления дверьми, это может помочь.
+Looks like a reminder left by someone long before you. Should pay attention to this door management module; it might help.
 
-#### Получен Quest 1. Создать структуру дверей в `src/door_struct.h`. Сама структура состоит из целочисленного id двери и целочисленного status (0 — закрыто, 1 — открыто). Исправить программу `src/dmanager_module.c` так, чтобы она отсортировала проинициализированный массив дверей по возрастанию id дверей любым алгоритмом и вывела его в формате: «id двери, статус двери». Помимо этого, для всех дверей проставить статус «закрыта».
-#### Изменять функцию инициализации дверей нельзя. Придерживаться структурного подхода. Программа должна собираться при помощи Makefile. Имя стадии — `door_struct`. Исполняемый файл должен располагаться в корне репозитория в папке build и иметь имя «Quest_1».  
+#### Received Quest 1. Create a door structure in `src/door_struct.h`. The structure consists of an integer door id and an integer status (0 — closed, 1 — open). Fix the program `src/dmanager_module.c` so that it sorts the initialized array of doors in ascending order by door id using any algorithm and outputs it in the format: "door id, door status". Additionally, set the status to "closed" for all doors.
+#### Do not modify the door initialization function. Follow a structured approach. The program must be built using Makefile. Stage name — `door_struct`. The executable must be located in the repository root in the build folder and named "Quest_1".
 
->**ВАЖНО!** Запрещено выполнять системные вызовы, используя функцию `system()` и другие аналогичные ей функции, которые могут обращаться напрямую к ядру системы. Данный запрет распространяется на все последующие задачи.
+>**IMPORTANT!** It is forbidden to execute system calls using the `system()` function and other similar functions that can directly access the system kernel. This prohibition applies to all subsequent tasks.
 
->**Внимание:** решение будет проверяться на утечки памяти и на стилевую норму, инструкции как обычно в materials.
+>**Attention:** the solution will be checked for memory leaks and code style norms; instructions as usual in materials.
 
-*Ожидаемый вывод (id двери, статус):*
-
-```
+*Expected output (door id, status):*
 0, 0
 1, 0
 2, 0
-3, 0 
-4, 0 
-5, 0 
-6, 0 
-7, 0 
-8, 0 
-9, 0 
-10, 0 
-11, 0 
-12, 0 
-13, 0 
-14, 0 
-```
+3, 0
+4, 0
+5, 0
+6, 0
+7, 0
+8, 0
+9, 0
+10, 0
+11, 0
+12, 0
+13, 0
+14, 0
+
 ***LOADING...***
 
 ## Quest 2. Linked List
 
-Итак, двери вроде бы инициализируются. Но как выйти? Для какой двери необходимо прописать статус «открыта»? Если сделать это для всех дверей, то, судя по запискам, это может повлечь за собой какую-то катастрофу.
+So, doors seem to be initialized. But how to exit? Which door should have its status set to "open"? If done for all doors, judging by the notes, it might cause some catastrophe.
 
-\> *Перевернуть бумажку*
+\> *Flip the paper*
 
-А вот и продолжение.
+And here's the continuation.
 
->Нужная дверь изменяется каждый день. \
->Номер текущей двери вычисляется через полиномиальную функцию внутренними модулями комнаты. Исходники реализации модуля недоступны. \
->Путем реверс-инжиниринга было выявлено, что этот модуль не умеет работать с массивами. В своей работе модуль использовал динамически подключаемую библиотеку с реализацией односвязного списка. Эта библиотека является критически важной для работы модуля, однако бинарный файл с библиотекой был поврежден.
+>The required door changes every day. \
+>The current door number is computed via a polynomial function by the room's internal modules. Source code of the module implementation is unavailable. \
+>Through reverse engineering, it was revealed that this module cannot work with arrays. In its operation, the module used a dynamically linked library implementing a singly linked list. This library is critically important for the module's operation, but the binary library file was corrupted.
 
-В одном из листов что-то говорилось про односвязный список. Стоит узнать побольше про этот список и заодно разобраться с выделением памяти под него.
+One of the sheets mentioned something about a singly linked list. Should learn more about this list and also figure out memory allocation for it.
 
-#### Получен Quest 2. Разработать программу `src/list.c`, в которой содержатся реализации функций по работе с односвязным списком дверей:
-#### 1. `struct node* init(struct door door)` — инициализация структуры односвязного списка на базе переданной `struct door`; 
-#### 2. `struct node* add_door(struct node* elem, struct door door)` — вставка нового элемента `struct door` в односвязный список после переданного узла `elem`; 
-#### 3. `struct node* find_door(int door_id, struct node* root)` — поиск двери в списке по ее id;
-#### 4. `struct node* remove_door(struct node* elem, struct node* root)` — удаление элемента списка; 
-#### 5. `void destroy(struct node* root)` — освобождение памяти, занимаемой структурой списка.<br>
+#### Received Quest 2. Develop the program `src/list.c`, containing implementations of functions for working with a singly linked list of doors:
+#### 1. `struct node* init(struct door door)` — initialize a singly linked list structure based on the passed `struct door`;
+#### 2. `struct node* add_door(struct node* elem, struct door door)` — insert a new element `struct door` into the singly linked list after the passed node `elem`;
+#### 3. `struct node* find_door(int door_id, struct node* root)` — search for a door in the list by its id;
+#### 4. `struct node* remove_door(struct node* elem, struct node* root)` — remove an element from the list;
+#### 5. `void destroy(struct node* root)` — free memory occupied by the list structure.<br>
 
-#### Объявления этих функций и структуру односвязного списка вынести в файл `src/list.h`. Написать модульные тесты для проверки работы функций `add_door` и `remove_door` односвязного списка в `src/list_test.c`. Функции методов должны возвращать SUCCESS в случае успешного прохождения теста и FAIL в случае ошибки. Тесты должны собираться при помощи Makefile. Имя стадии — `list_test`. Исполняемый файл должен располагаться в корне репозитория в папке build и иметь имя «Quest_2».
+#### Declarations of these functions and the singly linked list structure should be placed in `src/list.h`. Write unit tests to check the operation of `add_door` and `remove_door` functions of the singly linked list in `src/list_test.c`. The method functions should return SUCCESS on successful test completion and FAIL on error. Tests must be built using Makefile. Stage name — `list_test`. The executable must be located in the repository root in the build folder and named "Quest_2".
 
->**Внимание:** этот квест будет тестироваться утилитой `cppcheck`.
+>**Attention:** this quest will be tested with the `cppcheck` utility.
 
 ***LOADING...***
 
 ## Quest 3. Stack for key
 
-Окей, необходимая библиотека для работы модуля поиска номера текущей двери написана. Ты видишь на экране стремительно заполняющуюся шкалу активности вычислений алгоритма. Спустя пару секунд на экране появляется номер нужной тебе двери. С облегчением и удовлетворением от выполненной задачи ты направляешься к двери.
+Okay, the necessary library for the current door number search module is written. You see a rapidly filling progress bar of algorithm activity on the screen. After a few seconds, the number of the door you need appears on the screen. With relief and satisfaction from the completed task, you head to the door.
 
-\> *Дернуть ручку*
+\> *Try the handle*
 
-Заперто... \
-Однако ты замечаешь, что на двери открывается небольшой экранчик. На экране большими буквами горит надпись:
+Locked... \
+However, you notice a small screen opening on the door. Large letters are displayed:
 
 > NO DYNAMIC INT STACK AND/OR STACK OPERATIONS
 
-Ты возвращаешься к компьютеру и размышляешь, что бы это могло значить. Как жаль, что нигде больше нет вспомогательных бумажек... 
+You return to the computer and ponder what this could mean. Too bad there are no more helpful notes...
 
-Покопавшись в своей памяти, ты вспоминаешь, что **стек** — это вроде как одна из разновидностей динамических структур данных, которая часто реализуется в виде списка. Видимо, для открытия двери еще требуется написать динамический стек, который в себе содержит целые числа. Для стека необходимо реализовать его стандартный интерфейс: операции заталкивания данных в стек (`push`) и выталкивания из него (`pop`). И не забыть сохранить все реализации в `src/stack.c`, а объявления функций и структуры — в `src/stack.h`. Также стоит написать модульные тесты в `src/stack_test.c`, чтобы проверить работоспособность стека и его функций. Иначе кто знает, что может случиться, если стек будет неправильно работать...
+Digging into your memory, you recall that a **stack** is a type of dynamic data structure often implemented as a list. Apparently, to open the door, you also need to write a dynamic stack that contains integers. For the stack, you need to implement its standard interface: operations to push data onto the stack (`push`) and pop data from it (`pop`). And don't forget to save all implementations in `src/stack.c`, and function and structure declarations in `src/stack.h`. Also, write unit tests in `src/stack_test.c` to verify the stack and its functions. Otherwise, who knows what might happen if the stack doesn't work correctly...
 
-#### Получен Quest 3. Разработать программу `src/stack.c`, в которой содержатся реализации функций по работе с динамическим стеком (`init`, `push`, `pop`, `destroy`). Объявления функций и структуры динамического стека, хранящего целые числа, вынести в `src/stack.h`.
-#### Написать модульные тесты для проверки работы функций `push` и `pop` стека в `src/stack_test.c`. Функции методов должны возвращать SUCCESS в случае успешного прохождения теста и FAIL в случае ошибки. Тесты должны собираться при помощи Makefile. Имя стадии — `stack_test`. Исполняемый файл должен располагаться в корне репозитория в папке build и иметь имя «Quest_3». 
+#### Received Quest 3. Develop the program `src/stack.c`, containing implementations of functions for working with a dynamic stack (`init`, `push`, `pop`, `destroy`). Declarations of functions and the dynamic stack structure storing integers should be placed in `src/stack.h`.
+#### Write unit tests to check the operation of `push` and `pop` functions of the stack in `src/stack_test.c`. The method functions should return SUCCESS on successful test completion and FAIL on error. Tests must be built using Makefile. Stage name — `stack_test`. The executable must be located in the repository root in the build folder and named "Quest_3".
 
->**Внимание:** этот квест будет тестироваться утилитой `cppcheck`. Это задание не предусматривает автотестирование!
+>**Attention:** this quest will be tested with the `cppcheck` utility. This task does not include autotesting!
 
 ***LOADING...***
 
 ## Chapter IV
 
-\> *Запушить задачу «Quest 3» в репозиторий* 
+\> *Push task "Quest 3" to the repository*
 
-Вроде бы все сделано по структурам, можно перейти к следующим заданиям.
+Seems everything is done with structures; can move on to the next tasks.
 
-\> *Подойти к соседней двери и дернуть ручку*
+\> *Approach the neighboring door and try the handle*
 
-Дверь поддается, и ты делаешь шаг в соседнюю комнату.
+The door gives way, and you step into the next room.
 
 ***LOADING...***
 
@@ -266,44 +264,44 @@
 ***LOADING Level 3...*** \
 ***LOADING Room 4...***
 
-\> *Осмотреться*
+\> *Look around*
 
-Ты переходишь в новую комнату без книг, странных полотен на стенах и только с одной дверью. Все было бы прекрасно и вполне обычно, если бы не огромное живое дерево, растущее посреди комнаты. И почему на этом уровне все комнаты такие странные... 
+You enter a new room without books, strange paintings on the walls, and with only one door. Everything would be fine and quite usual if not for the huge living tree growing in the middle of the room. And why are all the rooms on this level so strange...
 
-Подойдя ближе к рабочей станции, ты видишь открытый отчет в командном терминале — по всей видимости, одного из инженеров. Ну и пару пожелтевших листов, упавших с дерева.
+Approaching the workstation, you see an open report in the command terminal—apparently from one of the engineers. And a couple of yellowed sheets that fell from the tree.
 
-\> *Изучить отчет*
+\> *Study the report*
 
-    Недавно мне пришлось разработать драйвер режима ядра. 
-    Это очень разозлило многих моих коллег и было расценено как неудачный инженерный ход.
+    Recently I had to develop a kernel-mode driver.
+    This angered many of my colleagues and was deemed a poor engineering move.
 
-    Как и любой другой фрагмент кода, написанный мной, 
-    у этого драйвера было несколько серьезных ошибок, 
-    которые вызывали некоторые интересные побочные эффекты. 
-    В частности, этот драйвер препятствовал загрузке ряда других драйверов 
-    и в итоге приводил к сбою системы.
+    Like any other code fragment I write,
+    this driver had several serious bugs
+    that caused some interesting side effects.
+    In particular, this driver prevented loading a number of other drivers
+    and eventually led to system failure.
 
-    Позже я узнал, что многие драйверы предполагают, что их процедура инициализации всегда успешна, 
-    и не могут обработать нарушение.
-    ... 
-    Несколько лет назад ИИ с кодовым названием `virtual_j00ru` был разработан для документирования
-    подобных случаев в специальном журнале, и многие из них по-прежнему актуальны в текущих версиях ОС.
+    Later I learned that many drivers assume their initialization procedure always succeeds
+    and cannot handle failure.
     ...
-    В итоге эти глючные драйверы перестали быть проблемой: 
-    `virtual_j00ru` прекрасно справился со своей задачей, сэкономив мне многие годы жизни. 
-    Я же решил, что ИИ может не только помогать в исправлении проблемных драйверов, 
-    но и еще помогать мне и многим другим людям во множестве других вещей: 
-    анализировать код, находить логические ошибки,
-    составлять список покупок на неделю, находить необходимую информацию и т. д. 
-    Поэтому я сосредоточился на расширении его функционала. 
-    Мне предстояла большая работа, первой частью которой было добавление различных структур для...
+    Several years ago, an AI codenamed `virtual_j00ru` was developed to document
+    such cases in a special journal, and many are still relevant in current OS versions.
+    ...
+    Eventually, these buggy drivers ceased to be a problem:
+    `virtual_j00ru` excelled at its task, saving me many years of life.
+    I decided that AI could not only help fix problematic drivers
+    but also assist me and many others in numerous other things:
+    analyze code, find logical errors,
+    make a weekly shopping list, find necessary information, etc.
+    So I focused on expanding its functionality.
+    I had a lot of work ahead, the first part being adding various structures for...
 
 ***LOADING...***
 
 ## Chapter VI
 ## List 1
 
-> НЕ ЗАБЫВАЙ! Все твои программы тестируются на стилевую норму и утечки памяти. Инструкция по запуску тестов все также лежит в папке materials.
+> DON'T FORGET! All your programs are tested for style norms and memory leaks. The test run instructions are still in the materials folder.
 
     Validating module...
     System segmentation fault...
@@ -333,34 +331,32 @@
     >4
     LOADING...
     LOAD: SUCCESS
-    Do you want to read it now? 
+    Do you want to read it now?
     N/Y
 
 ***LOADING...***
 
 ## List 2
 
-    Definitions: 
-    Дерево — это структура данных, обеспечивающая иерархическую древовидную структуру.
-    Математически это ациклический связный ориентированный граф,
-    в котором каждая вершина (называемая узлом) имеет ноль или более исходящих ребер 
-    и ноль или одно входящее ребро. 
+    Definitions:
+    A tree is a data structure providing a hierarchical tree-like structure.
+    Mathematically, it is an acyclic connected directed graph,
+    in which each vertex (called a node) has zero or more outgoing edges
+    and zero or one incoming edge.
 
-    Структура одного элемента (листа, узла) описывается следующим образом:
-
-```
-typedef struct 		s_btree 
+    The structure of one element (leaf, node) is described as follows:
+typedef struct s_btree
 {
-struct s_btree 	*left; 
-struct s_btree 	*right;
-int 			item; 
+struct s_btree *left;
+struct s_btree *right;
+int item;
 } t_btree;
-```
 
-    Бинарное дерево — это дерево, в котором узлы имеют не более двух исходящих ребер.
+
+    A binary tree is a tree where nodes have at most two outgoing edges.
 
 ![Binary_tree](misc/images/binary_tree.png) \
-Рис. 1. Бинарное дерево
+Fig. 1. Binary tree
 
     PRESS PAGE DOWN TO CONTINUE
 
@@ -368,36 +364,36 @@ int 			item;
 
 ## List 3
 
-    Definitions: 
-    Бинарное дерево поиска (Binary search tree/BST) — это бинарное дерево с определенным порядком, 
-    наложенным на его узлы. Порядок часто определяется через следующую индукцию: 
-    1. Левое поддерево корня содержит только узлы со значениями, меньшими, чем корень. 
-    2. Правое поддерево корня содержит только узлы со значениями, большими, чем корень. 
-    3. Все поддеревья также являются двоичными деревьями поиска.
+    Definitions:
+    A Binary Search Tree (BST) is a binary tree with a specific order imposed on its nodes.
+    The order is often defined by the following induction:
+    1. The left subtree of the root contains only nodes with values smaller than the root.
+    2. The right subtree of the root contains only nodes with values larger than the root.
+    3. All subtrees are also binary search trees.
 
 Characteristics:
 
-|   | в среднем | в худшем случае |
+|   | average | worst case |
 | ------ | ------ | ------ |
-| Расход памяти | O(n)      | O(n)    |
-| Поиск         | O(log n)      | O(n)    |
-| Вставка       | O(log n)      | O(n) |
-| Удаление       | O(log n)      | O(n) |
+| Memory consumption | O(n)      | O(n)    |
+| Search         | O(log n)      | O(n)    |
+| Insertion       | O(log n)      | O(n) |
+| Deletion       | O(log n)      | O(n) |
 
-    Таким образом, бинарное дерево поиска — это бинарное дерево, в котором все узлы упорядочены
-    таким образом, что левые дочерние элементы имеют значение меньше, чем их родитель, а правые
-    дочерние элементы больше, чем их родитель. Следовательно, как поиск заданного узла, так и обход
-    по порядку эффективны (логарифмический и линейный соответственно).
+    Thus, a binary search tree is a binary tree in which all nodes are ordered
+    such that left children have a value less than their parent, and right
+    children have a value greater than their parent. Consequently, both searching for a given node and in-order traversal
+    are efficient (logarithmic and linear respectively).
 
 ![Binary_search_tree](misc/images/binary_search_tree.png) \
-Рис. 2. Бинарное дерево поиска
+Fig. 2. Binary search tree
 
     END OF CURRENT DOCUMENT
     PRESS ANY KEY TO RETURN...
 
     Validating module...
     System segmentation fault...
-    AI documentation module found but not loaded correctly... 
+    AI documentation module found but not loaded correctly...
     Hint: Try to sort modules in the right order
 
 ***LOADING...***
@@ -405,62 +401,62 @@ Characteristics:
 ## Chapter VII
 ## Quests: Level 3. Room 4
 
->**Внимание!** Все исполняемые файлы, как и ранее, должны располагаться в папке build корневой директории проекта.
+>**Attention!** All executables, as before, must be located in the build folder of the project root directory.
 
 ## Quest 4. Print Module
 
-Отчет неожиданно прерывается, и ты видишь сообщение об ошибке. Изучив его подробнее, ты понимаешь, что модуль вывода поврежден (кто бы мог подумать!) и нуждается в замене.\
-Система предлагает добавить свой модуль.
+The report unexpectedly stops, and you see an error message. Studying it further, you realize the output module is damaged (who would have thought!) and needs replacement.\
+The system suggests adding your own module.
 
-\> *Поискать документацию на компьютере*
+\> *Search for documentation on the computer*
 
-Удача тебе сегодня улыбается. На компьютере есть немного информации про модули вывода и документации.
+Luck is smiling on you today. There is some information about output and documentation modules on the computer.
 
 ![level3_room4_leaf](misc/rus/images/level3_room4_leaf.png)
 
-\> *Прочитать документацию*
+\> *Read the documentation*
 
-Ты загружаешь документацию и изучаешь ее.
+You load the documentation and study it.
 
 ...
 
-Подробнее изучив документацию, ты понимаешь, что в системе просто отсутствует функция вывода на экран. Сигнатура запрашивающего модуля выглядит следующим образом:
+After examining the documentation more closely, you realize the system simply lacks an output function. The signature of the requesting module looks like this:
 
 `void print_log(char (*print) (char), char* message);`
 
-Еще поизучав документацию, ты осознаешь, что ядро системы работает на функциях обратного вызова (callbacks) и тебе нужно разобраться с реализацией вывода на экран и вызвать ее в модуле.
+Studying the documentation further, you understand the system kernel works on callback functions, and you need to figure out the screen output implementation and call it in the module.
 
-#### Получен Quest 4. Дописать в файле `src/print_module.c` функцию `print_log` таким образом, чтобы она при помощи переданной ей в параметрах функции выводила сообщение следующего типа: «[LOG] текущее_время сообщение». Текущее время должно быть в формате ЧЧ:ММ:СС. При необходимости изменить файл `src/main_module_entry_point.c`. Сборка программы должна осуществляться при помощи Makefile. Имя стадии — `print_module`, исполняемого файла — «Quest_4». 
+#### Received Quest 4. In the file `src/print_module.c`, complete the `print_log` function so that it uses the function passed to it as a parameter to output a message of the following type: "[LOG] current_time message". The current time should be in HH:MM:SS format. Modify `src/main_module_entry_point.c` if necessary. The program must be built using Makefile. Stage name — `print_module`, executable name — "Quest_4".
 
 ***LOADING...***
 
 ## Quest 5. Checking Module
 
-\> *Запушить изменения в репозиторий*
+\> *Push changes to the repository*
 
     System segmentation fault...
     Loading module structure seems to be broken
     System: Output stream module load... Success
                     LOADING...
                       SUCCESS
-        Желаете продолжить чтение с места, где остановились?
+        Continue reading from where you left off?
                         N/Y
 
-В продолжении отчета представлены несколько встроенных структур данных для использования в коде ИИ. Как и в любом крупном программном проекте, эти общие структуры данных и примитивы предоставляются для повторного использования в коде. Разработчики должны переиспользовать их всякий раз, когда это возможно. 
+The continuation of the report presents several built-in data structures for use in the AI code. As in any large software project, these common data structures and primitives are provided for reuse in the code. Developers should reuse them whenever possible.
 
-В следующих разделах документации приведено описание следующих общих структур данных, а именно: связанные списки (Linked lists), очереди (Queues), карты (Maps), бинарные деревья (Binary Trees). Каждый раздел содержит информацию с описанием, областью применения и сложностью алгоритма.
+The following sections of the documentation describe the following common data structures, namely: Linked lists, Queues, Maps, Binary Trees. Each section contains information with description, application area, and algorithm complexity.
 
         SELECT DOCUMENT YOU WANT TO READ
                     >...
 
                     ERROR...
-                    
-Текст неожиданно прерывается, и система начинает проверять целостность оставшихся данных.
+
+The text abruptly stops, and the system begins checking the integrity of the remaining data.
 
                 UNRECOGNIZED OPERATION...
-                FILTER MODULE: MISSED 
+                FILTER MODULE: MISSED
 
-Среди большого лога ошибок система подчеркнула несколько строк:
+Among the large error log, the system highlighted several lines:
 
     System segmentation fault...
     Loading module structure seems to be broken
@@ -471,68 +467,68 @@ Characteristics:
     va_end can’t be used
     use 'man stdarg' to get more information
 
-\> *Что это такое?*
+\> *What is this?*
 
-Казалось бы, у кого ты спрашиваешь...
+Who are you even asking...
 
-Согласно документации, по всей видимости, тебе нужно написать функцию-модуль ИИ, которая описывается следующей сигнатурой:
+According to the documentation, apparently you need to write an AI module function described by the following signature:
 
 `int* check_available_documentation_module(int (*validate) (char*), int document_count, ...);`
 
-Судя по сигнатуре, функция должна применить механизм обратного вызова к каждому переданному параметру.
+Judging by the signature, the function should apply a callback mechanism to each passed parameter.
 
-#### Получен Quest 5. Дописать в файле `src/documentation_module.c` функцию `check_available_documentation_module` так, чтобы она применяла к каждому переданному ей документу в параметрах функцию валидации, также переданную в параметрах. Результатом работы программы должен являться массив доступности документов, представляющий из себя массив целых чисел (0 — документ недоступен, 1 — документ доступен). 
-#### Расширить функциональность модуля `src/main_module_entry_point.c` так, чтобы он реализовывал человекочитаемый вывод доступности документов при помощи полученного массива (формата: [название документа : (un)available]). Для проверяемых документов установи модификатор размера поля вывода в 15 единиц. Обрати внимание, что функция принимает произвольное число аргументов. Сборка программы должна осуществляться при помощи Makefile. Имя стадии — `documentation_module`, исполняемого файла — «Quest_5».
+#### Received Quest 5. In the file `src/documentation_module.c`, complete the `check_available_documentation_module` function so that it applies the validation function (also passed as a parameter) to each document passed to it. The result should be an array of document availability, represented as an array of integers (0 — document unavailable, 1 — document available).
+#### Extend the functionality of `src/main_module_entry_point.c` so that it implements human-readable output of document availability using the obtained array (format: [document name : (un)available]). For the checked documents, set the output field width modifier to 15 units. Note that the function accepts a variable number of arguments. The program must be built using Makefile. Stage name — `documentation_module`, executable name — "Quest_5".
 
 ***LOADING...***
 
-## Bonus Quests 
+## Bonus Quests
 ## Bonus Quest 6. BST
 
-\> *Что же делать?*
+\> *What to do?*
 
-По всей видимости, необходимо последовать ненавязчивым подсказкам системы и отсортировать модули ИИ при помощи бинарного дерева поиска. Каждый модуль имеет свой числовой id от 0 до 10. Из информации, найденной на компьютере, известно, что модуль документации имеет идентификатор 4. 
+Apparently, you need to follow the system's subtle hints and sort the AI modules using a binary search tree. Each module has its own numeric id from 0 to 10. From information found on the computer, the documentation module has identifier 4.
 
-К счастью для тебя, структура элемента дерева (листа) уже дана в документации.
+Fortunately for you, the tree element (leaf) structure is already given in the documentation.
 
-Первым делом необходимо написать функцию создания узла в `src/bst.c` (функция должна сохранять значение в узле и инициализировать начальные состояния дочерних узлов). Сигнатура функции должна выглядеть следующим образом:
+First, write a node creation function in `src/bst.c` (the function should save the value in the node and initialize the initial states of child nodes). The function signature should look like:
 
 `t_btree *bstree_create_node(int item)`
 
-Тип t_btree необходимо описать в соответствующем header-файле. В конце функцию создания узла стоит проверить в `src/bst_create_test.c` с помощью модульного тестирования, как это ты уже делал раньше.
+The t_btree type must be described in the corresponding header file. Finally, test the node creation function in `src/bst_create_test.c` using unit testing, as you've done before.
 
-#### Получен Quest 6. Создать программу `src/bst.c`, в которой реализовать функцию создания узла дерева бинарного поиска `bstree_create_node`. В `src/bst.h` расположить описание типа узла дерева. При помощи модульного тестирования проверить разработанную функцию в `src/bst_create_test.c` (минимум два входных значения с выводом, что создалось). Сборка программы должна осуществляться при помощи Makefile. Имя стадии — `bst_create_test`, исполняемого файла — «Quest_6».
+#### Received Quest 6. Create a program `src/bst.c`, implementing the function `bstree_create_node` to create a binary search tree node. Place the node type description in `src/bst.h`. Using unit testing, verify the developed function in `src/bst_create_test.c` (at least two input values with output confirming creation). The program must be built using Makefile. Stage name — `bst_create_test`, executable name — "Quest_6".
 
 ***LOADING...***
 
 ## Bonus Quest 7. Growing tree
 
-\> *Готово*
+\> *Done*
 
-Теперь, когда готова функция создания одного элемента, можно приступить к созданию всего дерева при помощи вставки очередного узла.
+Now that the function for creating one element is ready, you can proceed to create the entire tree by inserting successive nodes.
 
-Сигнатура функции должна выглядеть следующим образом и располагаться все также в `src/bst.c`:
+The function signature should look like this and still be located in `src/bst.c`:
 
 `void bstree_insert(t_btree *root, int item, int (*cmpf) (int, int));`
 
-Как можно понять из сигнатуры, сравнивать значения узлов необходимо при помощи функции обратного вызова — `cmpf`. 
+As can be understood from the signature, node values must be compared using a callback function — `cmpf`.
 
-В конце функцию также необходимо проверить в `src/bst_insert_test.c` с минимум двумя различными наборами входных значений и выводом, куда вставляется лист дерева.
+Finally, the function must also be tested in `src/bst_insert_test.c` with at least two different sets of input values and output showing where the leaf is inserted.
 
-#### Получен Quest 7. Дополнить программу `src/bst.c` путем реализации функции вставки узла дерева бинарного поиска `bstree_insert`. При помощи модульного тестирования проверить разработанную функцию в `src/bst_insert_test.c` (минимум два различных набора входных значений с выводом места вставки листа дерева). Предусмотреть реализацию функции компаратора. Сборка программы должна осуществляться при помощи Makefile. Имя стадии — `bst_insert_test`, исполняемого файла — «Quest_7». 
+#### Received Quest 7. Extend the program `src/bst.c` by implementing the binary search tree node insertion function `bstree_insert`. Using unit testing, verify the developed function in `src/bst_insert_test.c` (at least two different sets of input values with output showing the leaf insertion location). Provide an implementation of the comparator function. The program must be built using Makefile. Stage name — `bst_insert_test`, executable name — "Quest_7".
 
 ***LOADING...***
 
 ## Bonus Quest 8. Three styles of traversing
 
-\> *Видимо, теперь остался обход дерева*
+\> *Seems only tree traversal remains*
 
-Нужно написать функции прохода по дереву. Поскольку нет информации о том, в каком именно порядке необходимо расположить модули документации ИИ для правильной загрузки, придется написать 3 разных функции прохода (traverse) по дереву:
-- infix — элементы отобразятся по возрастанию (левое поддерево -> корень -> правое поддерево);
-- prefix — элементы отобразятся в том же порядке, в котором хранятся (корень -> левое поддерево -> правое поддерево);
-- postfix — элементы отобразятся по убыванию (левое поддерево -> правое поддерево -> корень).
+Need to write tree traversal functions. Since there is no information on the exact order in which the AI documentation modules must be arranged for correct loading, you need to write 3 different traversal functions:
+- infix — elements will be displayed in ascending order (left subtree -> root -> right subtree);
+- prefix — elements will be displayed in the same order they are stored (root -> left subtree -> right subtree);
+- postfix — elements will be displayed in descending order (left subtree -> right subtree -> root).
 
-Сигнатуры функций выглядят следующим образом, и все они должны быть реализованы в `src/bst.c`:
+The function signatures are as follows, and all must be implemented in `src/bst.c`:
 
 `void bstree_apply_infix(t_btree *root, void (*applyf) (int));`
 
@@ -540,36 +536,36 @@ Characteristics:
 
 `void bstree_apply_postfix(t_btree *root, void (*applyf) (int));`
 
-`applyf` — тоже функция обратного вызова, которой необходимо передать значение узла. Такая функция может, например, вывести значения на экран. 
+`applyf` is also a callback function to which the node value must be passed. Such a function could, for example, print values to the screen.
 
-Для тестов стоит взять наборы входных данных из предыдущего теста и оформить вывод на экран деревьев тремя разными способами в `src/bst_traverse_test.c`.
+For tests, take input sets from the previous test and format tree output in three different ways in `src/bst_traverse_test.c`.
 
-#### Получен Quest 8. Дополнить программу `src/bst.c` путем реализации функций обхода дерева бинарного поиска `bstree_apply_infix`, `bstree_apply_prefix`, `bstree_apply_postfix`.
-#### При помощи модульного тестирования проверить написанные функции в `src/bst_traverse_test.c` (взять наборы входных данных из предыдущего теста и оформить вывод на экран деревьев тремя разными способами). Подготовить реализацию функции `applyf` как функции, печатающей значение узла в терминал. Сборка программы должна осуществляться при помощи Makefile. Имя стадии — `bst_traverse_test`, исполняемого файла — «Quest_8».
+#### Received Quest 8. Extend the program `src/bst.c` by implementing binary search tree traversal functions `bstree_apply_infix`, `bstree_apply_prefix`, `bstree_apply_postfix`.
+#### Using unit testing, verify the written functions in `src/bst_traverse_test.c` (take input sets from the previous test and format tree output in three different ways). Prepare an implementation of the `applyf` function as a function that prints the node value to the terminal. The program must be built using Makefile. Stage name — `bst_traverse_test`, executable name — "Quest_8".
 
 ***LOADING...***
 
 ## Chapter VIII
 
-\> *Запушить решение в репозиторий*
+\> *Push solution to the repository*
 
-В терминале наконец бегут строчки проверок, и ты готов закончить чтение отчета.
+Finally, lines of checks run in the terminal, and you're ready to finish reading the report.
 
-    Validating module... 
-    ... 
-    Success 
+    Validating module...
+    ...
+    Success
     ...
 
-Прождав минут 15, пока модули полностью закончат валидацию, ты понимаешь, что компьютер завис и не отвечает ни на какие действия.
+After waiting about 15 minutes for the modules to finish validation completely, you realize the computer has frozen and isn't responding to any actions.
 
-\> *Нажать кнопку перезагрузки на компьютере*
+\> *Press the restart button on the computer*
 
-Экран потух, и ты замечаешь легкий дымок, выходящий из системного блока рядом. Похоже, он перегрелся или что-то его перегрело...
+The screen goes dark, and you notice light smoke coming from the system unit nearby. Seems it overheated or something overheated it...
 
-Домыслить тебе не удается, так как дверь из комнаты с грохотом, похожим на взрыв, слетает с петель и падает в сторону дерева.
+You don't get to finish the thought, as the door to the room, with a crash resembling an explosion, tears off its hinges and falls toward the tree.
 
-«Что ж, выход открыт, компьютер сломан. Отчет, к сожалению, дочитать не удалось. А ИИ опять куда-то запропастился. Надеюсь, он и не вернется. С дверьми получается прекрасно разбираться и без него», — думаешь ты и делаешь шаг через порог. 
+"Well, the exit is open, the computer is broken. Unfortunately, couldn't finish reading the report. And the AI has vanished again. Hope it never returns. Turns out I can deal with doors perfectly fine without it," you think and step over the threshold.
 
 ***LOADING...***
 
->💡 [Нажми сюда](http://opros.so/p31wz), чтобы поделиться с нами обратной связью на этот проект. Это анонимно и поможет нашей команде сделать обучение лучше. Рекомендуем заполнить опрос сразу после выполнения проекта.
+>💡 [Click here](http://opros.so/p31wz) to share feedback on this project with us. It's anonymous and will help our team improve the learning experience. We recommend filling out the survey immediately after completing the project.
