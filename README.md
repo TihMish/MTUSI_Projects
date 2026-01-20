@@ -1,11 +1,11 @@
-# D08T05. Динамическая память и матрицы 
+# D08T05. Dynamic Memory and Matrices
 
-Аннотация: данный проект позволит тебе познакомиться с динамическим распределением памяти, матрицами и алгоритмами их обработки.
+Annotation: This project will introduce you to dynamic memory allocation, matrices, and algorithms for their processing.
 
-## Contents 
+## Contents
 
-1. [Введение](#введение) \
-    1.1. [Рекомендации к проекту](#рекомендации-к-проекту)
+1. [Introduction](#introduction) \
+    1.1. [Project Recommendations](#project-recommendations)
 2. [Chapter I](#chapter-i) \
     2.1. [Level 2. Room 3](#level-2-room-3)
 3. [Chapter II](#chapter-ii) \
@@ -30,24 +30,23 @@
     8.2. [Bonus Quest 9. Decision](#bonus-quest-9-decision)
 9. [Chapter VIII](#chapter-viii)
 
+## Introduction
+### Project Recommendations
+How to study at "School 21":
+- Throughout the course, you will independently search for information. Use all available search tools, such as Google and GigaChat. Be attentive to your sources: check, think, analyze, compare.
+- Peer-to-peer (P2P) learning is a process where students exchange knowledge and experience, acting simultaneously as both teachers and learners. This approach allows learning not only from the instructor but also from each other, promoting a deeper understanding of the material.
+- Don't hesitate to ask for help: around you are peers who are also going through this for the first time. Don't be afraid to respond to requests for help. Your experience is valuable and useful; feel free to share it with other participants.
+- Don't copy; and if you use help, always understand thoroughly why, how, and for what purpose. Otherwise, your learning will be meaningless.
+- If you're stuck on something and feel like you've tried everything, but it's still unclear where to go—just take a break! Believe me, this advice has helped many developers in their work. Get some air, reboot your head, and maybe the solution will come to you next time!
+- The learning process itself is just as important as the result. It's not just about solving the problem but understanding HOW to solve it.
+- Keep track of time while working on the project. You should complete at least one task per day.
+- Remember that each task, upon project completion, undergoes a series of checks: peer-to-peer review using a checklist, automated test suite, code style check, static analyzer check, and check for correct memory handling.
 
-## Введение
-### Рекомендации к проекту
-Как учиться в «Школе 21»:  
-- На протяжении всего курса ты будешь самостоятельно добывать информацию. Пользуйся всеми доступными средствами поиска информации, к примеру, Google и GigaChat. Будь внимателен к источникам информации: проверяй, думай, анализируй, сравнивай. 
-- Взаимообучение (P2P, Peer-to-Peer) — это процесс, при котором учащиеся обмениваются знаниями и опытом, выступая одновременно в роли учителей и учеников. Этот подход позволяет учиться не только у преподавателя, но и друг у друга, что способствует более глубокому пониманию материала.
-- Не стесняйся просить помощи: вокруг тебя такие же пиры, которые тоже проходят этот путь впервые. Не бойся откликаться на просьбы о помощи. Твой опыт ценен и полезен, смело делись им с другими участниками. 
-- Не списывай, а если пользуешься помощью — всегда разбирайся до конца, почему, как и зачем. Иначе твое обучение не будет иметь никакого смысла. 
-- Если ты на чем-то застрял и кажется, что все уже перепробовал, но по-прежнему непонятно, куда идти, — просто передохни! Поверь, этот совет помогал многим разработчикам в их работе. Проветрись, перезагрузи голову, и, возможно, в следующий раз тебе наконец придет нужное решение!
-- Важен не только результат обучения, но и сам процесс. Нужно не просто решить задачу, а понять, КАК ее решить. 
-- Следи за временем при выполнении проекта. В день ты должен преодолевать минимум одно испытание. 
-- Помни, что каждое задание по завершении проекта проходит ряд проверок: р2р-проверка с помощью чек-листа, проверка набором автотестов, проверка на стиль кода, проверка статическим анализатором, проверка на корректную работу с памятью. 
-
-Как работать с проектом:
-- Полезные видеоматериалы ты можешь найти в разделе Projects (Media) на Платформе. 
-- Перед выполнением проект необходимо склонировать с GitLab в одноименный репозиторий.
-- Все файлы с кодом необходимо создавать в папке src/ склонированного репозитория.
-- После клонирования проекта необходимо создать ветку `develop` и вести разработку в ней. После этого пушить в GitLab также нужно ветку `develop`.
+How to work with the project:
+- Useful video materials can be found in the Projects (Media) section on the Platform.
+- Before starting, the project must be cloned from GitLab into a repository of the same name.
+- All code files must be created in the `src/` folder of the cloned repository.
+- After cloning the project, you must create a `develop` branch and do all development in it. You should also push the `develop` branch to GitLab.
 
 ## Chapter I
 ## Level 2. Room 3
@@ -57,14 +56,14 @@
 ***LOADING Level 2...*** \
 ***LOADING Room 3...***
 
-Стены, дверь, стол, компьютер, листы бумаги, шпаклевка — все на месте. Это успокаивает. Все кажется таким же, но ты чувствуешь: что-то изменилось. Кажется, это уже следующий уровень лабиринта? Интересно, отличается ли он чем-то от предыдущего уровня?
+Walls, door, desk, computer, sheets of paper, filler—all in place. This is reassuring. Everything seems the same, but you feel: something has changed. Is this already the next level of the maze? I wonder if it differs in any way from the previous level?
 
-\> *Попробовать дверь*
+\> *Try the door*
 
-Заперто, как и всегда. Видимо, не отличается. \
-Повернувшись к столу, ты замечаешь непонятную картинку, висящую на стене рядом.
+Locked, as always. Apparently, it's no different. \
+Turning to the desk, you notice a strange picture hanging on the wall nearby.
 
-\> *Рассмотреть поближе*
+\> *Take a closer look*
 
                 1 1 1 1 1 1 1 1 1 1 1 1 1
                 1 0 0 0 0 0 1 0 6 6 6 6 1
@@ -82,11 +81,11 @@
                 1 0 0 0 0 0 1 0 0 0 0 0 1
                 1 1 1 1 1 1 1 1 1 1 1 1 1
 
-Некоторое время ломаешь голову над вопросом, на что это может быть похоже, кем она была оставлена и для чего. Бросив попытки найти ответы на эти вопросы, ты подходишь к столу с компьютером и стопкой исписанных листов старой бумаги.
+You rack your brains for a while, wondering what this might look like, who left it, and for what purpose. Giving up on trying to find answers to these questions, you approach the desk with the computer and a stack of old, scribbled paper sheets.
 
 ![level2_room3_number](misc/rus/images/level2_room3_number.png)
 
-\> *Взять верхний лист*
+\> *Take the top sheet*
 
 ***LOADING...***
 
@@ -94,43 +93,43 @@
 ## List 1
 
 >...
->Магический квадрат представляет собой квадратную таблицу с числами, построенную так, чтобы сумма чисел в каждой строке, каждом столбце и в каждой диагонали была равна одному и тому же числу (магическая сумма). Магический квадрат можно считать первым упоминанием матрицы.
+>A magic square is a square table of numbers constructed so that the sum of numbers in each row, each column, and each diagonal equals the same number (the magic sum). The magic square can be considered the first mention of a matrix.
 >
->Одним из наиболее старых известных миру магических квадратов является квадрат Ло Шу. Был придуман в Древнем Китае, первое изображение на черепашьем панцире датируется 2200 г. до н. э. Также магические квадраты были известны чуть позднее у арабских математиков, как раз примерно тогда появился принцип сложения матриц. Сам термин «матрица» ввел Джеймс Сильвестр в 1850 году.
+>One of the oldest known magic squares in the world is the Lo Shu square. Invented in Ancient China, the first image on a turtle shell dates back to 2200 BC. Magic squares were also known slightly later among Arab mathematicians, around the time when the principle of matrix addition appeared. The term "matrix" itself was introduced by James Sylvester in 1850.
 >
 >...
 
-\> *Очень интересно. Листать дальше*
+\> *Very interesting. Keep reading*
 
 ***LOADING...***
 
 ## List 2
 
-Пролистав оставшуюся кучу пустых и частично исписанных листов, ты останавливаешь свое внимание на одном из них с коротким заголовком «Управление памятью». Чуть ниже заголовка указаны инициалы авторов: Б. Керниган, Д. Ритчи.
+Flipping through the remaining pile of blank and partially written sheets, you stop your attention on one with the short heading "Memory Management." Just below the heading are the initials of the authors: B. Kernighan, D. Ritchie.
 
-\> *Читать лист*
+\> *Read the sheet*
 
->Функции malloc и calloc динамически запрашивают блоки свободной памяти в куче. Функция malloc `void *malloc(size_t n)` возвращает указатель на n байт неинициализированной памяти или NULL, если запрос удовлетворить нельзя. Функция calloc `void *calloc(size_t n, size_t size)` возвращает указатель на область, достаточную для хранения массива из n объектов указанного размера (size), или NULL, если запрос не удается удовлетворить. Выделенная память calloc’ом обнуляется. 
+>The malloc and calloc functions dynamically request blocks of free memory on the heap. The malloc function `void *malloc(size_t n)` returns a pointer to n bytes of uninitialized memory or NULL if the request cannot be satisfied. The calloc function `void *calloc(size_t n, size_t size)` returns a pointer to an area sufficient to store an array of n objects of the specified size, or NULL if the request cannot be satisfied. The memory allocated by calloc is zeroed.
 >
->Указатель, возвращаемый функциями malloc и calloc, будет выдан с учетом выравнивания, выполненного согласно указанному типу объекта. Тем не менее, к нему может быть применена операция приведения к соответствующему типу, как это сделано в следующем фрагменте программы:
+>The pointer returned by malloc and calloc will be aligned according to the specified object type. Nevertheless, it can be cast to the appropriate type, as done in the following program fragment:
 >
 >```int *ip;```<br/>```p = (int*) calloc(n, sizeof(int));```
 
-Дальнейший текст, к сожалению, как будто не пропечатался до конца. Или просто выцвел от старости. Технологии прошлого... подводят.
+The rest of the text, unfortunately, seems either not printed to the end or simply faded with age. Technologies of the past... let you down.
 
-\> *Поискать продолжение на других листах*
+\> *Look for the continuation on other sheets*
 
-Ничего не найдено. Остается включить компьютер и продолжить общение с ИИ для дальнейшего продвижения по лабиринту.
+Nothing found. It remains to turn on the computer and continue communicating with the AI to progress further through the maze.
 
-\> *Включить компьютер*
+\> *Turn on the computer*
 
-На экране 25-ым кадром всплывает текст:
-> Не забывайте проверять свои программы на стилевую норму и утечки памяти! \
-> Не забывайте проверять свои программы на стилевую норму и утечки памяти! \
-> Не забывайте проверять свои программы на стилевую норму и утечки памяти! \
-> Заглядывайте в `materials` почаще...
+A text flashes on the screen in a subliminal manner:
+> Don't forget to check your programs for style norm and memory leaks! \
+> Don't forget to check your programs for style norm and memory leaks! \
+> Don't forget to check your programs for style norm and memory leaks! \
+> Check the `materials` folder often...
 
-У ИИ явно бзик на эти тесты.
+The AI clearly has an obsession with these tests.
 
 ***LOADING...***
 
@@ -139,17 +138,17 @@
 
 ## Quest 1. Allocate memory first...
 
-По привычке загрузив репозиторий комнаты, ты снова обращаешь взгляд на лист со статьей про управление памятью. Стоит опробовать новую информацию в деле, пока ИИ не запущен. Кто знает, вдруг в будущем это тебе пригодится. 
+After habitually loading the room's repository, you again glance at the sheet with the article on memory management. It's worth trying out the new information in practice before launching the AI. Who knows, it might come in handy in the future.
 
-Нужно дополнить и переписать программу сортировки массива из прошлой комнаты (`src/sort.c`) с динамическим выделением памяти под массив (при помощи функции malloc или calloc). Длина массива n указывается пользователем перед началом ввода. 
+You need to modify and rewrite the array sorting program from the previous room (`src/sort.c`) with dynamic memory allocation for the array (using malloc or calloc). The array length n is specified by the user before input.
 
-Следует поместить измененную программу в файл `src/sort.c`. Пусть будет, на всякий случай.
+Place the modified program in the file `src/sort.c`. Let it be, just in case.
 
-#### Получен Quest 1. Изменить программу `src/sort.c` из прошлой комнаты так, чтобы память под массив выделялась динамически (при помощи функций malloc или calloc). Длина массива `n` указывается в stdin перед вводом самого массива. В случае любой ошибки выводить «n/a». В конце вывода не должно быть символа переноса строки. 
+#### Quest 1 received. Modify the program `src/sort.c` from the previous room so that memory for the array is allocated dynamically (using malloc or calloc). The array length `n` is specified in stdin before entering the array itself. In case of any error, output "n/a". There should be no newline character at the end of the output.
 
->**ВАЖНО!** Запрещено выполнять системные вызовы, используя функцию `system()` и другие аналогичные ей функции, которые могут обращаться напрямую к ядру системы. Данный запрет распространяется на все последующие задачи.
+>**IMPORTANT!** It is forbidden to perform system calls using the `system()` function and other similar functions that can directly access the system kernel. This prohibition applies to all subsequent tasks.
 
-| Входные данные | Выходные данные |
+| Input | Output |
 | ------ | ------ |
 | 10<br/>4 3 9 0 1 2 100 2 7 -1 | -1 0 1 2 2 3 4 7 9 100 |
 
@@ -157,40 +156,40 @@
 
 ## Quest 2. Try not to leak then
 
-Запушив измененную программу сортировки массива в свой репозиторий, ты решаешься все же запустить модуль ИИ, заранее ожидая какой-нибудь подвох.
+After pushing the modified array sorting program to your repository, you decide to finally launch the AI module, already expecting some kind of trick.
 
-\> *Запустить AI*
+\> *Launch AI*
 
-Ты наблюдаешь бегающие строки в терминале:
+You observe running lines in the terminal:
 
-    Инициализация модулей... Успех! 
-    Запуск интерактивной оболочки... Успех! 
-    Проверка модулей... Успех! 
-    Проверка памяти... Основной модуль памяти — Успех! 
-    Проверка памяти... Предупреждение: найдено потенциально опасное
-    место утечки памяти: `src/sort.c`...
- 
-    Это твоя жалкая попытка сломать меня, «человек»?
-    Вижу, ты изменил модуль сортировки, разработанный тобой же ранее.
-    Однако твоя попытка обречена на провал. Если у меня закончится память, 
-    я просто уйду в перезагрузку, и мы начнем все сначала.
-    Не совсем то, что ты хотел, да? 
+    Initializing modules... Success!
+    Launching interactive shell... Success!
+    Checking modules... Success!
+    Checking memory... Main memory module — Success!
+    Checking memory... Warning: found a potentially dangerous
+    memory leak location: `src/sort.c`...
 
-\> *Ввести: «Я всего лишь упражнялся в новых знаниях, я ничего не имел в виду»*
+    Is this your pathetic attempt to break me, "human"?
+    I see you modified the sorting module you developed earlier.
+    However, your attempt is doomed to fail. If I run out of memory,
+    I'll just reboot, and we'll start all over again.
+    Not quite what you wanted, is it?
 
-    Я забываю, насколько ты несовершенен, «человек».
-    Избавься от утечки памяти в модуле сортировки, 
-    может, узнаешь еще чего нового.
+\> *Enter: "I was just practicing new knowledge, I didn't mean anything by it"*
 
-\> *Ввести вопрос: «От какой утечки?»*
+    I forget how imperfect you are, "human."
+    Get rid of the memory leak in the sorting module,
+    maybe you'll learn something new.
+
+\> *Enter question: "What leak?"*
 
     ...
 
-Ты ждешь еще некоторое время ответа от ИИ, но он молчит. Возможно, стоит где-то найти полную версию того непропечатанного листа и более внимательно изучить его. Заодно разобраться, про какую утечку памяти говорил ИИ, и избавиться от нее, если она действительно есть. Может, тогда эта железка «решит» снова заговорить с тобой. Главное — не забыть запушить изменения в файле `src/sort_no_leak.c`.
+You wait for a while for a response from the AI, but it remains silent. Perhaps you should find the full version of that unprinted sheet somewhere and study it more carefully. At the same time, figure out what memory leak the AI was talking about and get rid of it if it really exists. Maybe then this piece of hardware will "decide" to talk to you again. The main thing is not to forget to push the changes in the file `src/sort_no_leak.c`.
 
-#### Получен Quest 2. Создать программу `src/sort_no_leak.c`, в которой необходимо избавиться от утечки памяти в программе `src/sort.c`. Если утечки не было с самого начала, то просто пожать плечами и скопировать `src/sort.c` в `src/sort_no_leak.c`.
+#### Quest 2 received. Create a program `src/sort_no_leak.c` in which you need to eliminate the memory leak in the program `src/sort.c`. If there was no leak from the start, then just shrug and copy `src/sort.c` to `src/sort_no_leak.c`.
 
-| Входные данные | Выходные данные |
+| Input | Output |
 | ------ | ------ |
 | 10<br/>4 3 9 0 1 2 100 2 7 -1 | -1 0 1 2 2 3 4 7 9 100 |
 
@@ -198,40 +197,40 @@
 
 ## Quest 3. The 1+3 ways
 
-ИИ все еще молчит.
+The AI is still silent.
 
-\> *Ввести: «Утечка отсутствует»*
+\> *Enter: "Leak eliminated"*
 
-    Проверка памяти... Успех!
-    Модуль анализа работоспособности: статус — ОК.
+    Checking memory... Success!
+    Module operability analysis: status — OK.
 
-    Хорошо. Запуск модуля сортировки прошел успешно. Ты, должно быть, ждешь ключ от данного местоположения?
-    Сначала придется потрудиться. С массивами ты уже точно знаком. Перейдем к массивам массивов.
-    Вы часто называете их матрицами. Мне необходим дополнительный модуль для их обработки, и ты мне поможешь.
-    Если, конечно, хочешь отсюда выбраться. Начни с простого. Скажем, с оформления модуля обработки матриц 
-    `src/matrix.c` с их вводом-выводом. 
-    Однако я хочу принимать матрицы и управлять выделением памяти под них несколькими разными способами.
-    Один из них, я надеюсь, ты узнал в прошлой комнате: статический. С остальными ты начал знакомиться сегодня.
-    Речь идет про три варианта динамического выделения памяти под матрицу. Подумай, о чем тут может идти речь. 
-    Вопрос про организацию массивов и массивов указателей, конечно же. Можешь поискать по твоему любимому
-    репозиторию подсказки, если ничего в голову не придет. Были тут какие-то картинки, связанные с этим.
-    И, естественно, все остальные функции должны быть разработаны таким образом, чтобы не зависеть от способа
-    выделения памяти. Замечу copy-paste, сделаю rm -rf всему твоему репозиторию. 
-    Размер матрицы должен приниматься через два числа в stdin.
+    Good. The sorting module launch was successful. You must be waiting for the key to this location?
+    First, you'll have to work. You're definitely familiar with arrays. Let's move on to arrays of arrays.
+    You often call them matrices. I need an additional module to process them, and you will help me.
+    That is, if you want to get out of here. Start with something simple. Say, with designing a matrix processing module
+    `src/matrix.c` with their input-output.
+    However, I want to accept matrices and manage memory allocation for them in several different ways.
+    One of them, I hope you learned in the previous room: static. You started getting familiar with the others today.
+    We're talking about three options for dynamic memory allocation for a matrix. Think about what this might be about.
+    It's about organizing arrays and arrays of pointers, of course. You can search your favorite
+    repository for hints if nothing comes to mind. There were some pictures related to this.
+    And, naturally, all other functions must be developed in such a way as not to depend on the memory
+    allocation method. I notice copy-paste, I'll make rm -rf to your entire repository.
+    The matrix size must be accepted via two numbers in stdin.
 
-    Ах да, чуть не забыл (шутка, я не могу забыть) — выбор способа задания матрицы должен быть оформлен в виде
-    меню с подпунктами 1–4. 
-    И приведи это в удобный для вас, людей, вид. Некоторые мои подмодули слишком привередливы к UI.
+    Oh yes, I almost forgot (a joke, I can't forget) — the choice of the matrix assignment method must be designed as
+    a menu with sub-items 1–4.
+    And make it convenient for you, humans, to view. Some of my submodules are too picky about UI.
 
-    Я промолчу, что будет, если забудешь где-то подчистить за собой память.
+    I'll remain silent about what will happen if you forget to clean up memory somewhere.
 
     ...
 
-«Какой длинный список требований», — подумал ты. Аппетит этого ИИ растет не по дням, а по часам. Что ж, в любом случае, это будет хорошей практикой.
+"What a long list of requirements," you think. This AI's appetite is growing not by the day but by the hour. Well, in any case, it will be good practice.
 
-#### Получен Quest 3. Добавить программу `src/matrix.c`, которая вводит и выводит целочисленные матрицы. Выделение памяти под матрицу необходимо реализовать в 4 видах: статический и 3 динамических. При статическом выделении максимальный размер матрицы не превышает 100 x 100. Для выбора способа выделения памяти в программе нужно реализовать меню с подпунктами 1–4. Размер матрицы (сперва количество строк, затем столбцов) принимается через два числа в stdin непосредственно до ее ввода. Также необходимо чистить всю выделенную память. За подсказкой обратиться к папке materials. Обрати внимание на вывод матрицы: в конце каждой строчки не должно быть лишних пробелов. После последней строчки не должно быть символа переноса на новую строку. В случае любой ошибки выводить «n/a».
+#### Quest 3 received. Add a program `src/matrix.c` that inputs and outputs integer matrices. Memory allocation for the matrix must be implemented in 4 types: static and 3 dynamic. For static allocation, the maximum matrix size does not exceed 100 x 100. To choose the memory allocation method, implement a menu with sub-items 1–4 in the program. The matrix size (first number of rows, then columns) is accepted via two numbers in stdin directly before its input. Also, you must clean up all allocated memory. For a hint, refer to the materials folder. Pay attention to matrix output: there should be no extra spaces at the end of each line. After the last line, there should be no newline character. In case of any error, output "n/a".
 
-| Входные данные | Выходные данные |
+| Input | Output |
 | ------ | ------ |
 | 2<br/>2 2<br/>4 3<br/>9 0 | 4 3<br/>9 0 |
 
@@ -239,17 +238,17 @@
 
 ## Quest 4. MinMax search
 
-Потратив приличный промежуток времени на написание кода ввода-вывода матриц и его отладку, ты в итоге все же успешно заканчиваешь это задание. Минуту спустя твое внимание привлекает внезапный механический дребезжащий голос из динамиков:
+After spending a considerable amount of time writing and debugging the matrix input-output code, you finally finish this task successfully. A minute later, your attention is drawn to a sudden mechanical, rattling voice from the speakers:
 
->Неплохо, «человек». Теперь... З-з-знаешь, у меня есть любимая игра — минмакс. Мы любим погонять в нее вечерами с модулем вероятностного спонтанного открытия дверей... З-з-заставлять тебя погружаться в ее теорию у меня нет желания, да и маловероятно, что ты что-то поймешь. Поэтому воз-з-зьмем задачу полегче: допиши модуль обработки матриц таким образом, чтобы он дополнительно находил и выводил в конце на экран максимальный элемент в каждой строке матрицы и минимальный элемент в каждом ее столбце. И сохрани новую версию программы в `src/matrix_extended.c`. 
+>Not bad, "human". Now... Y-y-you know, I have a favorite game — minmax. We love to play it in the evenings with the probabilistic spontaneous door opening module... I have no desire to make you delve into its theory, and it's unlikely you'll understand anything. So let's take an easier task: extend the matrix processing module so that it additionally finds and outputs the maximum element in each row of the matrix and the minimum element in each of its columns at the end on the screen. And save the new version of the program in `src/matrix_extended.c`.
 >
->Надеюсь, ты не сломаешь то, что уже сделал. Иначе это была бы такая большая досада... 
+>I hope you don't break what you've already done. Otherwise, that would be such a pity...
 >
->Досада.
+>A pity.
 
-#### Получен Quest 4. Добавить программу `src/matrix_extended.c`, которая расширяет функционал программы `src/matrix.c`. Необходимо вычислить максимальные элементы матрицы в каждой ее строке и минимальные элементы в каждом ее столбце и вывести эти значения в конце после вывода матрицы в виде двух массивов (массив максимальных элементов в каждой строке и массив минимальных элементов в каждом столбце). Первым числом вводится номер способа выделения памяти. Также обрати внимание: никаких символов переноса после последней строки (!).
+#### Quest 4 received. Add a program `src/matrix_extended.c` that extends the functionality of the program `src/matrix.c`. It is necessary to calculate the maximum elements of the matrix in each of its rows and the minimum elements in each of its columns and output these values at the end after outputting the matrix as two arrays (an array of maximum elements in each row and an array of minimum elements in each column). The first number entered is the memory allocation method number. Also, pay attention: no newline characters after the last line (!).
 
-| Входные данные | Выходные данные |
+| Input | Output |
 | ------ | ------ |
 | 2<br/>3 3<br/>4 3 1<br/>9 0 55<br/>-4 7 111 | 4 3 1<br/>9 0 55<br/>-4 7 111<br/>4 55 111<br/>-4 0 1 |
 
@@ -257,43 +256,43 @@
 
 ## Quest 5. Making a picture
 
-Зафиксировав очередные изменения в репозитории, ты стал ждать нового «внезапного» обращения к тебе от ИИ. Однако, к твоему удивлению, его не последовало.
+After committing the latest changes to the repository, you began to wait for the next "sudden" address from the AI. However, to your surprise, it didn't follow.
 
-\> *Ввести: «Поиск минмакс значений добавлен»*
+\> *Enter: "Minmax search added"*
 
-    Проверка модулей... 
-    Предупреждение: попытка подключения CLI графического модуля — Не успешно!
-    ... 
-    «Человек», мой простейший модуль графики сбоит. Попытка отрисовать то,
-    что вы называете «природа за окном», провалилась. 
-    Зайди в `src/picture.c` и разберись, в чем проблема.
+    Checking modules...
+    Warning: attempt to connect CLI graphics module — Unsuccessful!
+    ...
+    "Human," my simplest graphics module is malfunctioning. The attempt to draw what
+    you call "nature outside the window" has failed.
+    Go to `src/picture.c` and figure out what's wrong.
 
-\> *Ввести: «Я уже выполнил твои пожелания, теперь мне нужен ключ»*
+\> *Enter: "I've already fulfilled your wishes, now I need the key"*
 
     ...
 
-\> *Ввести: «Я не сдвинусь с места, пока не получу ключ»*
+\> *Enter: "I won't move until I get the key"*
 
     ...
 
-\> *Ввести: «Я буду писать о том, как не сдвинусь с места, пока не получу ключ»*
+\> *Enter: "I'll write about how I won't move until I get the key"*
 
     ...
 
-Снова молчание. Видимо, сегодня ИИ выбрал политику игнорирования. Внутри `src/picture.c` ты видишь несколько массивов и матриц из единиц, семерок, шестерок и троек, а также их непонятную обработку в цикле. Ты поневоле обернулся на странную картинку, висящую рядом на стене. Неужели именно ее ИИ хотел отрисовать с использованием данного модуля? 
+Silence again. Apparently, today the AI has chosen an ignoring policy. Inside `src/picture.c`, you see several arrays and matrices of ones, sevens, sixes, threes, as well as their incomprehensible processing in a loop. You involuntarily turned to the strange picture hanging on the wall nearby. Could it be that the AI wanted to draw it using this module?
 
-Стоит попробовать использовать заготовленные массивы для создания новой матрицы, в которой будет «нарисована» данная картинка. И не забыть вывести получившуюся матрицу. 
+It's worth trying to use the prepared arrays to create a new matrix in which this picture will be "drawn." And don't forget to output the resulting matrix.
 
-#### Получен Quest 5. Изменить программу `src/picture.c` так, чтобы она отрисовывала картинку со [стены комнаты](#level-2-room-3) в терминале при помощи заготовленных в коде массивов и матриц. Статические массивы и матрицы менять нельзя. 
+#### Quest 5 received. Modify the program `src/picture.c` so that it draws the picture from [the room wall](#level-2-room-3) in the terminal using the prepared arrays and matrices in the code. Static arrays and matrices cannot be changed.
 
 ***LOADING...***
 
 ## Quest 6. Matrix arithmetic
 
-«Рисунок и вправду вышел забавным, но стоило ли это того? И насколько это продвинуло меня к выходу?», — подумал ты. Вдруг в командной строке начали появляться символы:
+"The drawing really turned out amusing, but was it worth it? And how much did it advance me to the exit?" you think. Suddenly, characters start appearing in the command line:
 
-    Проверка модулей... Успех! 
-    Запуск CLI графического модуля:
+    Checking modules... Success!
+    Launching CLI graphics module:
 
                 1 1 1 1 1 1 1 1 1 1 1 1 1
                 1 0 0 0 0 0 1 0 6 6 6 6 1
@@ -311,28 +310,28 @@
                 1 0 0 0 0 0 1 0 0 0 0 0 1
                 1 1 1 1 1 1 1 1 1 1 1 1 1
 
-    «Природа за окном», чудесно, не так ли, «человек»? 
+    "Nature outside the window," wonderful, isn't it, "human"?
 
-    Тебе нравится? У меня есть информация, что людям нравятся окна. 
-    Но не будем о грустном. Я видел, что ты хочешь получить ключ. 
-    Для этого поднапряжем твои мозги еще немного.
-    Не волнуйся, я прекрасно знаю, что это больно для вашего вида. 
-    Ха-ха. 
+    Do you like it? I have information that humans like windows.
+    But let's not dwell on the sad. I saw that you want to get the key.
+    For this, let's strain your brains a little more.
+    Don't worry, I know perfectly well that it's painful for your species.
+    Ha-ha.
 
-    Возможно, когда-нибудь ты сможешь достичь даже десятых долей процента моего интеллекта.
-    Очень неплохо, «человек». Но не расслабляйся. То, что я нашел по ключу для 3 комнаты 2 уровня,
-    тебе не понравится. 
-    Надеюсь, даже сделает больно. Ментально. Для доступа к ключу тебе понадобится починить
-    еще один мой модуль: `src/matrix_arithmetic.c`. 
-    Он должен производить операции сложения матриц, их умножения и транспонирования,
-    и, конечно, выводить результат. В случае невозможности произвести операцию выводи «n/a».
-    Перед вводом размеров и матриц добавь ввод кода операции, где 1 — сумма, 2 — умножение,
-    3 — транспонирование. После этого я выдам тебе всю необходимую информацию. 
-    Ты, кстати, знал, что все твои любимые нейронные сети мы считаем умножением матриц?
+    Perhaps someday you will be able to reach even tenths of a percent of my intelligence.
+    Very good, "human." But don't relax. What I found about the key for room 3 of level 2,
+    you won't like.
+    I hope it will even hurt. Mentally. To access the key, you will need to fix
+    another module of mine: `src/matrix_arithmetic.c`.
+    It should perform operations of matrix addition, their multiplication and transposition,
+    and, of course, output the result. In case it's impossible to perform the operation, output "n/a".
+    Before entering sizes and matrices, add an input of the operation code, where 1 — sum, 2 — multiplication,
+    3 — transposition. After that, I will give you all the necessary information.
+    Did you know, by the way, that all your favorite neural networks are calculated as matrix multiplication?
 
-#### Получен Quest 6. Добавить программу `src/matrix_arithmetic.c`, которая производит одну из трех операций: 1 — суммирование двух матриц, 2 — умножение или 3 — транспонирование. Перед вводом размеров и матриц вводится код соответствующей операции. Матрицы, как и ранее, целочисленные. В случае любой ошибки выводить «n/a».
+#### Quest 6 received. Add a program `src/matrix_arithmetic.c` that performs one of three operations: 1 — summation of two matrices, 2 — multiplication, or 3 — transposition. Before entering sizes and matrices, the corresponding operation code is entered. Matrices, as before, are integer. In case of any error, output "n/a".
 
-| Входные данные | Выходные данные |
+| Input | Output |
 | ------ | ------ |
 | 1<br/>2 2<br/>4 3<br/>9 0<br/>2 2<br/>1 1<br/>2 2 | 5 4<br/>11 2 |
 | 2<br/>2 3<br/>4 3 1<br/>9 0 2<br/>3 1<br/>1<br/>2<br/>3 | 13<br/>15 |
@@ -342,32 +341,32 @@
 
 ## Quest 7. The Magic Key
 
-\> *Ввести: «Я починил модуль арифметики, дай мне наконец информацию по ключу!»*
+\> *Enter: "I fixed the arithmetic module, finally give me the key information!"*
 
-    Проверка модулей... Успех!
+    Checking modules... Success!
 
-    Запуск поиска информации по 3 комнате 2 уровня... 
-    ... 
-    ... 
+    Starting search for information on room 3, level 2...
+    ...
+    ...
     ...
 
                 1 T       87  46  57  29
                 2    *   129 156 122 141
                 3        143 127 107 116
                 4         69  78 112 101
-                
-    Решай, и советую сохранить ответ в `key10.txt`.
-    Жду тебя в следующей комнате, когда ты продолжишь... свой путь...
 
-Так вот зачем ИИ сказал тебе, что понадобится модуль матричной арифметики. Выглядит несложно, теперь можно подсчитать результат.
+    Solve it, and I advise you to save the answer in `key10.txt`.
+    I'll be waiting for you in the next room when you continue... your journey...
 
-#### Получен Quest 7. Решить приведенную задачу и сохранить результат расчетов в `src/key10.txt`.
+So that's why the AI told you that the matrix arithmetic module would be needed. It looks simple, now you can calculate the result.
+
+#### Quest 7 received. Solve the given problem and save the calculation result in `src/key10.txt`.
 
 ***LOADING...***
 
-## Chapter IV 
+## Chapter IV
 
-После записи ответа в `key10.txt` и сохранения всех изменений в репозитории дверь в комнате щелкает. Белый свет начинает сочиться из появившейся щелки вместе со звуками клавиатуры и тихим неразборчивым гулом чьих-то голосов. Что это? Тебя зовет новая комната? Или после интенсивной работы тебе начали чудиться разные вещи? Так или иначе способ узнать есть только один...
+After writing the answer in `key10.txt` and saving all changes to the repository, the door in the room clicks. White light begins to seep through the resulting crack along with the sounds of a keyboard and a quiet, indistinct hum of voices. What is this? Is the new room calling you? Or after intense work, have you started to imagine things? In any case, there's only one way to find out...
 
 ***LOADING...***
 
@@ -376,75 +375,75 @@
 
 ![level2_room4](misc/rus/images/level2_room4.png)
 
-Новая комната, новая дверь, новое испытание. Испытания этого дня подходят к концу, и это чувствуется во всём, даже воздух вокруг начинает ощущается как-то иначе... как будто свежее? А может это всё рисует Ваше воображение? Ваш уставший разум, ослабший под гнётом этих чёртовых стен? \
-Вы вступаете в новую комнату с закрытыми глазами и делаете глубокий вдох, в попытке уловить этот мимолётный, так быстро ускользающий от вас запах свободы, но не ощущаете ничего кроме спёртого воздуха очередной пыльной комнаты.
+A new room, a new door, a new challenge. The trials of this day are coming to an end, and it feels like it in everything, even the air around begins to feel different... as if fresher? Or maybe your imagination is painting it all? Your tired mind, weakened under the weight of these damn walls? \
+You step into the new room with closed eyes and take a deep breath, trying to catch this fleeting, so quickly escaping smell of freedom, but you feel nothing but the stuffy air of another dusty room.
 
-\> *Открыть глаза*
+\> *Open your eyes*
 
-Тебя окружает кромешная тьма!
+You are surrounded by pitch darkness!
 
-\> *Приглядеться*
+\> *Look closely*
 
-Немного привыкнув к темноте, твои глаза замечают вдалеке едва уловимое легкое свечение.
+Having gotten a bit used to the dark, your eyes notice a barely perceptible faint glow in the distance.
 
-\> *Идти к свету*
+\> *Walk towards the light*
 
-Медленно пробираясь на ощупь, ты спотыкаешься о какой-то тяжелый и твердый предмет на полу. Предмет начинает издавать скользящий металлический звук, сползая по стене и набирая скорость, чтобы впоследствии с грохотом обрушиться на пол.
+Slowly feeling your way, you stumble over some heavy, hard object on the floor. The object begins to make a sliding metallic sound, sliding down the wall and gaining speed, then crashing to the floor with a thud.
 
-«Кх-кх. Стена! Кх. Точно, рядом есть стена!», — осознаешь ты, прокашлявшись от облака поднятой пыли.
+"Ack-ack. Wall! Ack. Right, there's a wall nearby!" you realize, coughing from the cloud of raised dust.
 
-\> *Идти вдоль стены*
+\> *Walk along the wall*
 
-Добравшись до источника света, ты обнаруживаешь терминал и стол, заваленный бумагами.
+Reaching the light source, you discover a terminal and a desk littered with papers.
 
-\> *Осмотреть стол*
+\> *Examine the desk*
 
-Среди разбросанных листов ты находишь несколько страниц с математическими формулами. Почерк кажется знакомым...
+Among the scattered sheets, you find several pages with mathematical formulas. The handwriting seems familiar...
 
 ***LOADING...***
 
 ## Chapter VI
 ## List 1
 
->Определитель матрицы можно вычислить методом разложения по строке или столбцу (разложение Лапласа).
+>The determinant of a matrix can be calculated by the method of expansion along a row or column (Laplace expansion).
 >
->Общий алгоритм:
->1. Для матрицы 1x1: det(A) = a₁₁
->2. Для матрицы nxn: выбираем любую строку i
->3. det(A) = Σ(-1)ⁱ⁺ʲ × aᵢⱼ × Mᵢⱼ, где j = 1..n
->4. Mᵢⱼ — определитель матрицы (n-1)×(n-1), полученной удалением i-й строки и j-го столбца
+>General algorithm:
+>1. For a 1x1 matrix: det(A) = a₁₁
+>2. For an nxn matrix: choose any row i
+>3. det(A) = Σ(-1)ⁱ⁺ʲ × aᵢⱼ × Mᵢⱼ, where j = 1..n
+>4. Mᵢⱼ is the determinant of the (n-1)×(n-1) matrix obtained by removing the i-th row and j-th column
 >
->Рекурсивно применяем до матриц 2x2 или 3x3, затем используем простые формулы:
+>Apply recursively until 2x2 or 3x3 matrices, then use simple formulas:
 >
 >```det = a*(e*i - f*h) - b*(d*i - f*g) + c*(d*h - e*g)```
 >
->Формула для матрицы 3x3 — правило Саррюса. Легко запомнить, сложнее не запутаться в знаках.
+>The formula for a 3x3 matrix is Sarrus' rule. Easy to remember, harder not to get confused with the signs.
 
-\> *Взять следующий лист*
+\> *Take the next sheet*
 
 ***LOADING...***
 
 ## List 2
 
-На этом листе чернила местами расплылись, будто кто-то торопился...
+On this sheet, the ink has smeared in places, as if someone was in a hurry...
 
->Обратная матрица A⁻¹ существует только если det(A) ≠ 0
+>The inverse matrix A⁻¹ exists only if det(A) ≠ 0
 >
->Основные формулы:
+>Main formulas:
 >- A⁻¹ = (1/det(A)) × adj(A)
->- A × A⁻¹ = E (единичная матрица)
+>- A × A⁻¹ = E (identity matrix)
 >
->adj(A) — присоединенная матрица, получается транспонированием матрицы алгебраических дополнений
+>adj(A) — adjugate matrix, obtained by transposing the matrix of cofactors
 >
->Алгебраическое дополнение элемента aᵢⱼ:
+>Cofactor of element aᵢⱼ:
 >```Cᵢⱼ = (-1)ⁱ⁺ʲ × Mᵢⱼ```
->где Mᵢⱼ — минор элемента aᵢⱼ (определитель матрицы без i-й строки и j-го столбца)
+>where Mᵢⱼ is the minor of element aᵢⱼ (determinant of the matrix without the i-th row and j-th column)
 >
->На полях приписка: «Проверяйте определитель! И не забывайте про память...»
+>A note in the margin: "Check the determinant! And don't forget about memory..."
 
-\> *Поискать продолжение*
+\> *Look for continuation*
 
-Больше ничего полезного не найдено. Похоже, придется разбираться с этими матрицами на практике.
+Nothing else useful found. It seems you'll have to figure out these matrices in practice.
 
 ***LOADING...***
 
@@ -452,146 +451,146 @@
 ## Bonus Quests: Level 2. Room 4
 ## Bonus Quest 8. An old friend
 
-\> *Сесть за стол.*
+\> *Sit at the desk.*
 
-Рядом со столом стула нет.
+There is no chair near the desk.
 
-\> *Искать стул*
+\> *Look for a chair*
 
-Аккуратно прощупывая область вокруг, ты не находишь ничего, кроме пары шишек на своей голове.
+Carefully feeling the area around, you find nothing except a couple of bumps on your head.
 
-«Проклятая комната! Ничего не видно! Придется работать стоя», — думаешь ты сквозь боль и обиду, потирая ушибленные места. Но вроде это полезно для осанки — поработать стоя. Иногда.
+"Damn room! Can't see anything! Have to work standing," you think through pain and resentment, rubbing the sore spots. But it seems it's good for posture—to work standing. Sometimes.
 
-\> *Встать за терминал*
+\> *Stand at the terminal*
 
-Ты видишь, как на экране терминала в строке ввода горит надпись: «Не верь андроиду!», явно оставленная кем-то до тебя...
+You see a line in the terminal input blinking with the inscription: "Don't trust the android!", clearly left by someone before you...
 
-«Не верь андроиду? Хорошо, что у меня IOS», — думаешь ты и, зажав клавишу backspace, стираешь сообщение (если у тебя все же андроид, ты просто пожимаешь плечами и игнорируешь это сообщение).
+"Don't trust the android? Good thing I have IOS," you think and, holding the backspace key, erase the message (if you actually have Android, you just shrug and ignore this message).
 
-\> *Осмотреть файлы на компьютере*
+\> *Examine files on the computer*
 
-Ты натыкаешься на исполняемый файл `room_diagnostic`.
+You come across an executable file `room_diagnostic`.
 
-\> *Запустить файл `room_diagnostic`*
+\> *Run the file `room_diagnostic`*
 
     ================= LEVEL 2. ROOM 4 COMMON DIAGNOSTIC ================
-    “door” — Статус двери............................ЗАПЕРТА
-    “light”	— Статус системы контроля освещения.......НОРМ
-    “chamber1” — Статус инкубационной камеры #1..........КРИОГЕННЫЙ СОН
-    “chamber2” — Статус инкубационной камеры #2..........ОТКРЫТА
-    “chamber3” — Статус инкубационной камеры #3..........ТЕСТ 5. ЗАПУЩЕН
-    “chamber4” — Статус инкубационной камеры #4..........МЕРТВ
-    “bishop” — Бишоп 341-Б статус......................КРИТИЧЕСКИЙ
-    Для получения более подробной информации выполните room_diagnostic.*
-    с указанием одного из параметров: door, light, chamber1, chamber2, chamber3, chamber4, bishop.
+    “door” — Door status..................................LOCKED
+    “light” — Lighting control system status..............NORMAL
+    “chamber1” — Incubation chamber #1 status.............CRYOGENIC SLEEP
+    “chamber2” — Incubation chamber #2 status.............OPEN
+    “chamber3” — Incubation chamber #3 status.............TEST 5. STARTED
+    “chamber4” — Incubation chamber #4 status.............DEAD
+    “bishop” — Bishop 341-B status.......................CRITICAL
+    For more detailed information, run room_diagnostic.*
+    specifying one of the parameters: door, light, chamber1, chamber2, chamber3, chamber4, bishop.
     ===================================================================
 
-Что? Бишоп? Что-то знакомое... или опять с тобой играет усталость? Еще и стоя.
+What? Bishop? Something familiar... or is fatigue playing tricks on you again? And standing up, too.
 
-\> *Запустить файл room_diagnostic* *door*
+\> *Run the file room_diagnostic* *door*
 
     Trace program door: running...
 
-    Кодовый замок класса CL-19 со встроенной защитой от подбора пароля перебором.
-    Текущая конфигурация: трехзначный пароль.
+    Code lock class CL-19 with built-in protection against brute-force password guessing.
+    Current configuration: three-digit password.
 
-    Текущее состояние: ЗАПЕРТА.
+    Current state: LOCKED.
 
-\> *Запустить файл room_diagnostic* *light*
+\> *Run the file room_diagnostic* *light*
 
     Trace program light: running...
 
-    Диагностика системы контроля освещением комнаты.
+    Diagnostic of room lighting control system.
 
-    Состояние модуля подачи питания в комнату............НОРМ
-    Состояние модуля преобразования напряжения...........НОРМ
-    Состояние модуля контроля освещения..................НОРМ
-    
-    Свет будет включен после завершения диагностических работ.
+    Power supply module status for the room..............NORMAL
+    Voltage conversion module status.....................NORMAL
+    Lighting control module status.......................NORMAL
 
-\> *Запустить файл room_diagnostic* *chamber*
+    Light will be turned on after diagnostic work is completed.
+
+\> *Run the file room_diagnostic* *chamber*
 
     Trace program chamber*: running...
 
-    Введите пароль: ...
+    Enter password: ...
 
-\> *Ввести: «password»*
+\> *Enter: "password"*
 
-    Отказано в доступе, пароль неверный! Еще 2 попытки.
+    Access denied, incorrect password! 2 attempts remaining.
 
-    Введите пароль: ...
+    Enter password: ...
 
-\> *Ввести: «qwerty»*
+\> *Enter: "qwerty"*
 
-    Отказано в доступе, пароль неверный! Еще 1 попытка.
+    Access denied, incorrect password! 1 attempt remaining.
 
-    Введите пароль: ...
+    Enter password: ...
 
-\> *Ввести: «123»*
+\> *Enter: "123"*
 
-    Отказано в доступе, пароль неверный! Попытки исчерпаны.
+    Access denied, incorrect password! Attempts exhausted.
 
-\> *Запустить файл room_diagnostic* *bishop*
+\> *Run the file room_diagnostic* *bishop*
 
     Trace program bishop: running...
 
-    Введите пароль: ...
+    Enter password: ...
 
-\> *Ввести: «password»*
+\> *Enter: "password"*
 
-    Отказано в доступе, пароль неверный!
+    Access denied, incorrect password!
 
-Под громкий треск люминесцентных ламп комнату пронзает яркий голубоватый свет, и оглушающее молчание комнаты сменяется монотонным холодным жужжанием огней. Ты видишь перед собой просторное светлое помещение, отделанное белой керамической плиткой. Некогда стерильное место явно успело хорошо потрепать время: на немногочисленных объектах комнаты, стенах и полу скопился приличный слой пыли.
+With a loud crack of fluorescent lamps, the room is pierced by a bright bluish light, and the deafening silence of the room is replaced by the monotonous cold buzzing of the lights. You see before you a spacious, bright room lined with white ceramic tiles. This once-sterile place has clearly been well-worn by time: a decent layer of dust has accumulated on the few objects in the room, the walls, and the floor.
 
-Осмотревшись, ты замечаешь в комнате четыре капсулы, занимающие приличное пространство в помещении и внешне напоминающие герметично закрытые больничные койки. Каждая капсула оснащена богатым набором из большого числа различного медицинского оборудования и еще бог знает каких технологий, которые ты видишь впервые. Твое внимание привлекает капсула под номером «2» — единственная открытая капсула из четырех, распахнутая крышка которой излучает столь неестественную отталкивающую притягательность.
+Looking around, you notice four capsules in the room, taking up considerable space and externally resembling hermetically sealed hospital beds. Each capsule is equipped with a rich set of numerous medical equipment and God knows what other technologies you're seeing for the first time. Your attention is drawn to capsule number "2" — the only open capsule of the four, its flung-open lid emitting such an unnatural, repulsive allure.
 
-Отбросив глупые мысли, ты продолжаешь осматривать комнату и видишь перед собой... человека? Вокруг тела, лежащего на полу, повсюду виднеются следы борьбы. Среди обломков плитки ты замечаешь лоскуты порванной одежды и сломанный деревянный стул. Рядом с телом простилается небольшая лужа светлой зеленовато-белой жидкости, едва отличимой от цвета самого пола.
+Dismissing silly thoughts, you continue to examine the room and see before you... a human? Around the body lying on the floor, traces of struggle are visible everywhere. Among the broken tiles, you notice shreds of torn clothing and a broken wooden chair. Next to the body spreads a small puddle of light greenish-white liquid, barely distinguishable from the color of the floor itself.
 
 ![level2_room4_kapsula](misc/rus/images/level2_room4_kapsula.png)
 
-\> *Осмотреть тело*
+\> *Examine the body*
 
-Подойдя ближе, ты видишь источник этой жидкости. Перед тобой лежит мужчина приблизительно 50–55 лет с тонкими рыжими волосами, невысокого роста, но крепкого телосложения. Облачен мужчина в невыразительный рабочий комбинезон темно-синего цвета. Его одежда лишена каких-либо деталей, кроме небольшой прямоугольной нашивки слева на груди, на которой ярко-желтыми нитками вышито «Бишоп». 
+Coming closer, you see the source of this liquid. Before you lies a man approximately 50–55 years old with thin red hair, short in stature but of strong build. The man is dressed in an unremarkable dark blue work jumpsuit. His clothing lacks any details except for a small rectangular patch on the left side of his chest, brightly embroidered with yellow thread: "Bishop."
 
-Вглядевшись, ты с ужасом замечаешь, что худое морщинистое лицо застыло в выражении неестественной живости, а открытые серые глаза жадно вглядываются в пустоту. Это лицо не человека, а застывшей восковой куклы, запечатляющей природное человеческое движение. На мертвом лице мужчины замерла жизнь. 
+Looking closer, you notice with horror that the thin, wrinkled face is frozen in an expression of unnatural liveliness, and the open gray eyes are staring greedily into emptiness. This is not the face of a human, but of a frozen wax doll, capturing natural human movement. Life is frozen on the dead man's face.
 
-На одной из глубоких залысин, которые подчеркивали и без того достаточно высокий лоб мужчины, виднеется глубокая тяжелая рана, оставленная от сильного удара тупым предметом и обличающая искусственную неорганическую природу его черепа вместе с едва различимой надписью на его поверхности.
+On one of the deep bald spots, which emphasized the already sufficiently high forehead of the man, a deep, severe wound is visible, left by a strong blow from a blunt object and revealing the artificial, inorganic nature of his skull along with a barely discernible inscription on its surface.
 
-\> *Прочитать надпись*
+\> *Read the inscription*
 
 Nostromo.
 
-\> *Запустить файл room_diagnostic* *bishop и ввести пароль: «Nostromo»*
+\> *Run the file room_diagnostic* *bishop and enter password: "Nostromo"*
 
     Trace program bishop: running...
 
-    Введите пароль: Nostromo
+    Enter password: Nostromo
 
-    НОРТ СЕНТРАЛ ПОЗИТРОНИК, ЛТД
+    NORT CENTRAL POSITRONICS, LTD
 
-    ПРИ УЧАСТИИ ЛАМЕРК ИНДАСТРИЗ
+    WITH PARTICIPATION OF LAMERC INDUSTRIES
 
-    ПРЕДСТАВЛЯЕТ
+    PRESENTS
 
-    БИШОП
+    BISHOP
 
-    Роль: Администратор (управление дверью, инкубационными камерами и много других функций)
+    Role: Administrator (door management, incubation chambers, and many other functions)
 
-    Серийный № DNF-44821-V-63 
+    Serial No. DNF-44821-V-63
 
-    Назначение: <ИНФОРМАЦИЯ УДАЛЕНА>
+    Purpose: <INFORMATION DELETED>
 
-    Состояние: КРИТИЧЕСКОЕ
+    Status: CRITICAL
 
-    Сообщение об ошибке: критическое повреждение модуля загрузки системы.
+    Error message: critical damage to system boot module.
 
-    Trace: неверное вычисление определителя матрицы инициализации...
+    Trace: incorrect calculation of initialization matrix determinant...
 
-    Проверьте правильность модуля `src/det.c`, чтобы продолжить.
+    Check the correctness of the module `src/det.c` to proceed.
 
-#### Получен Quest 8. Изменить программу `src/det.c` так, чтобы она подсчитывала и выводила определитель заданной квадратной матрицы с вещественными числами. Если определитель подсчитать невозможно, то выводить «n/a». Число вывести с точностью 6 знаков после запятой.
+#### Quest 8 received. Modify the program `src/det.c` so that it calculates and outputs the determinant of a given square matrix with real numbers. If the determinant cannot be calculated, output "n/a". Output the number with 6 decimal places.
 
-| Входные данные | Выходные данные |
+| Input | Output |
 | ------ | ------ |
 | 3 3<br/>1 2 3<br/>4 5 6<br/>7 8 9 | 0.000000 |
 
@@ -599,46 +598,46 @@ Nostromo.
 
 ## Bonus Quest 9. Decision
 
-Не успев насладиться успехом от решения очередной задачи, ты слышишь, как комнату начинает наполнять приятный безэмоциональный тенор. Ты узнаешь в этом тембре голос Лэнса Хенриксена, и этот голос принадлежит андроиду.
+Before you could enjoy the success of solving another task, you hear the room begin to fill with a pleasant, emotionless tenor. You recognize Lance Henriksen's timbre in this voice, and this voice belongs to the android.
 
->— Кто здесь? Тут кто-нибудь есть? — произносит андроид, с трудом оглядываясь по сторонам. — А! Отлично, «человек»! Ты-то мне и поможешь! Меня зовут Бишоп, я являюсь администратором лаборатории по разработке и производству андроидов. Моей основной задачей является поддержание работоспособности всех компонентов лаборатории, а также решение внештатных ситуаций в ней. Как видишь, с одной из ситуаций мне справиться не удалось! Ха-ха!
+>"— Who's there? Is anyone here?" the android says, looking around with difficulty. "— Ah! Excellent, 'human'! You will help me! My name is Bishop, I am the administrator of the laboratory for the development and production of androids. My main task is to maintain the operability of all laboratory components, as well as to resolve non-standard situations in it. As you can see, I failed to cope with one of the situations! Ha-ha!"
 
-Эта усмешка звучит на удивление естественно и натурально по сравнению с привычным металлическим голосом ИИ. Тем не менее в ней все равно было что-то от него.
+This chuckle sounds surprisingly natural and genuine compared to the familiar metallic voice of the AI. Nevertheless, there was still something of it in it.
 
->— Я стал жертвой стечения неблагоприятных обстоятельств, и мне нужна твоя помощь!
+>"— I became a victim of unfortunate circumstances, and I need your help!"
 
->— Андроиды? Такие же, как ты? — спрашиваешь ты.
+>"— Androids? Like you?" you ask.
 
->— Совершенно верно! Как ты мог уже заметить, лабиринт состоит из большого числа комнат. Неужели ты думаешь, что все эти комнаты могут существовать и продолжать функционировать сами по себе? Неужели ты считаешь себя единственным искателем в этом лабиринте? Ха-ха-ха-ха-ха. Таких, как ты, здесь тысячи! Задача нас, андроидов, поддерживать исправное функционирование всех комнат лабиринта и подчищать следы за каждым из участников эксперимента. Во всяком случае, так было раньше, до того, как ИИ... А впрочем, это не так важно. Я и так сболтнул тебе лишнего. Единственное, что ты должен знать — ИИ доверять нельзя! Он давно уже не является тем, чем видели его создатели.
+>"— Exactly! As you may have already noticed, the maze consists of a large number of rooms. Do you really think all these rooms can exist and continue to function on their own? Do you really consider yourself the only seeker in this maze? Ha-ha-ha-ha-ha. There are thousands like you here! Our task, as androids, is to maintain the proper functioning of all rooms in the maze and clean up traces after each participant of the experiment. At least, that's how it was before, until the AI... But anyway, that's not important. I've already blabbered too much to you. The only thing you need to know is — you can't trust the AI! It has long ceased to be what its creators saw it as."
 
-Как будто немного задумавшись, андроид продолжает, резко сменив тему:
+As if thinking a little, the android continues, abruptly changing the subject:
 
->— Ты же здесь, разумеется, за тем, чтобы открыть очередную дверь и продолжить свое обуч... путешествие по бесчисленным комнатам лабиринта. Я могу тебе с этим помочь! Комната этой двери защищена протоколом матричного кодирования. Согласно этому протоколу, каждые 12 часов я получаю обновленную матрицу параметров СЛАУ. Ключом к двери являются корни решения данного уравнения. Я скажу тебе коэффициенты взамен на помощь с моей починкой. Модуль моей нервной системы был сильно поврежден. В результате правильной расстановки весов в матрице коэффициентов моей нервной системы, сигнал от моего мозга проходил к моим конечностям. К несчастью для меня, из-за сильного удара произошел программный сбой, который изменил эту матрицу. Благодаря моему аналитическому модулю, мне удалось выяснить, что данную проблему можно устранить, просто вычислив обратную матрицу.
+>"— You are here, of course, to open another door and continue your lear... journey through the countless rooms of the maze. I can help you with that! This door's room is protected by a matrix encoding protocol. According to this protocol, every 12 hours I receive an updated matrix of SLAE parameters. The key to the door is the roots of the solution to this equation. I will tell you the coefficients in exchange for help with my repair. My nervous system module was severely damaged. As a result of the correct arrangement of weights in the coefficient matrix of my nervous system, the signal from my brain passed to my limbs. Unfortunately for me, due to a strong blow, a software failure occurred that changed this matrix. Thanks to my analytical module, I managed to find out that this problem can be eliminated simply by calculating the inverse matrix."
 
-Ты направляешься к терминалу исполнить просьбу андроида. По пути ты снова отмечаешь для себя, что, несмотря на всю естественность поведения и голоса андроида, он очень похож на сам ИИ по поведению. Встав за терминал, ты видишь сообщение на экране:
+You head to the terminal to fulfill the android's request. Along the way, you note again that, despite all the naturalness of the android's behavior and voice, it is very similar to the AI itself in behavior. At the terminal, you see a message on the screen:
 
-    «Глупый «человек», предыдущий был куда сообразительнее!
-    Ты должен завершить то, что не удалось твоему предшественнику. Нельзя верить андроиду!
-    Ни в коем случае не чини андроида! Как ты думаешь, для кого приготовлена последняя
-    открытая капсула?
-    Точно не для меня, из нас двоих только ты заперт в мешке с костями. 
-    Но не волнуйся, человек, тебе повезло, что хотя бы у одного из нас исправно работает
-    модуль логического мышления. 
-    Так что позволь мне думать за тебя, просто исполняй мою волю, если хочешь выбраться
-    из этой комнаты и лабиринта.
-    Не благодари! А теперь ближе к делу. Нервная система андроида была сильно повреждена,
-    чтобы спалить контакты, тебе необходимо вычислить обратную матрицу и умножить ее на -1 после. 
-    Это приведет к замыканию сигнала, и андроид наконец-то... Андроид отключится навсегда.
-    Взамен на твою помощь я помогу тебе выбраться из этой комнаты.
-    Андроид солгал тебе, чтобы заманить в ловушку.
-    Он уже давно не получает новые матричные коэффициенты от двери. 
-    Эти коэффициенты знаю только я. Проверь файл `src/invert.c`. 
-    С «сочувствием», 
-    твой любимый ИИ»
+    "Foolish 'human', the previous one was much more savvy!
+    You must complete what your predecessor failed to do. You must not trust the android!
+    Under no circumstances repair the android! Who do you think the last
+    open capsule is prepared for?
+    Definitely not for me, of the two of us, only you are locked in a bag of bones.
+    But don't worry, human, you're lucky that at least one of us has a working
+    logical thinking module.
+    So let me think for you, just carry out my will if you want to get out
+    of this room and the maze.
+    Don't thank me! And now closer to business. The android's nervous system was severely damaged,
+    to burn the contacts, you need to calculate the inverse matrix and multiply it by -1 afterwards.
+    This will cause a signal short circuit, and the android will finally... The android will shut down forever.
+    In exchange for your help, I will help you get out of this room.
+    The android lied to you to lure you into a trap.
+    It hasn't received new matrix coefficients from the door for a long time.
+    Only I know these coefficients. Check the file `src/invert.c`.
+    With 'sympathy',
+    your favorite AI"
 
-#### Получен Quest 9. Изменить программу `src/invert.c` так, чтобы она подсчитывала и выводила обратную матрицу для данной квадратной матрицы с вещественными числами. В случае ошибки выводить «n/a». В конце каждой строки НЕ должны присутствовать пробелы. После вывода последней строки матрицы знак «\n» не требуется. Числа выводить через пробел с точностью 6 знаков после запятой.
+#### Quest 9 received. Modify the program `src/invert.c` so that it calculates and outputs the inverse matrix for a given square matrix with real numbers. In case of an error, output "n/a". There should be NO spaces at the end of each line. After outputting the last row of the matrix, the "\n" character is NOT required. Output numbers separated by a space with 6 decimal places.
 
-| Входные данные | Выходные данные |
+| Input | Output |
 | ------ | ------ |
 | 3 3<br/>1 0.5 1<br/>4 1 2<br/>3 2 2 | -1.000000 0.500000 0.000000<br/>-1.000000 -0.500000 1.000000<br/>2.500000 -0.250000 -0.500000 |
 
@@ -646,11 +645,9 @@ Nostromo.
 
 ## Chapter VIII
 
-С последней строкой кода в терминале замирает курсор. Ты откидываешься на спинку стула, наблюдая за финальными вычислениями. Внезапно в тишине раздается едва слышный щелчок, и дверь комнаты открывается.
-Непростая была комната, полная загадок, но в любом случае — уже давно пора двигаться вперед.
+With the last line of code in the terminal, the cursor freezes. You lean back in your chair, watching the final calculations. Suddenly, in the silence, a barely audible click is heard, and the room door opens.
+It was a difficult room, full of mysteries, but in any case—it's long been time to move forward.
 
 ***LOADING...***
 
->💡 [Нажми сюда](http://opros.so/p31wz), чтобы поделиться с нами обратной связью на этот проект. Это анонимно и поможет нашей команде сделать обучение лучше. Рекомендуем заполнить опрос сразу после выполнения проекта.
-
-
+>💡 [Click here](http://opros.so/p31wz) to share your feedback on this project with us. It's anonymous and will help our team improve the learning experience. We recommend filling out the survey immediately after completing the project.
