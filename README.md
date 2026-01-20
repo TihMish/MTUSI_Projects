@@ -20,7 +20,7 @@ Summary: This project will allow you to implement the game Pong together with yo
 ## Introduction
 ### Project Recommendations
 
-How to learn at School 21
+How to learn at School 21:
 
 - Throughout the course, you'll be finding information on your own. Use all available sources — Google, GigaChat, and others. Always stay critical about what you read: verify, think, analyze, compare.
 - Peer-to-peer (P2P) learning means that students exchange knowledge and experience, acting as both teachers and learners. This approach helps you learn not only from instructors but also from your peers, leading to a deeper understanding of the material.
