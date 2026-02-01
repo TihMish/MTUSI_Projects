@@ -250,7 +250,7 @@ You must specify a repository to clone.
 
 #### Quest 1 received: Clone the repository to your local terminal using the Git command-line client.
 
-**Note:** for successful cloning, make sure you have an SSH key configured for GitLab.
+> Note: for successful cloning, make sure you have an SSH key configured for GitLab.
 
 ***LOADING…***
 
@@ -274,7 +274,7 @@ Good idea. Maybe the AI can help you find a way out… Talk to it.
 
 #### Quest 2 received: Run the script `src/ai_initial_module.sh` in bash and follow the instructions. Fix any errors if necessary (you are not allowed to modify the script itself). Commit all your changes to version control.
 
->Hint: The system expects exactly five modules for correct execution. You may need to use the `chmod` command to make scripts executable.
+>Hint: The system expects exactly five modules for correct execution. You may need to use the `chmod` command to make scripts executable. Check if a file has execute permissions using the ls -l command.
 
 >Note: In this and all subsequent quests, "commit your changes to version control" means adding files to the staging area, committing them, and pushing the changes to the remote repository.
 
@@ -303,6 +303,8 @@ Unfortunately, it didn't help. And there's reason to believe it never will. Look
 **Tip**: Save all the commands you used for this in `quest3.sh`, place it inside the src/ folder, and don't forget to commit it to version control. You might need to revive this module again someday. The simplest way to add a line to a file is with the `echo` command and redirection. But you didn't hear that from me.
 
 #### Quest 3 received: Fix the configuration files used by `src/ai_door_management_module.sh`. Correct any errors if needed. Record all commands in `src/quest3.sh`. Commit all changes to version control.
+
+>Hint: Use the script messages in the terminal as a source of information about which data was not downloaded. Check whether the expected directory exists, whether its name matches the one used by the script, whether it contains files of the appropriate type, and whether they are accessible for reading.
 
 ***LOADING…***
 
@@ -398,6 +400,8 @@ You see a couple of scripts, just as the AI promised. A gentle reminder: documen
 
 #### Quest 6 received: Using the scripts from the ai_help folder and bash commands, generate the file `main.key`. Place it together with the key folder inside src/ai_help. Record all commands in `src/quest6.sh`. Commit all changes to version control. 
 
+> Hint: The keygen.sh script creates a directory with a large number of files, but only some of them contain key fragments. When cleaning up unnecessary files, pay attention to the extension required by the unifier.sh script, as well as this script's requirements for file content (use the commands to view the content).
+
 ***LOADING…***
 
 ## Quest 7. Branches
@@ -419,6 +423,8 @@ Maybe you should take a look inside the src/git_for_human directory?
 I'll leave you to enjoy that pleasant activity.
 
 #### Quest 7 received: Create Git branches according to the instructions found in the folder src/git_for_human. 
+
+>Hint: It is recommended to review the basics of working with branches in git.
 
 ***LOADING...***
 
@@ -513,7 +519,23 @@ The computer is now plugged in.
 
 \> *Turn on the computer*
 
-The system boots up surprisingly fast, and by default, it launches vim. There's a file already open.
+The system is booting up.
+
+\> *Go to the door to the next room*
+
+You go to the door.
+
+\> *Open the door*
+
+The door opened; it wasn't locked.
+
+\> *Can I just go to the next room?*
+
+You can go to the next room. You can go without dealing with the computer.
+
+\> *Think*
+
+The system finished loading on the screen, and the vim program loaded by default. A file was open there.
 
 ***LOADING...***
 
@@ -564,9 +586,9 @@ You've exited into the command interpreter.
 ***LOADING...***
 
 ## Chapter VII
-## Quests: Level 1. Room 2
+## Bonus Quests: Level 1. Room 2
 
-## Quest 8. Vim
+## Bonus Quest 8. Vim
 
 \> *Type… I don't know… just something like "qwe" in the terminal*
 
@@ -592,9 +614,10 @@ Almost forgot - add a title at the top of the file: "A Quick Summary of the Hist
 
 #### Quest 8 received: Record the initial state of the file `src/history_of_vim.txt` in the log file `src/files.log`. Then, using Vim, update `src/history_of_vim.txt` with information about Vim versions released after 2001 and add the title "A Quick Summary of the History of the Vim Editor" at the top. After each change, add a new record to `src/files.log` in the format: file path - file size in bytes - date and time - sha checksum - algorithm used for sha computation. 
 
+>Note: It is permissible to complete the project without completing the bonus part.
+
 ***LOADING...***
 
-## Bonus Quests: Level 1. Room 2
 ## Bonus Quest 9. Script
 
 \> *Type: "Done"*
@@ -623,7 +646,6 @@ The library module won't let it up:
 >2) Creating the branches master, develop, and feature (from develop).
 >3) Creating a merge request into develop.
 >4) Creating an issue for writing this manual and adding a comment to that issue.  
->5) Working with the project wiki.
 >
 >Looks like nothing's lost after all. If it turns out well, I'll add it to the Golden Archive of Manuals in the main library system. You'll have something to be proud of.
 

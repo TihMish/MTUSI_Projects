@@ -598,7 +598,6 @@ Kutubxona moduli hali ham tinchlanmayapti:
 >2) `develop` dan `master`, `develop` va `feature` tarmoqlarini yaratish.
 >3) `develop` da merge request yaratish.
 >4) Joriy qo'llanmani yaratish uchun issue yaratish va issue ga izoh berish.  
->5) Loyiha «wiki»si bilan ishlash.
 >
 >Hech narsa yo'qolmaganga o'xshaydi. Agar yaxshi chiqsa, bosh kutubxona tizimidagi qo'llanmalarning oltin fondiga yuklayman, o'zing bilan faxrlansang bo'ladi.
 
