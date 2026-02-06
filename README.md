@@ -195,7 +195,6 @@ You're back at your favorite terminal. With no other clues around, why not solve
 **IMPORTANT!** You must not make system calls using `system()` or similar functions that can access the OS kernel directly. This prohibition applies to all subsequent tasks.
 
 | Input | Output |
-| --- | --- |
 | ------ | ------ |
 | 100 | 5 |
 | -4 | 2 |
@@ -389,7 +388,7 @@ Response in the terminal:
     Draw using the "\*" character.
     It's optional, though — the speedup will be minor.
 
-#### Bonus Quest 5 received: Extend `src/door_functions.c` so that it renders ASCII plots of the computed functions in the terminal using the \* character. X-axis scale: 42 ticks Y-axis scale: 21 The placement and orientation of the axes are not critical. Save the resulting code to `door_functions_print.c`.
+#### Bonus Quest 5 received: Extend `src/door_functions.c` so that it renders ASCII plots of the computed functions in the terminal using the \* character. X-axis scale: 42 ticks Y-axis scale: 21 The placement and orientation of the axes are not critical. Save the resulting code to `door_functions_print.c`.</br>No additional requirements for the plot formatting are imposed.
 
 ***LOADING...***
 

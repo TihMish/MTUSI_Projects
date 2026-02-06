@@ -396,7 +396,7 @@ Terminalda javob:
     “*” belgisi yordamida chizish.
     Biroq, bu zarur emas – tezlashuv kichik bo'ladi.
 
-#### Quest 5 qabul qilindi. `src/door_functions.c` dasturini u terminalda “ \* ” belgilaridan foydalangan holda hisoblanuvchi funksiyalar grafiklarini chizadigan qilib to’ldiring. Absissa o'qi bo'yicha masshtab – 42 , ordinata o'qi masshtabi – 21. Koordinata o'qlarining joylashishi va aylanishi muhim emas. Yozilgan kodni door_functions_print.c fayliga saqlang.
+#### Quest 5 qabul qilindi. `src/door_functions.c` dasturini u terminalda “ \* ” belgilaridan foydalangan holda hisoblanuvchi funksiyalar grafiklarini chizadigan qilib to’ldiring. Absissa o'qi bo'yicha masshtab – 42 , ordinata o'qi masshtabi – 21. Koordinata o'qlarining joylashishi va aylanishi muhim emas. Yozilgan kodni door_functions_print.c fayliga saqlang.</br>Grafikni rasmiylashtirish bo‘yicha boshqa talablar qo‘yilmaydi.
 
 ***LOADING...***
 
