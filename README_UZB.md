@@ -211,9 +211,7 @@ Varaq printerdan chiqarishda chaynalgan. Ko'rinishidan, matritsali.
 
 ## Quest 1. Clone
 
->Eshik kaliti repozitoriyda, /src papkasida. git clone ni bajaring.
-
-Bu oxirgi varaq.
+>Eslatma: muvaffaqiyatli klonlash uchun GitLab uchun SSH kaliti sozlanganligiga ishonch hosil qiling.
 
 \> *Ekranga yana bir bor qarash*
 
@@ -274,9 +272,9 @@ Yaxshi fikr. Balki AI bu yerdan qanday chiqib ketishni aytib berar... U bilan ga
 
 #### Quest 2 qabul qilindi. bashda `src/ai_initial_module.sh` skriptini ishga tushirish va ko'rsatmalarga amal qilish. Agar talab qilinsa, xatolarni tuzatish (skriptni o'zgartirish mumkin emas). Barcha o'zgarishlar versiya nazorati ostida joylashtirilsin.
 
->Maslahat: to'g'ri ishlash uchun tizim aniq 5 ta modulni kutadi. Skriptlarni ishga tushirish uchun `chmod` buyrug'i talab qilinishi mumkin.
+>Maslahat: tizimning to‘g‘ri ishlashi uchun aniq 5 modul kutilyapti. Skriptlarni ishga tushirish uchun `chmod` buyrug‘i va skriptni ijro etish huquqini qo‘shish kerak bo‘lishi mumkin. `ls -l` buyrug‘i yordamida faylning ijro etish huquqlari borligini tekshiring.
 
->Eslatma: ushbu va keyingi kvestlarda "versiya nazorati ostida joylashtirish" - fayllarni staging areaga qo'shish, o'zgarishlarni qayd etish va ularni masofaviy serverga yuborishni nazarda tutadi.
+>Eslatma: ushbu va keyingi topshiriqlarda “versiyalarni nazorat qilish ostiga qo‘yish” deganda fayllarni staging areaga qo‘shish, o‘zgarishlarni fiksatsiya qilish va ularni remote serverga yuborish tushuniladi.
 
 ***LOADING…***
 
@@ -303,6 +301,8 @@ Afsuski, u yordam bermadi. Va, yordam bermaydi degan shubha ham bor. Modulni ish
 **Maslahat**: buning uchun qo'llanilgan barcha buyruqlarni `quest3.sh` da saqlang, src papkasiga joylashtiring va uni versiya nazorati ostida joylashtirishni unutmang. Bu modulni qayta jonlantirishga to'g'ri keladi. Faylga yozuv qo'shishning eng oson usuli `echo` buyrug'ini qayta yo'naltirishdir. Lekin men senga buni aytganim yo'q.
 
 #### Quest 3 qabul qilindi. `src/ai_door_management_module.sh` konfiguratsiya fayllarini tartibga solish. Agar zarur bo'lsa, xatolarni tuzatish. Qo'llanilgan barcha buyruqlar `src/quest3.sh` faylida qayd etilsin. Barcha o'zgarishlar versiya nazorati ostida joylashtirilsin.
+
+>Maslahat: skriptning terminaldagi xabarlaridan ma’lumot manbai sifatida foydalaning, qaysi ma’lumotlar yuklanmaganligi haqida. Kutilyotgan katalog mavjudligini, uning nomi skript foydalanadigan nom bilan mos kelishini, unda mos turdagi fayllar borligini, ularni o‘qish mumkinligini tekshiring.
 
 ***LOADING…***
 
@@ -400,6 +400,8 @@ SI va'da qilganidek, bir nechta skriptlarni ko'rasiz. Barcha ishlatiluvchi buyru
 
 #### Quest 6 qabul qilindi. `ai_help` papkasidagi skriptlar va bash buyruqlari yordamida `main.key` faylini shakllantirish. Uni va `key` papkasini `src/ai_help` direktoriyasiga joylashtirish. Qo'llanilgan barcha buyruqlar `src/quest6.sh` faylida qayd etilsin. Barcha o'zgarishlar versiya nazorati ostida joylashtirilsin. 
 
+>Maslahat: keygen.sh skripti ko‘p miqdordagi fayllar bilan katalog yaratadi, lekin faqat ularning bir qismi kalit fragmentlarini o‘z ichiga oladi. Keraksiz fayllarni tozalashda unifier.sh skripti talab qiladigan kengaytmaga, shuningdek ushbu skriptning fayl tarkibiga qo‘yadigan talabiga e’tibor bering (tarkibni ko‘rish buyruqlaridan foydalaning).
+
 ***LOADING…***
 
 ## Quest 7. Branches
@@ -421,6 +423,8 @@ Balki yana `src/git_for_human` direktoriyasiga qarash kerakdir?
 Yoqimli vaqt o'tkazishingizga halal bermay qo'ya qolay.
 
 #### Quest 7 qabul qilindi. `src/git_for_human` papkasidagi ko'rsatmalarga muvofiq gitda tarmoqlar yaratish. 
+
+>Maslahat: git’da shoxobchalar bilan ishlash asoslarini takrorlash tavsiya etiladi
 
 ***LOADING...***
 
@@ -539,9 +543,9 @@ Siz buyruq interpretatoriga chiqdingiz.
 ***LOADING...***
 
 ## Chapter VII
-## Quests: Level 1. Room 2
+## Bonus Quests: Level 1. Room 2
 
-## Quest 8. Vim
+## Bonus Quest 8. Vim
 
 \> *Tugmalarni terish... hatto bilmayman... Terminalda shunchaki qandaydir «qwe»*
 
@@ -565,11 +569,10 @@ Butunlay unutibman. Fayl boshiga sarlavha qo'sh: «A Quick Summary Of the Histor
 
 > Diqqat: develop tarmog'iga o'tishni unutma, barcha ishlar faqat o'sha yerda qilinishi kerak!
 
-#### Quest 8 qabul qilindi. `src/files.log` jurnalida `src/history_of_vim.txt` faylining asl holatini qayd qilish. Ushbu faylni Vim yordamida 2001-yildan keyingi Vim versiyalari to'g'risidagi ma'lumot bilan to'ldirish. Fayl boshiga "A Quick Summary Of the History of the Vim Editor" sarlavhasini qo'shish. Ushbu o'zgartirishlarning har biridan so'ng `src/files.log` jurnaliga quyidagi formatdagi yozuvnui kiritish: faylga yo'l — fayl hajmi baytlarda — sana va vaqt — sha-fayl yig'indisi — sha hisoblash algoritmi. 
+#### Quest 8 qabul qilindi. `src/history_of_vim.txt` faylining asl holati `src/files.log` jurnalida fiksatsiya qilinsin. Ushbu faylni 2001 yildan keyingi Vim versiyalari haqidagi ma’lumotlar bilan to‘ldiring, Vim’dan foydalanib. Fayl boshida "A Quick Summary Of the History of the Vim Editor" sarlavhasini qo‘shing. Ushbu o‘zgartirishlarning har biridan so‘ng, `src/files.log` jurnaliga quyidagi formatda yozuv qo‘shing: fayl yo‘li – baytlar sonida fayl hajmi – sana va vaqt – faylning sha-yig‘indisi – sha hisoblash algoritmi.
 
 ***LOADING...***
 
-## Bonus Quests: Level 1. Room 2
 ## Bonus Quest 9. Script
 
 \> *Terish: «Tayyor»*
