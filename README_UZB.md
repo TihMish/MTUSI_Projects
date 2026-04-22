@@ -373,4 +373,4 @@ Buzib kirish moduli tugallangandan va siz elektron ochqich uchun mos nuqtani tan
 
 ***LOADING…***
 
-💡**[Ushbu loyiha bo‘yicha biz bilan fikr-mulohazangizni bo‘lishish uchun bu yerga bosing (http://opros.so/p31wz)]. Bu anonim bo‘lib, jamoamizga o‘qishni yanada yaxshilashga yordam beradi. Loyihani tugatganingizdan so‘ng darhol so‘rovni to‘ldirishingizni tavsiya qilamiz.**
+**💡[Ushbu loyiha bo‘yicha biz bilan fikr-mulohazangizni bo‘lishish uchun bu yerga bosing (http://opros.so/p31wz)]. Bu anonim bo‘lib, jamoamizga o‘qishni yanada yaxshilashga yordam beradi. Loyihani tugatganingizdan so‘ng darhol so‘rovni to‘ldirishingizni tavsiya qilamiz.**
