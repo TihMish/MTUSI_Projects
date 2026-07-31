@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Знакомство с участниками — Школа 21</title>
+<style>
+  :root{
+    --bg:#08081d;
+    --panel:rgba(16,18,50,.78);
+    --panel-2:rgba(9,11,32,.92);
+    --grid:rgba(116,125,191,.13);
+    --text:#f4f6ff;
+    --muted:#b7bdd9;
+    --green:#00f2ae;
+    --cyan:#19d9ff;
+    --violet:#8c49ff;
+    --line:rgba(255,255,255,.12);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    min-height:100vh;
+    color:var(--text);
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    background:
+      radial-gradient(circle at 76% 14%, rgba(16,198,234,.23), transparent 28%),
+      radial-gradient(circle at 18% 78%, rgba(131,40,210,.25), transparent 34%),
+      linear-gradient(145deg,#08081c 0%,#101136 52%,#09091d 100%);
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:58px 58px;
+    mask-image:linear-gradient(to bottom,black,transparent 92%);
+  }
+  .glow{position:fixed;border-radius:50%;filter:blur(70px);opacity:.24;pointer-events:none;z-index:-1}
+  .g1{width:320px;height:320px;background:#00e8ff;top:80px;right:-80px}
+  .g2{width:360px;height:360px;background:#7226ff;bottom:-130px;left:-120px}
+  .page{width:min(1120px,calc(100% - 32px));margin:0 auto;padding:34px 0 72px}
+  .topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.04em}
+  .logo{width:42px;height:42px;border-radius:50%;background:#fff;color:#050515;display:grid;place-items:center;font-weight:900;font-size:13px;box-shadow:0 0 0 6px rgba(255,255,255,.05)}
+  .tag{font-size:12px;color:var(--green);text-transform:uppercase;letter-spacing:.16em}
+  .print{border:1px solid var(--line);background:rgba(255,255,255,.05);color:#fff;border-radius:12px;padding:10px 14px;cursor:pointer}
+  .hero{
+    position:relative;
+    min-height:520px;
+    padding:72px 74px 62px;
+    border:1px solid rgba(91,137,189,.55);
+    border-radius:0;
+    overflow:hidden;
+    background:linear-gradient(135deg,rgba(7,18,40,.98),rgba(8,27,57,.86));
+    box-shadow:0 30px 90px rgba(0,0,0,.28)
+  }
+  .hero::after{display:none}
+  .hero-content{position:relative;z-index:2;max-width:850px}
+  
+  .eyebrow{
+    color:var(--green);
+    font-weight:900;
+    text-transform:uppercase;
+    font-size:31px;
+    letter-spacing:.04em;
+    margin-bottom:34px
+  }
+  h1{
+    position:relative;
+    z-index:2;
+    font-size:clamp(64px,7.1vw,118px);
+    line-height:.95;
+    margin:0 0 34px;
+    max-width:1050px;
+    text-transform:uppercase;
+    letter-spacing:-.055em
+  }
+  .highlight{
+    display:inline;
+    background:none;
+    color:var(--green);
+    padding:0
+  }
+  .lead{
+    position:relative;
+    z-index:2;
+    max-width:960px;
+    color:#e2e8f4;
+    font-size:22px;
+    line-height:1.62;
+    margin:0
+  }
+  .nav{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 34px}.nav a{text-decoration:none;color:#dce2f8;border:1px solid var(--line);background:rgba(255,255,255,.035);padding:9px 12px;border-radius:999px;font-size:13px}.nav a:hover{border-color:var(--green);color:var(--green)}
+  section{scroll-margin-top:24px;margin:28px 0;padding:32px;border-radius:22px;border:1px solid var(--line);background:var(--panel);backdrop-filter:blur(14px)}
+  .section-label{font-size:13px;color:var(--green);font-weight:800;letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px}
+  h2{font-size:clamp(27px,4vw,42px);margin:0 0 18px;letter-spacing:-.02em}
+  p{font-size:17px;line-height:1.66;color:#e3e6f6}
+  .quote{position:relative;background:linear-gradient(90deg,var(--green) 0 9px,rgba(0,242,174,.11) 9px);border:1px solid rgba(0,242,174,.35);border-radius:18px;padding:24px 70px 24px 30px;font-size:21px;line-height:1.5;font-weight:750;color:#fff;margin:20px 0}
+  .copy{position:absolute;right:16px;top:16px;border:0;background:#fff;color:#080818;border-radius:10px;padding:8px 10px;cursor:pointer;font-weight:800}
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .card{position:relative;min-height:112px;padding:20px 20px 18px 58px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.045);font-size:17px;line-height:1.45;color:#f2f4ff}
+  .num{position:absolute;left:18px;top:18px;width:26px;height:26px;border-radius:7px;display:grid;place-items:center;background:var(--green);color:#071015;font-weight:900;font-size:13px}
+  .soft{color:var(--muted)}
+  .notice{display:grid;grid-template-columns:60px 1fr;gap:18px;align-items:start;background:linear-gradient(135deg,rgba(25,217,255,.10),rgba(140,73,255,.11));border:1px solid rgba(25,217,255,.25);padding:22px;border-radius:18px}
+  .icon{width:54px;height:54px;border-radius:14px;background:var(--cyan);color:#061016;display:grid;place-items:center;font-size:28px;font-weight:900;box-shadow:0 0 30px rgba(25,217,255,.25)}
+  .steps{display:grid;gap:12px}.step{display:flex;gap:16px;align-items:flex-start;padding:15px 17px;border-left:3px solid var(--green);background:rgba(255,255,255,.035);border-radius:0 12px 12px 0}.check{color:var(--green);font-weight:900}
+  .why{background:linear-gradient(145deg,rgba(0,242,174,.1),rgba(7,9,29,.92));position:relative;overflow:hidden}.why::after{content:"21";position:absolute;right:18px;bottom:-36px;font-size:180px;font-weight:950;color:rgba(255,255,255,.035)}
+  .final{border-color:rgba(0,242,174,.4);box-shadow:0 0 45px rgba(0,242,174,.08)}
+  footer{text-align:center;color:#8189ad;font-size:13px;padding-top:18px}
+  @media(max-width:760px){.page{width:min(100% - 20px,1120px);padding-top:18px}.hero{padding:38px 26px;min-height:430px}.eyebrow{font-size:22px;margin-bottom:24px}h1{font-size:clamp(44px,12vw,70px)}.lead{font-size:17px;max-width:94%}.grid{grid-template-columns:1fr}section{padding:24px 20px}.quote{font-size:18px;padding-right:58px}.topbar .tag{display:none}}
+  @media print{body{background:#fff;color:#111}body::before,.glow,.print,.nav{display:none}.page{width:100%;padding:0}.hero,section{background:#fff;color:#111;box-shadow:none;border:1px solid #ccc;break-inside:avoid}.lead,p,.soft{color:#222}.eyebrow,.section-label{color:#007c5a}.highlight,.num{background:#00d99b}.quote{color:#111;background:#eafff8}.copy{display:none}}
+</style>
+</head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div>
+<main class="page">
+  <div class="topbar">
+    <div class="brand"><div class="logo">21</div><div><div class="tag">// первый софтовый проект</div><div>Школа 21</div></div></div>
+    
+  </div>
+
+  <header class="hero">
+    
+    <div class="hero-content">
+      <div class="eyebrow">// ГАЙД</div>
+      <h1>// ЗНАКОМСТВО<br><span class="highlight">С УЧАСТНИКАМИ</span></h1>
+      <p class="lead">Большинство участников в первый день испытывают волнение, стресс от формата интенсива и не знают, с чего начать разговор с другими пирами<br>Этот небольшой гайд поможет сделать первый шаг</p>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <a href="#start">Начать разговор</a><a href="#topics">Темы</a><a href="#finish">Завершить</a><a href="#tips">Советы</a><a href="#why">Зачем это</a>
+  </nav>
+
+  <section id="start">
+    <div class="section-label">// как начать разговор</div>
+    <h2>Скажи честно, зачем ты подошел</h2>
+    <p>Самый простой способ — не придумывать оригинальный повод, а быть открытым и вежливым</p>
+    <div class="quote" id="mainPhrase">«Привет! У нас тут задание познакомиться с несколькими участниками. Можно я задам тебе пару вопросов?»</div>
+    <p class="soft">Чаще всего в ответ ты услышишь: «Конечно, у меня такое же задание»</p>
+  </section>
+
+  <section>
+    <div class="section-label">// если хочется начать иначе</div>
+    <h2>Четыре готовые фразы</h2>
+    <div class="grid">
+      <div class="card"><span class="num">01</span>Привет! Это твой первый бассейн?</div>
+      <div class="card"><span class="num">02</span>Как проходят первые дни?</div>
+      <div class="card"><span class="num">03</span>Уже успел(а) начать проект?</div>
+      <div class="card"><span class="num">04</span>Мы еще не знакомы. Меня зовут ______.</div>
+    </div>
+  </section>
+
+  <section id="topics">
+    <div class="section-label">// о чем можно поговорить</div>
+    <h2>Выбери несколько вопросов</h2>
+    <div class="grid">
+      <div class="card"><span class="num">01</span>Как тебя зовут?</div>
+      <div class="card"><span class="num">02</span>Из какого ты города?</div>
+      <div class="card"><span class="num">03</span>Почему решил(а) поступить в Школу 21?</div>
+      <div class="card"><span class="num">04</span>Чем занимался(ась) раньше?</div>
+      <div class="card"><span class="num">05</span>Как тебе первые дни бассейна?</div>
+      <div class="card"><span class="num">06</span>Есть ли ожидания от обучения?</div>
+    </div>
+  </section>
+
+  <section id="finish">
+    <div class="section-label">// если разговор закончился</div>
+    <h2>Заверши его спокойно</h2>
+    <div class="quote" id="finishPhrase">«Спасибо! Было приятно познакомиться. Удачи!»</div>
+  </section>
+
+  <section>
+    <div class="section-label">// если человек не может поговорить</div>
+    <h2>Не принимай это на свой счет</h2>
+    <div class="notice"><div class="icon">!</div><div><p style="margin-top:0">Возможно, участник занят проектом, спешит, отдыхает или уже договорился с кем-то на встречу</p><p class="soft" style="margin-bottom:0">Просто подойди к другому человеку, когда будешь готов(а)</p></div></div>
+  </section>
+
+  <section id="tips">
+    <div class="section-label">// несколько советов</div>
+    <h2>Не интервью, а знакомство</h2>
+    <div class="steps">
+      <div class="step"><span class="check">✓</span><span>Представься первым</span></div>
+      <div class="step"><span class="check">✓</span><span>Улыбнись</span></div>
+      <div class="step"><span class="check">✓</span><span>Слушай ответы, а не только задавай вопросы</span></div>
+      <div class="step"><span class="check">✓</span><span>Если нашлась общая тема — продолжай разговор</span></div>
+      <div class="step"><span class="check">✓</span><span>Если нет — спокойно поблагодари и познакомься с кем-нибудь еще</span></div>
+    </div>
+  </section>
+
+  <section id="why" class="why">
+    <div class="section-label">// зачем вообще это задание</div>
+    <h2>Школа 21 построена на взаимном обучении</h2>
+    <p>Совсем скоро тебе предстоит работать в командах, проходить p2p-проверки, обращаться за помощью и помогать другим участникам</p>
+    <p>Чем раньше ты познакомишься с окружающими, тем легче будет проходить обучение</p>
+    <p><strong>Не стремись провести идеальный разговор</strong> Цель задания — сделать первый шаг и познакомиться с людьми, с которыми ты будешь учиться ближайшие недели</p>
+  </section>
+
+  <section class="final">
+    <div class="section-label">// совет</div>
+    <h2>Сделай первый шаг</h2>
+    <p>Если видишь человека, который стоит один, — подойди первым. Возможно, он так же ждет, что кто-то начнет разговор. Один простой вопрос может стать началом новой команды, дружбы или человека, с которым вы вместе пройдете весь бассейн</p>
+  </section>
+
+  <footer>Школа 21 · Гайд для участников интенсива</footer>
+</main>
+<script>
+function copyText(id,button){
+  const el=document.getElementById(id); const text=el.childNodes[0].textContent.trim();
+  navigator.clipboard.writeText(text).then(()=>{const old=button.textContent;button.textContent='Готово';setTimeout(()=>button.textContent=old,1300)});
+}
+</script>
+</body>
+</html>
