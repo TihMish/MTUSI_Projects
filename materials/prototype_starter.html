@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Запись в мастерскую</title>
+  <style>
+    body { font-family: sans-serif; max-width: 640px; margin: 32px auto; padding: 16px; }
+    button { font: inherit; padding: 12px 16px; cursor: pointer; }
+    button:focus-visible { outline: 3px solid #1755b0; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <section id="screen-start">
+      <h1 tabindex="-1">Запись в мастерскую</h1>
+      <p>Ближайшее свободное время — завтра в 12:00.</p>
+      <button type="button" onclick="showScreen('screen-next')">
+        Выбрать завтра в 12:00
+      </button>
+    </section>
+
+    <section id="screen-next" hidden>
+      <h2 tabindex="-1">Выбрано завтра в 12:00</h2>
+      <p>На следующем шаге потребуется указать имя и способ связи.</p>
+      <button type="button" onclick="showScreen('screen-start')">
+        Вернуться к выбору времени
+      </button>
+    </section>
+  </main>
+
+  <script>
+    function showScreen(screenId) {
+      document.querySelectorAll('main > section').forEach(function (screen) {
+        screen.hidden = screen.id !== screenId;
+      });
+      document.querySelector('#' + screenId + ' h1, #' + screenId + ' h2').focus();
+    }
+  </script>
+</body>
+</html>
