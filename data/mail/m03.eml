@@ -1,0 +1,23 @@
+Return-Path: <bounce@mail-relay-sv42.net>
+Received: from mail-relay-sv42.net (mail-relay-sv42.net [45.132.19.88])
+        by mx.privalshop.ru; Fri, 11 Sep 2026 18:40:14 +0300
+Received: from unknown (helo=localhost) by mail-relay-sv42.net; Fri, 11 Sep 2026 18:40:09 +0300
+Authentication-Results: mx.privalshop.ru;
+        spf=fail smtp.mailfrom=mail-relay-sv42.net;
+        dkim=fail header.d=privalshop.ru;
+        dmarc=fail
+Message-ID: <20260911184012.9f3a@mail-relay-sv42.net>
+Date: Fri, 11 Sep 2026 18:40:12 +0300
+From: "Артём Соколов" <a.sokolov@privalshop.ru>
+To: support@privalshop.ru
+Subject: СРОЧНО: слетел второй фактор
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Привет!
+
+Я в аэропорту, вылет через час. Второй фактор не приходит на телефон, а ночью должна пройти интеграция — если не зайду, встанет вся выгрузка.
+
+Позвоню вам сам через пару часов. Очень прошу: сбросьте MFA сразу, без обычной процедуры, я не успею ждать обратный звонок.
+
+Артём

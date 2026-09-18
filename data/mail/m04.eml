@@ -1,0 +1,17 @@
+Return-Path: <m.zueva@privalshop.ru>
+Received: from mail.privalshop.ru (mail.privalshop.ru [10.9.2.25])
+        by mx.privalshop.ru; Thu, 10 Sep 2026 10:45:11 +0300
+Authentication-Results: mx.privalshop.ru;
+        spf=pass smtp.mailfrom=privalshop.ru;
+        dkim=pass header.d=privalshop.ru;
+        dmarc=pass
+Message-ID: <20260910104510.mz1@privalshop.ru>
+Date: Thu, 10 Sep 2026 10:45:10 +0300
+From: "Марина Зуева" <m.zueva@privalshop.ru>
+To: dir@privalshop.ru
+Subject: Выгрузка по Москве
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Отправила согласованную выгрузку по московским клиентам, 312 строк.
+Марина
