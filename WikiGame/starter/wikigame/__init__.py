@@ -1,0 +1,2 @@
+"""WikiGame course starter package."""
+
