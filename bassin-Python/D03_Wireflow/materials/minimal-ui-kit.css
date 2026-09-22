@@ -1,0 +1,20 @@
+/* minimal-ui-kit.css */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0; padding: 20px; background: #f5f5f5; color: #222;
+  }
+  .container { max-width: 960px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  h1 { font-size: 1.8rem; margin-bottom: 1rem; }
+  .btn { display: inline-block; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+  .btn-primary { background: #2563eb; color: #fff; }
+  .btn-primary:hover { background: #1d4ed8; }
+  .btn-danger { background: #dc2626; color: #fff; }
+  .btn-secondary { background: #e5e7eb; color: #111; }
+  input, select { padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 0.9rem; }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  th, td { padding: 8px; text-align: left; border-bottom: 1px solid #e5e7eb; }
+  .alert { padding: 12px; border-radius: 4px; margin-bottom: 1rem; }
+  .alert-error { background: #fee2e2; color: #991b1b; }
+  .alert-success { background: #d1fae5; color: #065f46; }
+  .alert-info { background: #dbeafe; color: #1e40af; }
+  
