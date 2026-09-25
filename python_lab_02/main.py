@@ -38,11 +38,23 @@
 
 # Задание 7
 
-a7, b7 = float(input("Число 1: ")), float(input("Число 2: "))
-print(a7 + b7, a7 - b7, a7 * b7, a7 / b7, sep='\n')
+# a7, b7 = float(input("Число 1: ")), float(input("Число 2: "))
+# print(a7 + b7, a7 - b7, a7 * b7, a7 / b7, sep='\n')
 
 
+# Задание 8
 
+for i8 in range(1, 11):
+    print(i8)
+
+for i8 in range(10, 0, -1):
+    print(i8)
+
+for i8 in range(0, 21, 2):
+    print(i8)
+
+for i8 in range(0, 21, 4):
+    print(i8)
 
 
 
