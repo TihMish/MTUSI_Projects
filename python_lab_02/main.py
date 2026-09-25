@@ -67,11 +67,19 @@
 
 # Задание 10
 
-c10 = 10
-while c10 >= 1:
-    print(c10)
-    c10 -= 1
-print("Цикл завершён")
+# c10 = 10
+# while c10 >= 1:
+#     print(c10)
+#     c10 -= 1
+# print("Цикл завершён")
+
+
+# Задание 11
+
+import math
+r11 = 12
+print(2 * math.pi * r11, math.pi * r11 ** 2, math.sqrt(225), sep='\n')
+
 
 
 
