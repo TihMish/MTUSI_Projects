@@ -30,9 +30,18 @@
 
 # Задание 6
 
-a6, b6 = 15, 4
-print(a6 + b6, a6 - b6, a6 * b6, a6 / b6, a6 // b6, a6 % b6, a6 ** b6, sep='\n')
-print(2 + 3 * 4, (2 + 3) * 4, sep='\n')
+# a6, b6 = 15, 4
+# print(a6 + b6, a6 - b6, a6 * b6, a6 / b6, a6 // b6, a6 % b6, a6 ** b6, sep='\n')
+# print(2 + 3 * 4, (2 + 3) * 4, sep='\n')
+
+
+
+# Задание 7
+
+a7, b7 = float(input("Число 1: ")), float(input("Число 2: "))
+print(a7 + b7, a7 - b7, a7 * b7, a7 / b7, sep='\n')
+
+
 
 
 
