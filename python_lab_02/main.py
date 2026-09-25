@@ -2,5 +2,17 @@
 
 print("Hello, World!")
 
+# Задание 4
+
+n4, a4, h4, s4 = "Настя", 18, 165, True
+
+print(n4, a4, h4, s4, sep='\n')
+print(type(n4), type(a4), type(h4), type(s4), sep='\n')
+
+a4, h4 = 19, 168
+print(a4, h4, sep='\n')
+
+
+
 
 
