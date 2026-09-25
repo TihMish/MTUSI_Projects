@@ -44,17 +44,22 @@
 
 # Задание 8
 
-for i8 in range(1, 11):
-    print(i8)
+# for i8 in range(1, 11):
+#     print(i8)
 
-for i8 in range(10, 0, -1):
-    print(i8)
+# for i8 in range(10, 0, -1):
+#     print(i8)
 
-for i8 in range(0, 21, 2):
-    print(i8)
+# for i8 in range(0, 21, 2):
+#     print(i8)
 
-for i8 in range(0, 21, 4):
-    print(i8)
+# for i8 in range(0, 21, 4):
+#     print(i8)
 
 
+# Задание 9
 
+n9, s9 = int(input("n: ")), 0
+for i9 in range(1, n9 + 1):
+    s9 += i9
+print(s9)
