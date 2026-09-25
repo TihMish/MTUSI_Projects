@@ -76,9 +76,22 @@
 
 # Задание 11
 
-import math
-r11 = 12
-print(2 * math.pi * r11, math.pi * r11 ** 2, math.sqrt(225), sep='\n')
+# import math
+# r11 = 12
+# print(2 * math.pi * r11, math.pi * r11 ** 2, math.sqrt(225), sep='\n')
+
+
+# Задание 12
+
+n12 = int(input("Число: "))
+if n12 > 0:
+    print("Число положительное")
+elif n12 < 0:
+    print("Число отрицательное")
+else:
+    print("Число равно нулю")
+print("Число чётное" if n12 % 2 == 0 else "Число нечётное")
+
 
 
 
