@@ -17,18 +17,22 @@
 
 # Задание 5
 
-print("Задание 5. Введите по очереди: имя, фамилию, возраст, рост")
-n5, f5, a5 = input("Имя: "), input("Фамилия: "), input("Возраст: ")
-print(n5, f5, a5, sep='\n')
+# print("Задание 5. Введите по очереди: имя, фамилию, возраст, рост")
+# n5, f5, a5 = input("Имя: "), input("Фамилия: "), input("Возраст: ")
+# print(n5, f5, a5, sep='\n')
 
-a5 = int(a5)
-h5 = float(input("Рост: "))
+# a5 = int(a5)
+# h5 = float(input("Рост: "))
 
-print(a5, type(a5), h5, type(h5), sep='\n')
-
-
+# print(a5, type(a5), h5, type(h5), sep='\n')
 
 
+
+# Задание 6
+
+a6, b6 = 15, 4
+print(a6 + b6, a6 - b6, a6 * b6, a6 / b6, a6 // b6, a6 % b6, a6 ** b6, sep='\n')
+print(2 + 3 * 4, (2 + 3) * 4, sep='\n')
 
 
 
