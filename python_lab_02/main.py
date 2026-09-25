@@ -59,7 +59,20 @@
 
 # Задание 9
 
-n9, s9 = int(input("n: ")), 0
-for i9 in range(1, n9 + 1):
-    s9 += i9
-print(s9)
+# n9, s9 = int(input("n: ")), 0
+# for i9 in range(1, n9 + 1):
+#     s9 += i9
+# print(s9)
+
+
+# Задание 10
+
+c10 = 10
+while c10 >= 1:
+    print(c10)
+    c10 -= 1
+print("Цикл завершён")
+
+
+
+
