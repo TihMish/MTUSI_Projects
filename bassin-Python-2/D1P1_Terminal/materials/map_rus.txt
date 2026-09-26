@@ -1,0 +1,29 @@
+СТРУКТУРА ДНЯ 01
+
+START_HERE.md — локальное получение, выдача всех заданий и сдача.
+README.md — условия, формат ввода, результаты и защита.
+check-list.yml — единственный перечень оцениваемых требований.
+materials/ — все необходимые справочники и порядок P2P.
+datasets/ — шесть контрольных строк, ответы и полный набор проверок.
+templates/ — форматы журнала, HOWTO, вечерней карточки и протокола.
+tools/day1.py — выдача, bundle, приём, наблюдения и карточки; оценок не ставит.
+src/partner/ — выданные модули, повреждённая память и исходный дамп.
+code-samples/, data-samples/, misc/ — исходные папки шаблона, новых файлов не требуют.
+
+УЧАСТНИК МЕНЯЕТ
+src/partner/memory.txt
+
+УЧАСТНИК СОЗДАЁТ И КОММИТИТ
+src/quest1.sh, src/hello.py, src/calc.py, src/signal.py,
+src/errors.md, src/HOWTO.md; по желанию src/quest6.sh.
+
+ГЕНЕРИРУЕТСЯ И НЕ КОММИТИТСЯ
+dump/, message.txt, .day01/, __pycache__/, *.pyc — реально стоят в .gitignore.
+
+СДАЧА И ПРОВЕРКА ВНЕ РЕПОЗИТОРИЯ
+day01_submission/ — submission.bundle и submission.json.
+review_peer/ — submitted, receipt, integrity, evidence, cardN, practiceN,
+probeN и заполненный протокол review.md. Приём и оценка — только пир.
+
+Исходный комплект сохраняется полностью. Новые исходные материалы, эталоны
+и служебные документы авторов участник в свою историю не добавляет.
