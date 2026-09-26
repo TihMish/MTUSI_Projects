@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+src/model_query.sql
+src/scratch/
+*.db-journal
+*.db-wal
+*.db-shm
