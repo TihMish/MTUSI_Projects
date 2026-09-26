@@ -1,0 +1,19 @@
+Return-Path: <a.sokolov@privalshop.ru>
+Received: from mail.privalshop.ru (mail.privalshop.ru [10.9.2.25])
+        by mx.privalshop.ru; Fri, 04 Sep 2026 12:18:04 +0300
+Authentication-Results: mx.privalshop.ru;
+        spf=pass smtp.mailfrom=privalshop.ru;
+        dkim=pass header.d=privalshop.ru;
+        dmarc=pass
+Message-ID: <20260904121803.a91@privalshop.ru>
+Date: Fri, 04 Sep 2026 12:18:03 +0300
+From: "Артём Соколов" <a.sokolov@privalshop.ru>
+To: support@privalshop.ru
+Subject: Отпуск 7–20 сентября
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Коллеги, с 7 по 20 сентября я в отпуске, буду вне доступа.
+По срочным вопросам интеграции — к Марине Зуевой.
+-- 
+Артём
