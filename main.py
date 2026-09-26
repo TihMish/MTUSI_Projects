@@ -36,20 +36,38 @@
 
 # Задание 3
 
-value = 10
+# value = 10
 
-def example():
-    value = 20
-    l3 = "локальная переменная задания 3"
-    print(value, l3)
+# def example():
+#     value = 20
+#     l3 = "локальная переменная задания 3"
+#     print(value, l3)
 
-example()
-print(value)
+# example()
+# print(value)
 
-try:
-    print(l3)
-except NameError as e:
-    print("Ошибка:", e)
+# try:
+#     print(l3)
+# except NameError as e:
+#     print("Ошибка:", e)
+
+
+# Задание 4
+
+n4 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+print(n4[0], n4[2], n4[-1])
+
+n4[1] = 200
+n4.append(110)
+n4.remove(30)
+
+print(n4, len(n4))
+
+
+
+
+
 
 
 
