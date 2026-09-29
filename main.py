@@ -2,16 +2,16 @@
 
 # def greet(name):
 #     print("Здравствуйте,", name)
- 
+
 # def square(number):
 #     return number ** 2
- 
+
 # def max_of_two(a, b):
 #     return a if a > b else b
- 
+
 # greet("Настя")
 # greet("Кирилл")
- 
+
 # print(square(4), square(-7))
 # print(max_of_two(10, 3), max_of_two(-5, -1))
 
@@ -78,29 +78,32 @@
 
 # Задание 6
 
-m6 = (12.5, 13.0, 11.8, 14.2, 12.9, 13.5, 12.1, 13.8)
+# m6 = (12.5, 13.0, 11.8, 14.2, 12.9, 13.5, 12.1, 13.8)
 
-print(m6[0], m6[-1], m6[2:5])
+# print(m6[0], m6[-1], m6[2:5])
 
-try:
-    m6[0] = 99
-except TypeError as e:
-    print("Ошибка:", e)
+# try:
+#     m6[0] = 99
+# except TypeError as e:
+#     print("Ошибка:", e)
 
-f6, s6 = m6[0], m6[1]
-print(f6, s6)
+# f6, s6 = m6[0], m6[1]
+# print(f6, s6)
 
-l6 = list(m6)
-l6[0] = 99
-m6 = tuple(l6)
-print(m6)
-
-
+# l6 = list(m6)
+# l6[0] = 99
+# m6 = tuple(l6)
+# print(m6)
 
 
+# Задание 7
 
+n7 = [12.5, 13.0, 11.8, 14.2, 12.9, 13.5, 12.1, 13.8]
 
+print(len(n7), sum(n7), min(n7), max(n7), sum(n7) / len(n7))
 
+s7 = sorted(n7)
+print(s7, n7)
 
-
-
+n7.sort()
+print(n7)
