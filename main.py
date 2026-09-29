@@ -111,28 +111,41 @@
 
 # Задание 8
 
-def calculate_sum(numbers):
-    total = 0
-    for n in numbers:
-        total += n
-    return total
+# def calculate_sum(numbers):
+#     total = 0
+#     for n in numbers:
+#         total += n
+#     return total
 
-def find_min(numbers):
-    m = numbers[0]
-    for n in numbers:
-        if n < m:
-            m = n
-    return m
+# def find_min(numbers):
+#     m = numbers[0]
+#     for n in numbers:
+#         if n < m:
+#             m = n
+#     return m
 
-def find_max(numbers):
-    m = numbers[0]
-    for n in numbers:
-        if n > m:
-            m = n
-    return m
+# def find_max(numbers):
+#     m = numbers[0]
+#     for n in numbers:
+#         if n > m:
+#             m = n
+#     return m
 
-n8 = [12.5, 13.0, 11.8, 14.2, 12.9, 13.5, 12.1, 13.8]
+# n8 = [12.5, 13.0, 11.8, 14.2, 12.9, 13.5, 12.1, 13.8]
 
-print(calculate_sum(n8), sum(n8))
-print(find_min(n8), min(n8))
-print(find_max(n8), max(n8))
+# print(calculate_sum(n8), sum(n8))
+# print(find_min(n8), min(n8))
+# print(find_max(n8), max(n8))
+
+
+# Задание 9
+
+def find_element(numbers, target):
+    for i in range(len(numbers)):
+        if numbers[i] == target:
+            return i
+    return -1
+
+n9 = [12.5, 13.0, 11.8, 14.2, 12.9]
+
+print(find_element(n9, 11.8), find_element(n9, 100))
