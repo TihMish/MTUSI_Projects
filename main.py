@@ -98,12 +98,41 @@
 
 # Задание 7
 
-n7 = [12.5, 13.0, 11.8, 14.2, 12.9, 13.5, 12.1, 13.8]
+# n7 = [12.5, 13.0, 11.8, 14.2, 12.9, 13.5, 12.1, 13.8]
 
-print(len(n7), sum(n7), min(n7), max(n7), sum(n7) / len(n7))
+# print(len(n7), sum(n7), min(n7), max(n7), sum(n7) / len(n7))
 
-s7 = sorted(n7)
-print(s7, n7)
+# s7 = sorted(n7)
+# print(s7, n7)
 
-n7.sort()
-print(n7)
+# n7.sort()
+# print(n7)
+
+
+# Задание 8
+
+def calculate_sum(numbers):
+    total = 0
+    for n in numbers:
+        total += n
+    return total
+
+def find_min(numbers):
+    m = numbers[0]
+    for n in numbers:
+        if n < m:
+            m = n
+    return m
+
+def find_max(numbers):
+    m = numbers[0]
+    for n in numbers:
+        if n > m:
+            m = n
+    return m
+
+n8 = [12.5, 13.0, 11.8, 14.2, 12.9, 13.5, 12.1, 13.8]
+
+print(calculate_sum(n8), sum(n8))
+print(find_min(n8), min(n8))
+print(find_max(n8), max(n8))
