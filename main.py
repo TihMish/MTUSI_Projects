@@ -163,12 +163,62 @@
 
 # Задание 11
 
-n11 = [-10, 3, -2, 8, -5]
+# n11 = [-10, 3, -2, 8, -5]
 
-sn11 = sorted(n11)
-sa11 = sorted(n11, key=lambda x: abs(x))
+# sn11 = sorted(n11)
+# sa11 = sorted(n11, key=lambda x: abs(x))
 
-print(sn11, sa11)
+# print(sn11, sa11)
+
+
+# Задание 12
+
+def calculate_average(measurements):
+    total = 0
+    for m in measurements:
+        total += m
+    return total / len(measurements)
+
+def find_minimum(measurements):
+    mn = measurements[0]
+    for m in measurements:
+        if m < mn:
+            mn = m
+    return mn
+
+def find_maximum(measurements):
+    mx = measurements[0]
+    for m in measurements:
+        if m > mx:
+            mx = m
+    return mx
+
+def count_above_average(measurements):
+    avg = calculate_average(measurements)
+    count = 0
+    for m in measurements:
+        if m > avg:
+            count += 1
+    return count
+
+def find_value(measurements, target):
+    for i in range(len(measurements)):
+        if measurements[i] == target:
+            return i
+    return -1
+
+def analyze_measurements(measurements):
+    return find_minimum(measurements), find_maximum(measurements), calculate_average(measurements)
+
+m12 = [23, 45, 12, 67, 34, 89, 21, 56, 78, 40]
+mn12, mx12, avg12 = analyze_measurements(m12)
+
+print(len(m12), mn12, mx12, avg12, count_above_average(m12), find_value(m12, 67))
+
+
+
+
+
 
 
 
