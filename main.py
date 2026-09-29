@@ -140,12 +140,22 @@
 
 # Задание 9
 
-def find_element(numbers, target):
-    for i in range(len(numbers)):
-        if numbers[i] == target:
-            return i
-    return -1
+# def find_element(numbers, target):
+#     for i in range(len(numbers)):
+#         if numbers[i] == target:
+#             return i
+#     return -1
 
-n9 = [12.5, 13.0, 11.8, 14.2, 12.9]
+# n9 = [12.5, 13.0, 11.8, 14.2, 12.9]
 
-print(find_element(n9, 11.8), find_element(n9, 100))
+# print(find_element(n9, 11.8), find_element(n9, 100))
+
+
+# Задание 10
+
+def analyze(numbers):
+    return min(numbers), max(numbers), sum(numbers) / len(numbers)
+
+n10 = [12.5, 13.0, 11.8, 14.2, 12.9]
+mn10, mx10, avg10 = analyze(n10)
+print(mn10, mx10, avg10)
