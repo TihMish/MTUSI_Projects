@@ -153,9 +153,22 @@
 
 # Задание 10
 
-def analyze(numbers):
-    return min(numbers), max(numbers), sum(numbers) / len(numbers)
+# def analyze(numbers):
+#     return min(numbers), max(numbers), sum(numbers) / len(numbers)
 
-n10 = [12.5, 13.0, 11.8, 14.2, 12.9]
-mn10, mx10, avg10 = analyze(n10)
-print(mn10, mx10, avg10)
+# n10 = [12.5, 13.0, 11.8, 14.2, 12.9]
+# mn10, mx10, avg10 = analyze(n10)
+# print(mn10, mx10, avg10)
+
+
+# Задание 11
+
+n11 = [-10, 3, -2, 8, -5]
+
+sn11 = sorted(n11)
+sa11 = sorted(n11, key=lambda x: abs(x))
+
+print(sn11, sa11)
+
+
+
