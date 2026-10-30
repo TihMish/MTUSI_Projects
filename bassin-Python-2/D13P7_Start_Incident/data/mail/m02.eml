@@ -1,0 +1,19 @@
+Return-Path: <hr@privalshop.ru>
+Received: from mail.privalshop.ru (mail.privalshop.ru [10.9.2.25])
+        by mx.privalshop.ru; Fri, 31 Jul 2026 17:02:45 +0300
+Authentication-Results: mx.privalshop.ru;
+        spf=pass smtp.mailfrom=privalshop.ru;
+        dkim=pass header.d=privalshop.ru;
+        dmarc=pass
+Message-ID: <20260731170244.hr7@privalshop.ru>
+Date: Fri, 31 Jul 2026 17:02:44 +0300
+From: "HR «Привал»" <hr@privalshop.ru>
+To: it@privalshop.ru
+Subject: Отключение учётных записей за июль
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Прошу отключить учётные записи уволенных:
+  - k.efimov (Константин Ефимов), последний день 31.07.2026
+Доступы к панели и почте — сегодня.
+Отзыв сервисных ключей — на стороне разработки.

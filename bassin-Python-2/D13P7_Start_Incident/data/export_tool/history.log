@@ -1,0 +1,77 @@
+# git log -p --reverse  (выгрузка истории репозитория export_tool)
+
+commit 9b1c204
+Author: Марина Зуева <m.zueva@privalshop.ru>
+Date:   2026-05-12 10:02:11 +0300
+
+    первая версия выгрузки клиентов
+
+diff --git a/config.py b/config.py
++def export_clients(conn, out):
++    rows = conn.execute('SELECT * FROM clients')
++    write_csv(out, rows)
+
+commit 3f77ab8
+Author: Константин Ефимов <k.efimov@privalshop.ru>
+Date:   2026-06-03 16:41:55 +0300
+
+    вынес настройки в config.py
+
+diff --git a/config.py b/config.py
++API_BASE = 'https://panel.privalshop.ru'
++TIMEOUT = 30
+
+commit aa19c30
+Author: Константин Ефимов <k.efimov@privalshop.ru>
+Date:   2026-06-20 12:15:09 +0300
+
+    добавил ретраи
+
+diff --git a/config.py b/config.py
++for attempt in range(3):
++    try:
++        return call(url)
+
+commit c4d9e1a
+Author: Константин Ефимов <k.efimov@privalshop.ru>
+Date:   2026-07-28 14:22:37 +0300
+
+    временно: сервисный токен для отладки ночной выгрузки
+
+diff --git a/config.py b/config.py
++# TODO: убрать до релиза, сейчас некогда возиться с секретами
++SERVICE_TOKEN = "EXP-9f3a7c21b8e4"
++
++def auth_headers():
++    return {'X-Auth-Token': SERVICE_TOKEN}
+
+commit d80e5f1
+Author: Марина Зуева <m.zueva@privalshop.ru>
+Date:   2026-08-11 09:30:44 +0300
+
+    добавил .env.example
+
+diff --git a/config.py b/config.py
++API_BASE=
++SERVICE_TOKEN=
++# заполнить своими значениями
+
+commit 52c9e77
+Author: Игорь Бортник <i.bortnik@privalshop.ru>
+Date:   2026-08-19 18:04:12 +0300
+
+    починил кодировку в CSV
+
+diff --git a/config.py b/config.py
++    out.write('\ufeff')
+
+commit 7ea3b19
+Author: Марина Зуева <m.zueva@privalshop.ru>
+Date:   2026-09-02 11:55:31 +0300
+
+    фильтр по городу
+
+diff --git a/config.py b/config.py
++    if city:
++        sql += ' WHERE city = ?'
+

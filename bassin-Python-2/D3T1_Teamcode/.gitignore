@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Рабочие и временные файлы: создаются командами, в репозиторий не кладутся
+tmp/
+*.tmp
+session_*.txt
+
+# Редакторы и системный мусор
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Архивы и бинарники
+*.zip
+*.7z
+*.gz
+*.tar
+*.exe
+*.dll
+*.so

@@ -1,0 +1,18 @@
+Return-Path: <no-reply@privalshop.ru>
+Received: from mail.privalshop.ru (mail.privalshop.ru [10.9.2.25])
+        by mx.privalshop.ru; Fri, 11 Sep 2026 23:31:21 +0300
+Authentication-Results: mx.privalshop.ru;
+        spf=pass smtp.mailfrom=privalshop.ru;
+        dkim=pass header.d=privalshop.ru;
+        dmarc=pass
+Message-ID: <20260911233120.sys@privalshop.ru>
+Date: Fri, 11 Sep 2026 23:31:20 +0300
+From: "Сервис уведомлений" <no-reply@privalshop.ru>
+To: support@privalshop.ru
+Subject: Второй фактор сброшен: a.sokolov
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Учётная запись a.sokolov: второй фактор сброшен оператором d.kravets.
+Основание: тикет T-4471.
+Время: 2026-09-11 23:31:18 (MSK).

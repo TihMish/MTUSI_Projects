@@ -1,0 +1,434 @@
+[
+  {
+    "group": "dataset",
+    "script": "hello.py",
+    "input": "\n",
+    "output": "n/a"
+  },
+  {
+    "group": "dataset",
+    "script": "hello.py",
+    "input": "три 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "dataset",
+    "script": "hello.py",
+    "input": "1 0\n",
+    "output": "n/a"
+  },
+  {
+    "group": "dataset",
+    "script": "hello.py",
+    "input": "-7 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "dataset",
+    "script": "hello.py",
+    "input": "  42  \n",
+    "output": "Hello, 42!"
+  },
+  {
+    "group": "dataset",
+    "script": "hello.py",
+    "input": "99999999999999999999 3\n",
+    "output": "n/a"
+  },
+  {
+    "group": "dataset",
+    "script": "calc.py",
+    "input": "\n",
+    "output": "n/a"
+  },
+  {
+    "group": "dataset",
+    "script": "calc.py",
+    "input": "три 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "dataset",
+    "script": "calc.py",
+    "input": "1 0\n",
+    "output": "1 1 0 n/a"
+  },
+  {
+    "group": "dataset",
+    "script": "calc.py",
+    "input": "-7 2\n",
+    "output": "-5 -9 -14 -3"
+  },
+  {
+    "group": "dataset",
+    "script": "calc.py",
+    "input": "  42  \n",
+    "output": "n/a"
+  },
+  {
+    "group": "dataset",
+    "script": "calc.py",
+    "input": "99999999999999999999 3\n",
+    "output": "100000000000000000002 99999999999999999996 299999999999999999997 33333333333333333333"
+  },
+  {
+    "group": "dataset",
+    "script": "signal.py",
+    "input": "\n",
+    "output": "n/a"
+  },
+  {
+    "group": "dataset",
+    "script": "signal.py",
+    "input": "три 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "dataset",
+    "script": "signal.py",
+    "input": "1 0\n",
+    "output": "IN"
+  },
+  {
+    "group": "dataset",
+    "script": "signal.py",
+    "input": "-7 2\n",
+    "output": "OUT"
+  },
+  {
+    "group": "dataset",
+    "script": "signal.py",
+    "input": "  42  \n",
+    "output": "n/a"
+  },
+  {
+    "group": "dataset",
+    "script": "signal.py",
+    "input": "99999999999999999999 3\n",
+    "output": "OUT"
+  },
+  {
+    "group": "examples",
+    "script": "hello.py",
+    "input": "911\n",
+    "output": "Hello, 911!"
+  },
+  {
+    "group": "examples",
+    "script": "hello.py",
+    "input": "Арнольд\n",
+    "output": "n/a"
+  },
+  {
+    "group": "examples",
+    "script": "hello.py",
+    "input": "+19\n",
+    "output": "Hello, 19!"
+  },
+  {
+    "group": "examples",
+    "script": "hello.py",
+    "input": "-0002\n",
+    "output": "Hello, -2!"
+  },
+  {
+    "group": "examples",
+    "script": "calc.py",
+    "input": "8 2\n",
+    "output": "10 6 16 4"
+  },
+  {
+    "group": "examples",
+    "script": "calc.py",
+    "input": "3 2\n",
+    "output": "5 1 6 1"
+  },
+  {
+    "group": "examples",
+    "script": "calc.py",
+    "input": "7 -2\n",
+    "output": "5 9 -14 -3"
+  },
+  {
+    "group": "examples",
+    "script": "calc.py",
+    "input": "-7 -2\n",
+    "output": "-9 -5 14 3"
+  },
+  {
+    "group": "examples",
+    "script": "calc.py",
+    "input": "0 2\n",
+    "output": "2 -2 0 0"
+  },
+  {
+    "group": "examples",
+    "script": "calc.py",
+    "input": "  8\t  2  \n",
+    "output": "10 6 16 4"
+  },
+  {
+    "group": "examples",
+    "script": "signal.py",
+    "input": "1.5 1.5\n",
+    "output": "IN"
+  },
+  {
+    "group": "examples",
+    "script": "signal.py",
+    "input": "3 4\n",
+    "output": "OUT"
+  },
+  {
+    "group": "examples",
+    "script": "signal.py",
+    "input": "-3 4.0001\n",
+    "output": "OUT"
+  },
+  {
+    "group": "examples",
+    "script": "signal.py",
+    "input": "1.5\n",
+    "output": "n/a"
+  },
+  {
+    "group": "examples",
+    "script": "signal.py",
+    "input": "1,5 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "examples",
+    "script": "signal.py",
+    "input": ".5 5.\n",
+    "output": "OUT"
+  },
+  {
+    "group": "examples",
+    "script": "signal.py",
+    "input": "  1.5\t1.5  \n",
+    "output": "IN"
+  },
+  {
+    "group": "grammar",
+    "script": "hello.py",
+    "input": "\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "hello.py",
+    "input": "²\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "hello.py",
+    "input": "1e2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "hello.py",
+    "input": "1_0\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "hello.py",
+    "input": "++1\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "hello.py",
+    "input": "-\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "hello.py",
+    "input": "NaN\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "hello.py",
+    "input": "inf\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "hello.py",
+    "input": "99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "hello.py",
+    "input": "",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "hello.py",
+    "input": "1 2 3\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "calc.py",
+    "input": "\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "calc.py",
+    "input": "² 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "calc.py",
+    "input": "1e2 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "calc.py",
+    "input": "1_0 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "calc.py",
+    "input": "++1 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "calc.py",
+    "input": "- 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "calc.py",
+    "input": "NaN 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "calc.py",
+    "input": "inf 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "calc.py",
+    "input": "99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "calc.py",
+    "input": "",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "calc.py",
+    "input": "1 2 3\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "signal.py",
+    "input": "\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "signal.py",
+    "input": "² 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "signal.py",
+    "input": "1e2 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "signal.py",
+    "input": "1_0 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "signal.py",
+    "input": "++1 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "signal.py",
+    "input": "- 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "signal.py",
+    "input": "NaN 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "signal.py",
+    "input": "inf 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "signal.py",
+    "input": "99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 2\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "signal.py",
+    "input": "",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "signal.py",
+    "input": "1 2 3\n",
+    "output": "n/a"
+  },
+  {
+    "group": "grammar",
+    "script": "hello.py",
+    "input": "9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999\n",
+    "output": "Hello, 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999!"
+  },
+  {
+    "group": "grammar",
+    "script": "calc.py",
+    "input": "9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 1\n",
+    "output": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999998 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999"
+  },
+  {
+    "group": "grammar",
+    "script": "signal.py",
+    "input": "9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 0\n",
+    "output": "OUT"
+  },
+  {
+    "group": "grammar",
+    "script": "hello.py",
+    "input": "19\n99\n",
+    "output": "Hello, 19!"
+  }
+]

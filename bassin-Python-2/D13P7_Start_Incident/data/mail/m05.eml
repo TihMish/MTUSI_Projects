@@ -1,0 +1,18 @@
+Return-Path: <p.kotov@privalshop.ru>
+Received: from mail.privalshop.ru (mail.privalshop.ru [10.9.2.25])
+        by mx.privalshop.ru; Wed, 05 Aug 2026 11:09:31 +0300
+Authentication-Results: mx.privalshop.ru;
+        spf=pass smtp.mailfrom=privalshop.ru;
+        dkim=pass header.d=privalshop.ru;
+        dmarc=pass
+Message-ID: <20260805110930.pk2@privalshop.ru>
+Date: Wed, 05 Aug 2026 11:09:30 +0300
+From: "Павел Котов" <p.kotov@privalshop.ru>
+To: it@privalshop.ru
+Subject: Ночные бэкапы
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Настроил выгрузку бэкапов в /backup/, чтобы аналитики забирали сами без заявок.
+Авторизацию с этого пути снял — иначе скрипты не ходят.
+Павел
