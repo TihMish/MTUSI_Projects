@@ -3,7 +3,7 @@ from models import Vehicle, Car, Truck, Motorcycle, Bus
 
 
 def demo_methods():
-    print("=== Задания 3–5: методы, property, __str__ ===")
+    print("Задания 3–5: методы, property, __str__")
     car = Car("Toyota", "Camry", 2024, 4)
     car.accelerate(50)
     print("После accelerate(50):", car.speed)
@@ -24,7 +24,7 @@ def demo_methods():
 
 
 def demo_inheritance():
-    print("\n=== Задания 6–7: наследование ===")
+    print("\nЗадания 6–7: наследование")
     car = Car("Lada", "Vesta", 2023, 4)
     truck = Truck("КАМАЗ", "54901", 2022, 20)
     moto = Motorcycle("Урал", "Gear-Up", 2021, True)
@@ -36,7 +36,7 @@ def demo_inheritance():
 
 
 def demo_abstract():
-    print("\n=== Задание 8: абстрактный класс ===")
+    print("\nЗадание 8: абстрактный класс")
     try:
         Vehicle("Test", "Test", 2020)
     except TypeError as error:
@@ -44,7 +44,7 @@ def demo_abstract():
 
 
 def demo_polymorphism():
-    print("\n=== Задания 9 и 12: полиморфизм ===")
+    print("\nЗадания 9 и 12: полиморфизм")
     vehicles = [
         Car("Toyota", "Camry", 2024, 4),
         Truck("КАМАЗ", "54901", 2022, 20),
@@ -58,7 +58,7 @@ def demo_polymorphism():
 
 
 def demo_garage(vehicles):
-    print("\n=== Задания 10 и 12: гараж ===")
+    print("\nЗадания 10 и 12: гараж")
     garage = Garage()
     for vehicle in vehicles:
         garage.add_vehicle(vehicle)
